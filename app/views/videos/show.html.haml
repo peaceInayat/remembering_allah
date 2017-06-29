@@ -12,7 +12,7 @@
       .panel.panel-default
         .panel-heading
           .embed-responsive.embed-responsive-16by9
-            %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/#{@content.url}"}
+            %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/#{@content.url[32..42]}"}
         .panel-body
           %h4= @content.title
           %hr

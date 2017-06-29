@@ -1,14 +1,15 @@
 %div.row
-  %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh'}
-    = link_to 'All Posts', posts_path, class:'nav_btn'
-    %ul.nav.nav-pills.nav-stacked
+  %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+    %ul.nav.nav-pills.nav-stacked{style:'margin:5% 0% 0% 5%;'}
+      %li= link_to 'All Posts', posts_path, class:'nav_btn'
       - Category.where(section:'article').each do |cat|
-        = link_to cat.name, posts_path(category_id: cat.id), class:'nav_btn'
+        %li= link_to cat.name, posts_path(category_id: cat.id), class:'nav_btn'
+      %br
       = link_to 'Add Category', categories_path, class:'nav_btn'
 
 
   %div.col-sm-10
-    .container
+    .container{style:'margin-top:2%;'}
       .row
         - @posts.each do |article|
           .col-md-12
@@ -25,17 +26,9 @@
                 %a.btn.btn-primary{:href => article, method: :delete, data: { confirm: 'Are you sure?' }} Destroy
 
 
-    = link_to 'New Article', new_post_path, class:'btn btn-default'
+      = link_to 'New Article', new_post_path, class:'btn btn-default'
 
 :css
-  .the-click {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-  }
 
   a:hover {
     color: #fff;
@@ -61,12 +54,15 @@
     padding: 4%;
     color: #442525;
     font-size: 1.5em;
-    border-bottom: 1px solid #442525;
-    background-color: #f6f3e7;
+    border-bottom: 1px solid #e0d8cf;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #f9f0e7;
   }
 
-  .nav_btn:hover{
-    border-bottom: 1px solid #f6f3e7;
-    color: #f6f3e7;
+  .nav-pills > li > a{
+    border-radius: 0px;
+  }
+
+  .nav-pills > li > a:hover{
     background-color: #442525;
   }

@@ -1,9 +1,11 @@
 %div.row
-  %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh'}
-    %ul.nav.nav-pills.nav-stacked
+  %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+    %ul.nav.nav-pills.nav-stacked{style:'margin:5% 0% 0% 5%;'}
+      %li= link_to 'All Posts', posts_path, class:'nav_btn'
       - Category.where(section:'article').each do |cat|
-        = link_to cat.name, posts_path(category_id: cat.id), class:'btn btn-primary', style:'display:block; margin: 1% 0%;'
-      = link_to 'Add Category', categories_path, class:'btn btn-default', style:'display:block; margin: 1% 0%;'
+        %li= link_to cat.name, posts_path(category_id: cat.id), class:'nav_btn'
+      %br
+      = link_to 'Add Category', categories_path, class:'nav_btn'
 
 
   %div.col-sm-10
@@ -28,3 +30,37 @@
         = render @content.comments
         %h3 Add a comment:
         = render "comments/form"
+
+:css
+
+  a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(245, 238, 238, 0.58);
+  }
+
+  p.body {
+    padding-top: 2%;
+  }
+
+  hr{
+    margin: 0px;
+  }
+
+  .nav_btn{
+    display: block;
+    padding: 4%;
+    color: #442525;
+    font-size: 1.5em;
+    border-bottom: 1px solid #e0d8cf;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #f9f0e7;
+  }
+
+  .nav-pills > li > a{
+    border-radius: 0px;
+  }
+
+  .nav-pills > li > a:hover{
+    background-color: #442525;
+  }

@@ -10,16 +10,39 @@
         </div>
     <% end %>
     <%= f.label :title %><br>
-    <%= f.text_field :title %><br>
+    <%= f.text_area :title, rows:'3' %><br>
     <br>
     <%= f.label :body %><br>
-    <%= f.text_field :body %><br>
+    <%= f.text_area :body, rows:'10' %><br>
     <%= f.label :url %><br>
-    <%= f.text_field :url %><br>
+
+    <%= f.text_field :url, class:'url' %>
+    <br>
     <br>
     <%= f.collection_select :category_id, Category.where(section:'video'), :id, :name %>
-
     <br>
-    <%= f.submit %>
+    <br>
+    <%= f.submit class:'btn btn-default' %>
 <% end %>
 <br>
+
+<style>
+    textarea {
+        width: 100%;
+        padding: 1.5%;
+    }
+
+    input.url{
+        width: 100%;
+        padding: 1%;
+    }
+
+    select{
+        padding: .6% 2%;
+        border-radius: 5%;
+        font-size: 1.3em;
+    }
+    select option{
+        font-size: 1.3em;
+    }
+</style>

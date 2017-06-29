@@ -35,6 +35,9 @@
     %div.col-md-8.col-xs-12
       %iframe{:align => "middle", :height=> '500', :src => "https://www.youtube.com/embed/W_UVeiWx-44", :style => "display: block; margin: auto;", :width => "100%", protocol:'https'}
 
+%div{style:'background-color: #000; padding-bottom: 3%; padding-top:1%;'}
+  %div.container{align:'center'}
+    %h2 Pillars Of Islam
 %div{style:'background-color: #685050; padding-bottom: 3%; padding-top:1%;'}
   %div.container
     %h2{style: 'text-align:center'} Heading
@@ -51,7 +54,7 @@
 %div.container-fuild{style:'background-color: #f9f0e7; padding: 1%;'}
   %div{align:'center'}
     %strong Our Recent
-    %h2 Blog Posts
+    %h3 Blog Posts
   %div.row
     - @recent_posts.reverse.each do |post|
       %div.col-md-3.col-xs-12
@@ -63,12 +66,22 @@
   %div.container
     %div.row{style: 'text-align:center'}
       %div.col-md-3.col-xs-12
-        %div.footer_widget
-          %h3 Facebook
+        %div.footer_widget{style:'text-align:left'}
+          %h3 Social Media
+          %h3
+            %a{:href => "https://www.facebook.com", target:'_blank'}
+              %i.fa.fa-facebook{"aria-hidden" => "true"} &nbsp; &nbsp; Join us @ Facebook
+          %h3
+            %a{:href => "https://plus.google.com", target:'_blank'}
+              %i.fa.fa-google{"aria-hidden" => "true"} &nbsp; &nbsp; Join us @ Google Plus
+          %h3
+            %a{:href => "https://twitter.com", target:'_blank'}
+              %i.fa.fa-twitter{"aria-hidden" => "true"} &nbsp; &nbsp; Join us @ Twitter
+
 
       %div.col-md-3.col-xs-12
         %div.footer_widget
-          %p Tags
+          %h3 Tags
           %div.tagcloud
             %a{:href => "#islamic"} islamic
             %a{:href => "#kalma"} Kalma
@@ -82,8 +95,8 @@
             %a{:href => "#zakat"} Zakat
 
       %div.col-md-3.col-xs-12
-        %p Quick Links
-        %ul.quick_links{align:'left'}
+        %h3 Quick Links
+        %ul.quick_links#quick_l{align:'left'}
           %li
             %a{:href => "#"}
               %span.fa.fa-arrow-right
@@ -108,8 +121,28 @@
             %a{:href => "#"}
               %i.fa.fa-arrow-right
               Mosque, Center For Peace
-      %div.col-md-3.col-xs-12
-        %p Contact Us
+      %div.col-md-3.col-xs-12{align:'left'}
+        %h3 Contact Us
+        %ul.quick_links#address
+          %li
+            %a{:href => "#"}
+              The Church Branch, 123 Lorem Ipsum Avenue, New York United States, 012345
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-phone
+              0123 456 7890
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-fax
+              0123 456 7890
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-envelope-o
+              info@churchmosque.com
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-globe
+              www.churchmosque.com
 
 
 
@@ -117,6 +150,10 @@
   .border{
     border: 4px solid #563a3a;
     color: #ffffff;
+  }
+
+  h2{
+    color: #fff;
   }
 
   .border:hover{
@@ -154,4 +191,17 @@
   .footer_widget .tagcloud a:hover {
     background-color: #442525;
     color: #f6f3e7;
+  }
+  .quick_links a{
+    color: #442525 !important;
+  }
+  #quick_l a:hover{
+    font-weight: bold;
+  }
+  #address a:hover{
+    cursor: default;
+  }
+  a:hover{
+    background-color: transparent;
+    text-decoration: none;
   }

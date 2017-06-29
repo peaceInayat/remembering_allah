@@ -1,27 +1,25 @@
 %div.row
-  %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh'}
-    = link_to 'All Videos', videos_path, class:'btn btn-primary', style:'display:block; margin: 1% 0%;'
-    %ul.nav.nav-pills.nav-stacked
+  %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+    %ul.nav.nav-pills.nav-stacked{style:'margin:5% 0% 0% 5%;'}
+      %li= link_to 'All Videos', videos_path, class:'nav_btn'
       - Category.where(section:'video').each do |cat|
-        = link_to cat.name, videos_path(category_id: cat.id), class:'btn btn-primary', style:'display:block; margin: 1% 0%;'
-      = link_to 'Add Category', categories_path, class:'btn btn-default', style:'display:block; margin: 1% 0%;'
-
+        %li= link_to cat.name, videos_path(category_id: cat.id), class:'nav_btn'
+      %br
+      = link_to 'Add Category', categories_path, class:'nav_btn'
 
   %div.col-sm-10
-    .row
+    .row{style:'padding:1%;'}
       - @videos.each do |video|
         .col-sm-3.col-xs-12
           .panel.panel-default
             .panel-heading
               .embed-responsive.embed-responsive-16by9
-                %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/#{video.url}"}
+                %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/#{video.url[32..42]}"}
                 %a.the-click{:href => video_path(video)}
             .panel-body
               %h4.single_line= truncate(video.title, :length => 70)
               %hr
               %p= truncate(video.body, :length => 125)
-
-
     = link_to 'New Video', new_video_path, class:'btn btn-default'
 
 :css
@@ -52,4 +50,21 @@
   hr{
     margin-top: 0px;
     margin-bottom: 5px;
+  }
+  .nav_btn{
+    display: block;
+    padding: 4%;
+    color: #442525;
+    font-size: 1.5em;
+    border-bottom: 1px solid #e0d8cf;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #f9f0e7;
+  }
+
+  .nav-pills > li > a{
+    border-radius: 0px;
+  }
+
+  .nav-pills > li > a:hover{
+    background-color: #442525;
   }

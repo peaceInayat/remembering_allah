@@ -1,0 +1,91 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #222;
+  color: white;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  font-size: 0.9em;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1; text-decoration: none;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #222;
+}
+
+.spacing{
+  border: 1px solid #e2e2e2;
+  border-radius: 7px;
+  padding: 3%;
+  background-color: #eee;
+}
+
+.well{
+  margin: 0px !important;
+  margin-bottom: 20px !important;
+}
+
+.col-sm-8 form.form-horizontal{
+  margin-top: 15px;
+}
+
+
+#faq_nav {
+  a {
+    background-color: #eee;
+    margin: 2%;
+  }
+}
+
+.nav-pills > li.active > a {
+  color: #fff;
+  background-color: #337ab7 !important;
+}
+
+footer.navbar-fixed-bottom {
+  background: #543939;
+  bottom: 0%;
+  width: 100%;
+  padding: 2rem 0;
+  color: white;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}

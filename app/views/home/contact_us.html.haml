@@ -1,0 +1,139 @@
+:css
+  #contact_us{
+      text-align: justify;
+      color: rgba(53, 53, 53, 0.99) !important;
+      font-family: trebuc;
+      margin-top: 1%;
+  }
+  .white_bg_static_pages{
+      background-color: #fff !important;
+  }
+
+  #main{
+      background-color: #fff !important;
+  }
+
+  h4{
+      color: #162e40; !important;
+  }
+  h2{
+      color: #162e40 !important;
+  }
+  .google-maps {
+      position: relative;
+      padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+      overflow: hidden;
+  }
+  a:hover{
+    background-color: transparent;
+  }
+  .google-maps iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+  }
+.container
+  %div.row
+    %div.col-md-6.col-xs-12
+      #accordion.panel-group{style:'margin-top:5%;'}
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse1"} What is the board the school is following?
+          #collapse1.panel-collapse.collapse.in
+            .panel-body
+              We are following CCE pattern i.e Continuous and comprehensive evaluation. The main aim of CCE is to evaluate every aspect of the child during their presence at the school.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse2"} What are the classes upto which the school supports currently?
+          #collapse2.panel-collapse.collapse
+            .panel-body
+              Currently we take admissions for students belonging to LKG, UKG and First to Eight Standard.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse3"} What about Hifz?
+          #collapse3.panel-collapse.collapse
+            .panel-body
+              InshaAllah Extra classes of Hifz will be started from 1st Std. (most probably early morning before the 1st period) depending upon the capability of the student.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse4"} Which school of thought will be followed?
+          #collapse4.panel-collapse.collapse
+            .panel-body
+              Quran and Authentic Hadeeth.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse5"} What are the extra curricular activities ?
+          #collapse5.panel-collapse.collapse
+            .panel-body
+              Excursions, Class activities, Taekwondo (from 1st Std.), Annual Sports, EPS (English Public Speaking), APS (Arabic Public Speaking) etc.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse6"} What is the board the school is following?
+          #collapse6.panel-collapse.collapse
+            .panel-body
+              We are following CCE pattern i.e Continuous and comprehensive evaluation. The main aim of CCE is to evaluate every aspect of the child during their presence at the school.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse7"} What are the classes upto which the school supports currently?
+          #collapse7.panel-collapse.collapse
+            .panel-body
+              Currently we take admissions for students belonging to LKG, UKG and First to Eight Standard.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse8"} What about Hifz?
+          #collapse8.panel-collapse.collapse
+            .panel-body
+              InshaAllah Extra classes of Hifz will be started from 1st Std. (most probably early morning before the 1st period) depending upon the capability of the student.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse9"} Which school of thought will be followed?
+          #collapse9.panel-collapse.collapse
+            .panel-body
+              Quran and Authentic Hadeeth.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse10"} What are the extra curricular activities ?
+          #collapse10.panel-collapse.collapse
+            .panel-body
+              Excursions, Class activities, Taekwondo (from 1st Std.), Annual Sports, EPS (English Public Speaking), APS (Arabic Public Speaking) etc.
+    %div.col-md-6.col-xs-12
+      #contact_us.row
+        .col-md-12.colxs-12
+          %h2{:align => "left", :style => "font-family: museo700"} Contact Us
+          %hr{:style => "height: 3px;background-color: #162e40;"}/
+          %div{:style => "font-size: 1.2em;"}
+            %b Ilm School of Excellence
+            %br/
+            Sanjay Nagar,
+            %br/
+            Near Rehmaniya Masjid,
+            %br/
+            Site-1, Borabanda,
+            %br/
+            Hyderabad, Telangana
+            %br/
+            India
+            %br/
+            Tel : +91 9441 281 247 (General)
+            %br/
+            Alternate No : +91 9063 781 288
+            %br/
+            Email : care.ilmschool@gmail.com
+            %br/
+            %br/
+        .google-maps{:style => "border: 1px solid #d3d3d3;"}
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "250", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d951.5498503658001!2d78.41813228812808!3d17.45016767863356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91182b60d3c9%3A0xff15353e7cd7b653!2sILM+School+Of+Excellence!5e0!3m2!1sen!2sin!4v1493723118284", :style => "border:0", :width => "600"}
+        %br/

@@ -1,0 +1,33 @@
+%div{style:'margin:3%;'}
+  %div.row
+    %div.col-sm-4
+      .panel.panel-default
+        %table.table.table-striped
+          %thead
+            %tr
+              %th Article Categories
+              %th
+              %th
+          %tbody
+            - @a_cats.each do |category|
+              %tr
+                %td= category.name
+                %td= link_to 'Edit', edit_category_path(category)
+                %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
+    %div.col-sm-4{align:'center'}
+      .panel.panel-default
+        = render 'form'
+    %div.col-sm-4
+      .panel.panel-default
+        %table.table.table-striped
+          %thead
+            %tr
+              %th Video Categories
+              %th
+              %th
+          %tbody
+            - @v_cats.each do |category|
+              %tr
+                %td= category.name
+                %td= link_to 'Edit', edit_category_path(category)
+                %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }

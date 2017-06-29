@@ -1,0 +1,72 @@
+%div.row
+  %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh'}
+    = link_to 'All Posts', posts_path, class:'nav_btn'
+    %ul.nav.nav-pills.nav-stacked
+      - Category.where(section:'article').each do |cat|
+        = link_to cat.name, posts_path(category_id: cat.id), class:'nav_btn'
+      = link_to 'Add Category', categories_path, class:'nav_btn'
+
+
+  %div.col-sm-10
+    .container
+      .row
+        - @posts.each do |article|
+          .col-md-12
+            .panel.panel-default
+              .panel-heading
+                %h4.single_line
+                  =link_to article.title, article
+                %hr
+                %p.date= article.created_at.strftime("%B %d, %Y")
+              .panel-body
+                %p= truncate(article.body, :length => 200)
+              .btn-group.btn-group-justified
+                %a.btn.btn-primary{:href => edit_post_path(article)} Edit
+                %a.btn.btn-primary{:href => article, method: :delete, data: { confirm: 'Are you sure?' }} Destroy
+
+
+    = link_to 'New Article', new_post_path, class:'btn btn-default'
+
+:css
+  .the-click {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+
+  a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(245, 238, 238, 0.58);
+  }
+  .single_line {
+    text-overflow: ellipsis;
+    max-height: 26px;
+    line-height: 26px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .panel-body {
+    padding: 5px 15px;
+  }
+  hr{
+    margin: 0px;
+  }
+  .nav_btn{
+    display: block;
+    padding: 4%;
+    color: #442525;
+    font-size: 1.5em;
+    border-bottom: 1px solid #442525;
+    background-color: #f6f3e7;
+  }
+
+  .nav_btn:hover{
+    border-bottom: 1px solid #f6f3e7;
+    color: #f6f3e7;
+    background-color: #442525;
+  }

@@ -1,0 +1,16 @@
+<%= simple_form_for(@category) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+    <br>
+    <%= f.select :section, options_for_select([['article' ,'Article'], ['video', 'Video']]) %>
+    <br>
+  </div>
+<br>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,67 @@
+!!! 5
+%html
+%head
+  %title Ra
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+  %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+  %link{:href => "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet", :type => "text/css"}
+
+
+%body{style:"margin-bottom:60px;"}
+  %nav.navbar.navbar-inverse
+    .container{style:'width:80%;'}
+      .navbar-header
+        %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        = link_to image_tag('logo.png'), root_path
+      #myNavbar.collapse.navbar-collapse{style:'padding-top:1.5%'}
+        %div
+          %ul.nav.navbar-nav.navbar-left
+            %li
+              %a{:href => root_path}Home
+            %li.dropdown
+              %a.dropbtn
+                About Us
+                %span.caret
+              .dropdown-content
+                %a{:href => root_path} Who we Are
+                %a{:href => root_path} Our Aim
+                %a{:href => root_path} Gallery
+                %a{:href => testimonials_path}Testimonials
+            %li
+              %a{:href => posts_path}Blog
+            %li
+              %a{:href => videos_path}Videos
+            %li
+              %a{:href => root_path}Wisdom Corner
+
+          %ul.nav.navbar-nav.navbar-right
+            - if user_signed_in?
+              %li= link_to "Account", edit_user_registration_path
+              %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+            - else
+              %li= link_to "Sign Up", new_user_registration_path
+              %li= link_to "Sign In", new_user_session_path
+            %li
+              %a{:href => contact_us_path}Contact Us
+
+  .container
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: "alert alert-info"
+  = yield
+
+  %footer.navbar-fixed-bottom
+    %p &copy; 2017 Ra. All Rights Reserved.
+
+:css
+  .navbar-nav > li > a {
+    font-size: 1.5em;
+  }
+  .navbar {
+    border-radius: 0px !important;
+    margin-bottom: 0px;
+  }

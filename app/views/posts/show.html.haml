@@ -1,0 +1,30 @@
+%div.row
+  %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh'}
+    %ul.nav.nav-pills.nav-stacked
+      - Category.where(section:'article').each do |cat|
+        = link_to cat.name, posts_path(category_id: cat.id), class:'btn btn-primary', style:'display:block; margin: 1% 0%;'
+      = link_to 'Add Category', categories_path, class:'btn btn-default', style:'display:block; margin: 1% 0%;'
+
+
+  %div.col-sm-10
+    #post_content.container
+      %h1.title= @content.title
+      %p.date
+        Submitted #{time_ago_in_words(@content.created_at)} Ago By
+        %strong= @content.user.name
+      %hr
+      %p.body= @content.body
+      .btn-group.pull-right
+        = link_to like_post_path(@content), method: :put, class: "btn btn-default" do
+          %span.glyphicon.glyphicon-heart
+          = @content.get_upvotes.size
+        - if user_signed_in?
+          =link_to 'Edit', edit_post_path(@content),class:'btn btn-default'
+          =link_to 'Delete', post_path(@content), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default'
+      #comments
+        %h2
+          = @content.comments.count
+          Comments
+        = render @content.comments
+        %h3 Add a comment:
+        = render "comments/form"

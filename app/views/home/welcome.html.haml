@@ -1,0 +1,157 @@
+#myCarousel.carousel.slide{"data-ride" => "carousel", style:'margin-top: -1.1%;'}
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "4", "data-target" => "#myCarousel"}
+  .carousel-inner
+    .item.active
+      = image_tag "slider1.jpg"
+      .carousel-caption
+        %h3 Los Angeles
+        %p LA is always so much fun!
+    .item
+      = image_tag "slider2.jpg"
+    .item
+      = image_tag "slider3.jpg"
+    .item
+      = image_tag "slider4.jpg"
+    .item
+      = image_tag "slider5.jpg"
+  %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
+    %span.glyphicon.glyphicon-chevron-left
+    %span.sr-only Previous
+  %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"}
+    %span.glyphicon.glyphicon-chevron-right
+    %span.sr-only Next
+
+
+%div.container-fuild{style:'background-color: #f9f0e7;'}
+  %div.row
+    %div.col-md-4.col-xs-12{style:'padding:0% 4%;'}
+      %h2 In the name of Allah, most beneficient most merciful
+      %p Duis consequat eros nec tortor mollis luctus. Proin imperdiet nibh vitae lacus dignissim dictum. Etiam suscipit, sem et aliquam faucibus, justo risus aliquet ante, vitae ullamcorper sapien mauris a justo. Cras ac scelerisque lorem. Aliquam auctor pellentesque. Donec vulputate aliquam libero, auctor egestas velit sollicitudin sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras rhoncus est vel risus malesuada ullamcorper in ac ligula. Fusce vulputate est nec libero.
+    %div.col-md-8.col-xs-12
+      %iframe{:align => "middle", :height=> '500', :src => "https://www.youtube.com/embed/W_UVeiWx-44", :style => "display: block; margin: auto;", :width => "100%", protocol:'https'}
+
+%div{style:'background-color: #685050; padding-bottom: 3%; padding-top:1%;'}
+  %div.container
+    %h2{style: 'text-align:center'} Heading
+    %div.row{style: 'text-align:center'}
+      %div.col-md-4.col-xs-12
+        %div.border
+          %h3 Tawassum
+      %div.col-md-4.col-xs-12
+        %div.border
+          %h3 Tadabbur
+      %div.col-md-4.col-xs-12
+        %div.border
+          %h3 Tafakkur
+%div.container-fuild{style:'background-color: #f9f0e7; padding: 1%;'}
+  %div{align:'center'}
+    %strong Our Recent
+    %h2 Blog Posts
+  %div.row
+    - @recent_posts.reverse.each do |post|
+      %div.col-md-3.col-xs-12
+        .panel.panel-default
+          .panel-heading= post.title
+          .panel-body= truncate(post.body, :length => 200)
+
+%div.footer
+  %div.container
+    %div.row{style: 'text-align:center'}
+      %div.col-md-3.col-xs-12
+        %div.footer_widget
+          %h3 Facebook
+
+      %div.col-md-3.col-xs-12
+        %div.footer_widget
+          %p Tags
+          %div.tagcloud
+            %a{:href => "#islamic"} islamic
+            %a{:href => "#kalma"} Kalma
+            %a{:href => "#mosque"} Mosque
+            %a{:href => "#namaz"} Namaz
+            %a{:href => "#people"} people
+            %a{:href => "#project"} Project
+            %a{:href => "#quran"} Quran
+            %a{:href => "#rights"} Rights
+            %a{:href => "#salat"} Salat
+            %a{:href => "#zakat"} Zakat
+
+      %div.col-md-3.col-xs-12
+        %p Quick Links
+        %ul.quick_links{align:'left'}
+          %li
+            %a{:href => "#"}
+              %span.fa.fa-arrow-right
+              Marriage and Islam
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-arrow-right
+              Importance of Prayer
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-arrow-right
+              Quran Recitation
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-arrow-right
+              Children Rights In Islam
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-arrow-right
+              Pray! Before It Is Late
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-arrow-right
+              Mosque, Center For Peace
+      %div.col-md-3.col-xs-12
+        %p Contact Us
+
+
+
+:css
+  .border{
+    border: 4px solid #563a3a;
+    color: #ffffff;
+  }
+
+  .border:hover{
+    border: 4px solid #F0F2F4;
+    color: #563a3a;
+  }
+  .footer{
+    padding: 3%;
+    background-image: url(/assets/contact_bg.jpg);
+  }
+  .carousel-control:hover{
+    opacity: 0.1;
+  }
+  ul{
+    list-style: none;
+  }
+  .quick_links li {
+    border-bottom: 1px solid #563a3a;
+    line-height: 36px;
+  }
+  .footer_widget .tagcloud a {
+    background-color: #f6f3e7;
+    border: 1px solid #442525;
+    border-radius: 20px;
+    color: #442525;
+    float: left;
+    font-family: "Lato",sans-serif;
+    font-size: 14px!important;
+    font-weight: 400;
+    line-height: 14px;
+    margin: 0 10px 10px 0;
+    padding: 9px 15px;
+    text-decoration: none;
+  }
+  .footer_widget .tagcloud a:hover {
+    background-color: #442525;
+    color: #f6f3e7;
+  }

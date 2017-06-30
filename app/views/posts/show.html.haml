@@ -2,7 +2,7 @@
   %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
     %ul.nav.nav-pills.nav-stacked{style:'margin:5% 0% 0% 5%;'}
       %li= link_to 'All Posts', posts_path, class:'nav_btn'
-      - Category.where(section:'article').each do |cat|
+      - Category.where(section:'Article').each do |cat|
         %li= link_to cat.name, posts_path(category_id: cat.id), class:'nav_btn'
       %br
       = link_to 'Add Category', categories_path, class:'nav_btn'

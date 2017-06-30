@@ -16,7 +16,7 @@
     <%= f.text_area :body, rows:'10' %><br>
 
     <br>
-    <%= f.collection_select :category_id, Category.where(section:'article'), :id, :name %>
+    <%= f.collection_select :category_id, Category.where(section:'Article'), :id, :name %>
     <br>
     <br>
     <%= f.submit class:'btn btn-default' %>

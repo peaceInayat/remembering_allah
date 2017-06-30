@@ -19,7 +19,7 @@
     <%= f.text_field :url, class:'url' %>
     <br>
     <br>
-    <%= f.collection_select :category_id, Category.where(section:'video'), :id, :name %>
+    <%= f.collection_select :category_id, Category.where(section:'Video'), :id, :name %>
     <br>
     <br>
     <%= f.submit class:'btn btn-default' %>

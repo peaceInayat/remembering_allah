@@ -2,7 +2,7 @@
   %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh'}
     = link_to 'All Videos', videos_path, class:'btn btn-primary', style:'display:block; margin: 1% 0%;'
     %ul.nav.nav-pills.nav-stacked
-      - Category.where(section:'video').each do |cat|
+      - Category.where(section:'Video').each do |cat|
         = link_to cat.name, videos_path(category_id: cat.id), class:'btn btn-primary', style:'display:block; margin: 1% 0%;'
       = link_to 'Add Category', categories_path, class:'btn btn-default', style:'display:block; margin: 1% 0%;'
 

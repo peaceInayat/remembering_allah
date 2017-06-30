@@ -6,10 +6,9 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @a_cats = Category.where(section:'article')
-    @v_cats = Category.where(section:'video')
+    @a_cats = Category.where(section:'Article')
+    @v_cats = Category.where(section:'Video')
     @category = Category.new
-    @sections = ['Article', 'Video']
   end
 
   # GET /categories/1

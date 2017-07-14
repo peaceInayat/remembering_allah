@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+  resources :wisdoms do
+    member do
+      put "like",    to: "wisdoms#upvote"
+    end
+  end
+  resources :testimonials
   resources :categories
   resources :videos
   resources :posts do
@@ -15,8 +22,6 @@ Rails.application.routes.draw do
   end
   devise_for :users
   root 'home#welcome'
-  # post '/video_categories', to: 'home#create_video_category'
-  get '/testimonials', to: 'home#testimonials'
   get '/contact_us', to: 'home#contact_us'
 
 end

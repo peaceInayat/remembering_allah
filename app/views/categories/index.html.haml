@@ -1,5 +1,9 @@
 %div{style:'margin:3%;'}
   %div.row
+    %div.col-sm-12{align:'center'}
+      .panel.panel-default
+        = render 'form'
+  %div.row
     %div.col-sm-4
       .panel.panel-default
         %table.table.table-striped
@@ -14,9 +18,20 @@
                 %td= category.name
                 %td= link_to 'Edit', edit_category_path(category)
                 %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
-    %div.col-sm-4{align:'center'}
+    %div.col-sm-4
       .panel.panel-default
-        = render 'form'
+        %table.table.table-striped
+          %thead
+            %tr
+              %th Wisdom Categories
+              %th
+              %th
+          %tbody
+            - @w_cats.each do |category|
+              %tr
+                %td= category.name
+                %td= link_to 'Edit', edit_category_path(category)
+                %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
     %div.col-sm-4
       .panel.panel-default
         %table.table.table-striped

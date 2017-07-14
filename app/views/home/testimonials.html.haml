@@ -1,14 +1,71 @@
 %div.container
-  %blockquote
-    %p For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
-    %footer From WWF's website
+  %div#myCarousel.carousel.slide{"data-ride" => "carousel",style:'background:#685050;'}
+    %ol.carousel-indicators
+      %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+      %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+      %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+    .carousel-inner
+      .item.active
+        %row
+          %col-md-offset-2.col-md-8.col-md-offset-2{style:'padding:2% 0% 5% 0%;'}
+            %p.testimonial For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries a For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries a For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries a For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries a For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+            %div.row
+              %div.col-sm-3
+                = image_tag "ccc.jpg", style:'height:120px; width:150px;', class:'img-circle'
+              %div.col-sm-9
+                %p.reviewer Ayesha Sonika
+                %p PHD in Social Work (Jamia Milla)
 
-%div.container
-  %blockquote
-    %p For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
-    %footer From WWF's website
 
-%div.container
-  %blockquote
-    %p For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
-    %footer From WWF's website
+    %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
+      %span.glyphicon.glyphicon-chevron-left.white
+      %span.sr-only Previous
+    %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"}
+      %span.glyphicon.glyphicon-chevron-right.white
+      %span.sr-only Next
+  %br
+  = link_to 'Add Testimonial', new_post_path, class:'btn btn-default'
+
+
+:css
+  .row {
+    display: table;
+  }
+
+  [class*="col-sm-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .testimonial{
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: justify;
+    font-style: italic;
+  }
+  .reviewer{
+    color: #cfcfcf;
+  }
+  blockquote{
+    text-align: justify;
+    border: none;
+  }
+  .white{
+    color: #ffffff;
+  }
+  .carousel-control:hover{
+    opacity: 1;
+  }
+  .carousel-control{
+    opacity: 0.7;
+  }
+  a:hover{
+    background-color: transparent;
+  }
+  .container{
+    padding: 0%;
+  }
+  .item{
+    padding: 5% 0% 20% 0%;
+  }

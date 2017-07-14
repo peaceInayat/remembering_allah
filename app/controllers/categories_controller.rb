@@ -7,6 +7,7 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @a_cats = Category.where(section:'Article')
+    @w_cats = Category.where(section:'Wisdom')
     @v_cats = Category.where(section:'Video')
     @category = Category.new
   end

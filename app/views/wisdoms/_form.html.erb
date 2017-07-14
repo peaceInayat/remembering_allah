@@ -1,0 +1,39 @@
+<%= form_for @wisdom do |f| %>
+    <% if @wisdom.errors.any? %>
+        <div id="errors">
+          <h2><%= pluralize(@wisdom.errors.count, "error") %> prevented this Gem from saving:</h2>
+          <ul>
+            <% @wisdom.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <%= f.label :title %><br>
+    <%= f.text_area :title, rows:'3' %><br>
+    <br>
+    <%= f.label :body %><br>
+
+    <%= f.cktext_area :body, :class => "form-control" %><br>
+
+    <br>
+    <%= f.collection_select :category_id, Category.where(section:'Wisdom'), :id, :name %>
+    <br>
+    <br>
+    <%= f.submit class:'btn btn-default' %>
+<% end %>
+
+<style>
+    textarea {
+        width: 100%;
+        padding: 1.5%;
+    }
+    select{
+        padding: .6% 2%;
+        border-radius: 5%;
+        font-size: 1.3em;
+    }
+    select option{
+        font-size: 1.3em;
+    }
+</style>

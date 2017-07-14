@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 
   has_many :posts
+  has_many :videos
+  has_many :wisdoms
   has_many :comments
 
   # Include default devise modules. Others available are:

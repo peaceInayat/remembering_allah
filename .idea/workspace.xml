@@ -36,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/wisdoms/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="660">
+            <state vertical-scroll-proportion="0.4883721" vertical-offset="0" max-vertical-offset="660">
               <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
               <folding />
             </state>
@@ -113,10 +113,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="welcome.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/welcome.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.023364486" vertical-offset="0" max-vertical-offset="3495">
+            <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="3495">
               <caret line="1" column="53" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
               <folding>
                 <marker date="1500007273591" expanded="true" signature="7849:7905" placeholder="{...}" />
@@ -140,6 +140,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="testimonials_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/testimonials_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="show.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/videos/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
@@ -152,25 +162,6 @@
                 <marker date="1499928725514" expanded="true" signature="1654:1889" placeholder="{...}" />
                 <marker date="1499928725514" expanded="true" signature="1912:1941" placeholder="{...}" />
                 <marker date="1499928725514" expanded="true" signature="1970:2006" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/videos/index.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="64" />
-              <folding>
-                <marker date="1498802551392" expanded="true" signature="1124:1237" placeholder="{...}" />
-                <marker date="1498802551392" expanded="true" signature="1249:1320" placeholder="{...}" />
-                <marker date="1498802551392" expanded="true" signature="1336:1482" placeholder="{...}" />
-                <marker date="1498802551392" expanded="true" signature="1497:1525" placeholder="{...}" />
-                <marker date="1498802551392" expanded="true" signature="1530:1580" placeholder="{...}" />
-                <marker date="1498802551392" expanded="true" signature="1591:1826" placeholder="{...}" />
-                <marker date="1498802551392" expanded="true" signature="1849:1878" placeholder="{...}" />
-                <marker date="1498802551392" expanded="true" signature="1907:1943" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -853,7 +844,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17855169" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -863,7 +854,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28267476" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5106383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -981,6 +972,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,14 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="315">
           <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/testimonials_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1185">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1203,14 +1187,14 @@
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1140">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="64" />
           <folding>
-            <marker date="1498802551392" expanded="true" signature="1124:1237" placeholder="{...}" />
-            <marker date="1498802551392" expanded="true" signature="1249:1320" placeholder="{...}" />
-            <marker date="1498802551392" expanded="true" signature="1336:1482" placeholder="{...}" />
-            <marker date="1498802551392" expanded="true" signature="1497:1525" placeholder="{...}" />
-            <marker date="1498802551392" expanded="true" signature="1530:1580" placeholder="{...}" />
-            <marker date="1498802551392" expanded="true" signature="1591:1826" placeholder="{...}" />
-            <marker date="1498802551392" expanded="true" signature="1849:1878" placeholder="{...}" />
-            <marker date="1498802551392" expanded="true" signature="1907:1943" placeholder="{...}" />
+            <marker date="1498802551392" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1498802551392" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1498802551392" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1498802551392" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1498802551392" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1498802551392" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1498802551392" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1498802551392" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1272,14 +1256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/wisdoms/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="660">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/wisdoms/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="960">
@@ -1295,25 +1271,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/wisdoms/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5" vertical-offset="30" max-vertical-offset="1110">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-          <folding>
-            <marker date="1500006858707" expanded="true" signature="1295:1393" placeholder="{...}" />
-            <marker date="1500006858707" expanded="true" signature="1409:1555" placeholder="{...}" />
-            <marker date="1500006858707" expanded="true" signature="1570:1598" placeholder="{...}" />
-            <marker date="1500006858707" expanded="true" signature="1603:1625" placeholder="{...}" />
-            <marker date="1500006858707" expanded="true" signature="1636:1871" placeholder="{...}" />
-            <marker date="1500006858707" expanded="true" signature="1894:1923" placeholder="{...}" />
-            <marker date="1500006858707" expanded="true" signature="1952:1988" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/welcome.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.023364486" vertical-offset="0" max-vertical-offset="3495">
+        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="3495">
           <caret line="1" column="53" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
           <folding>
             <marker date="1500007273591" expanded="true" signature="7849:7905" placeholder="{...}" />
@@ -1333,6 +1293,38 @@
             <marker date="1500007273591" expanded="true" signature="8996:9019" placeholder="{...}" />
             <marker date="1500007273591" expanded="true" signature="9045:9068" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/testimonials_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/wisdoms/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5" vertical-offset="30" max-vertical-offset="1110">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding>
+            <marker date="1500006858707" expanded="true" signature="1295:1393" placeholder="{...}" />
+            <marker date="1500006858707" expanded="true" signature="1409:1555" placeholder="{...}" />
+            <marker date="1500006858707" expanded="true" signature="1570:1598" placeholder="{...}" />
+            <marker date="1500006858707" expanded="true" signature="1603:1625" placeholder="{...}" />
+            <marker date="1500006858707" expanded="true" signature="1636:1871" placeholder="{...}" />
+            <marker date="1500006858707" expanded="true" signature="1894:1923" placeholder="{...}" />
+            <marker date="1500006858707" expanded="true" signature="1952:1988" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/wisdoms/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4883721" vertical-offset="0" max-vertical-offset="660">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

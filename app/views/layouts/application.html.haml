@@ -11,7 +11,7 @@
 
 %body{style:"margin-bottom:60px;"}
   %nav.navbar.navbar-inverse
-    .container{style:'width:80%;'}
+    .container-fluid
       .navbar-header
         %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button"}
           %span.icon-bar
@@ -31,7 +31,10 @@
                 %a{:href => root_path} Who we Are
                 %a{:href => root_path} Our Aim
                 %a{:href => root_path} Gallery
-                %a{:href => testimonials_path}Testimonials
+                %a{:href => testimonials_path} Testimonials
+                %a{:href => root_path} Publications
+            %li
+              %a{:href => posts_path}Breath of Quran
             %li
               %a{:href => posts_path}Blog
             %li

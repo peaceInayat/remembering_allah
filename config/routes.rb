@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
+
   mount Ckeditor::Engine => '/ckeditor'
   resources :wisdoms do
     member do
@@ -20,7 +22,7 @@ Rails.application.routes.draw do
       put "like",    to: "videos#upvote"
     end
   end
-  devise_for :users
+
   root 'home#welcome'
   get '/contact_us', to: 'home#contact_us'
 

@@ -34,3 +34,7 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'paperclip', '~> 5.1'
 gem 'ckeditor', '~> 4.2'
+
+gem 'omniauth', '~> 1.6', '>= 1.6.1'
+gem 'omniauth-facebook', '~> 4.0'
+gem 'omniauth-google-oauth2', '~> 0.4.1'

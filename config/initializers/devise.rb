@@ -10,7 +10,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'admin@ra.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -257,4 +257,8 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   # config.secret_key = '98431b58e37575e037c5faf40d75177eb9718f988cc0f371d00083ef353aded5b4a6854308c8ad310aac516ab8e73c9afd1c75e68af3172afd5511efe495a876' if Rails.env.production?
+
+  config.omniauth :facebook, '630959483779007', 'fb122993ef718948c95835e42dc5a20b', callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  config.omniauth :google_oauth2, '341045728348-335uqdhhbgruvgba2ik3tp0kveq7u9t7.apps.googleusercontent.com', 'X1pdNewdqK5PuS70jaY608_R', { access_type: "offline", approval_prompt: "" }
+
 end

@@ -11,3 +11,22 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignoring Database Configurations
+config/database.yml
+config/mongoid.yml
+
+# Ignoring database schema file
+db/schema.rb
+
+# Ignoring Redis Configurations
+
+# Ignoring Gemfile.lock
+Gemfile.lock
+
+# Ignoring db schema file
+db/schema.rb
+
+
+# Ignore local_env file which contains all account credentials, client secrets and API keys
+config/local_env.yml

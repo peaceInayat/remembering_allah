@@ -64,8 +64,8 @@
     %div.row
       - @recent_posts.reverse.each do |post|
         %div.col-md-4.col-xs-12
-          .panel.panel-default=link_to '', post
-            .panel-heading= post.title
+          .panel.panel-default
+            .panel-heading=link_to post.title, post
             .panel-body= truncate(post.body, :length => 200)
 
 %div.footer

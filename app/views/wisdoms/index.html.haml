@@ -21,7 +21,7 @@
                 %hr
                 %p.date= wisdom.created_at.strftime("%B %d, %Y")
               .panel-body
-                %p= truncate(wisdom.body, :length => 200)
+                %p= truncate(wisdom.body.to_s.html_safe, :length => 200)
                 %p= wisdom.body.to_s.html_safe
               - if can? :edit, Wisdom
                 .btn-group.btn-group-justified

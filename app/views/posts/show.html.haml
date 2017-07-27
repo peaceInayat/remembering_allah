@@ -16,7 +16,7 @@
         Submitted #{time_ago_in_words(@content.created_at)} Ago By
         %strong= @content.user.name
       %hr
-      %p.body= @content.body
+      %p.body= @content.body.to_s.html_safe
       .btn-group.pull-right
         = link_to like_post_path(@content), method: :put, class: "btn btn-default" do
           %span.glyphicon.glyphicon-heart

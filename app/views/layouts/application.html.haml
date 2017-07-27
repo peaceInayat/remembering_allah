@@ -9,8 +9,8 @@
   %link{:href => "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet", :type => "text/css"}
 
 
-%body{style:"margin-bottom:60px;"}
-  %nav.navbar.navbar-inverse
+%body{style:"margin:75px 0px;"}
+  %nav.navbar.navbar-inverse.navbar-fixed-top
     .container-fluid
       .navbar-header
         %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button"}
@@ -18,7 +18,7 @@
           %span.icon-bar
           %span.icon-bar
         = link_to image_tag('logo.png'), root_path
-      #myNavbar.collapse.navbar-collapse{style:'padding-top:1.5%'}
+      #myNavbar.collapse.navbar-collapse{style:'padding-top:0.58%'}
         %div
           %ul.nav.navbar-nav.navbar-left
             %li

@@ -22,7 +22,7 @@
         = link_to like_video_path(@content), method: :put, class: "btn btn-default" do
           %span.glyphicon.glyphicon-heart
           = @content.get_upvotes.size
-        - if user_signed_in?
+        - if can? :edit, @content
           =link_to 'Edit', edit_video_path(@content),class:'btn btn-default'
           =link_to 'Delete', video_path(@content), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default'
       #post_content

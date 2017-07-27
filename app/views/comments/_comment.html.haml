@@ -3,12 +3,8 @@
     %p= comment.body
     %footer= time_ago_in_words(comment.created_at) + "ago by #{comment.user.name}"
 
-  - if user_signed_in?
-    %p= link_to 'Delete', [comment.content, comment],
-        method: :delete,
-        class: "btn btn-default",
-        align: 'right',
-        data: { confirm: 'Are you sure?' }
+  - if can? :destroy, comment
+    %p= link_to 'Delete', [comment.content, comment], method: :delete, class: "btn btn-default", align: 'right', data: { confirm: 'Are you sure?' }
 
 :css
   blockquote{

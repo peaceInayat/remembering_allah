@@ -5,7 +5,8 @@
       - Category.where(section:'Article').each do |cat|
         %li= link_to cat.name, posts_path(category_id: cat.id), class:'nav_btn'
       %br
-      = link_to 'Add Category', categories_path, class:'nav_btn'
+      - if can? :create, Category
+        = link_to 'Add Category', categories_path, class:'nav_btn'
 
 
   %div.col-sm-10
@@ -21,12 +22,12 @@
                 %p.date= article.created_at.strftime("%B %d, %Y")
               .panel-body
                 %p= truncate(article.body, :length => 200)
-              .btn-group.btn-group-justified
-                %a.btn.btn-primary{:href => edit_post_path(article)} Edit
-                %a.btn.btn-primary{:href => article, method: :delete, data: { confirm: 'Are you sure?' }} Destroy
-
-
-      = link_to 'New Article', new_post_path, class:'btn btn-default'
+              - if can? :edit, article
+                .btn-group.btn-group-justified
+                  %a.btn.btn-primary{:href => edit_post_path(article)} Edit
+                  %a.btn.btn-primary{:href => article, method: :delete, data: { confirm: 'Are you sure?' }} Destroy
+      - if can? :create, Post
+        = link_to 'New Article', new_post_path, class:'btn btn-default'
 
 :css
 

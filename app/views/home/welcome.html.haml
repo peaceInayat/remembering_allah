@@ -1,19 +1,17 @@
-%div{style:'background-color:#f9f0e7'}
-  %marquee{style:'padding: 1% 0 1.5% 0;font-size: 1.4em;color:#543939'} Alhamdulillah. In Sha Allah our next event is going to be this Sunday.
+%div{style:'background-color:#f9f0e7; padding: 0.6% 0 .6% 0;'}
+  %marquee{style:'font-size: 1.4em;color:#000'} Alhamdulillah. In Sha Allah our next event is going to be this Sunday.
 
-#myCarousel.carousel.slide{"data-ride" => "carousel", style:'margin-top: -1.1%;'}
+#myCarousel.carousel.slide{"data-ride" => "carousel"}
   %ol.carousel-indicators
     %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
     %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
     %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
     %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
     %li{"data-slide-to" => "4", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "5", "data-target" => "#myCarousel"}
   .carousel-inner
     .item.active
       = image_tag "slider1.jpg"
-      .carousel-caption
-        %h3 Los Angeles
-        %p LA is always so much fun!
     .item
       = image_tag "slider2.jpg"
     .item
@@ -22,6 +20,8 @@
       = image_tag "slider4.jpg"
     .item
       = image_tag "slider5.jpg"
+    .item
+      = image_tag "slider6.jpg"
   %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
     %span.glyphicon.glyphicon-chevron-left
     %span.sr-only Previous
@@ -31,16 +31,17 @@
 
 
 %div.container-fuild{style:'background-color: #f9f0e7;'}
-  %div.row
-    %div.col-md-4.col-xs-12{style:'padding:0% 4%;'}
-      %h2 In the name of Allah, most beneficient most merciful
+  %div.row{style:'margin:0%;'}
+    %div.col-md-6.col-xs-12{style:'padding:0% 4%;'}
+      %h3 In the name of Allah, most beneficient most merciful
       %p Duis consequat eros nec tortor mollis luctus. Proin imperdiet nibh vitae lacus dignissim dictum. Etiam suscipit, sem et aliquam faucibus, justo risus aliquet ante, vitae ullamcorper sapien mauris a justo. Cras ac scelerisque lorem. Aliquam auctor pellentesque. Donec vulputate aliquam libero, auctor egestas velit sollicitudin sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras rhoncus est vel risus malesuada ullamcorper in ac ligula. Fusce vulputate est nec libero.
-    %div.col-md-8.col-xs-12
-      %iframe{:align => "middle", :height=> '500', :src => "https://www.youtube.com/embed/W_UVeiWx-44", :style => "display: block; margin: auto;", :width => "100%", protocol:'https'}
+      %p Duis consequat eros nec tortor mollis luctus. Proin imperdiet nibh vitae lacus dignissim dictum. Etiam suscipit, sem et aliquam faucibus, justo risus aliquet ante, vitae ullamcorper sapien mauris a justo. Cras ac scelerisque lorem. Aliquam auctor pellentesque. Donec vulputate aliquam libero, auctor egestas velit sollicitudin sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras rhoncus est vel risus malesuada ullamcorper in ac ligula. Fusce vulputate est nec libero.
+    %div.col-md-6.col-xs-12.video{style:'position: relative; height: 0; padding-bottom: 28.25%;'}
+      %iframe{:align => "middle", :src => "https://www.youtube.com/embed/y9nZuLZYBLI", allowfullscreen:'true', style:'position: absolute; top: 0;left: 0;width: 100%; height: 100%;', protocol:'https'}
 
 %div{style:'background-color: #000; padding-bottom: 3%; padding-top:1%;'}
   %div.container{align:'center'}
-    %h2 Pillars Of Islam
+    %h2 Breadth of Quran
 %div{style:'background-color: #685050; padding-bottom: 3%; padding-top:1%;'}
   %div.container
     %h2{style: 'text-align:center'} Heading
@@ -63,7 +64,7 @@
     %div.row
       - @recent_posts.reverse.each do |post|
         %div.col-md-4.col-xs-12
-          .panel.panel-default
+          .panel.panel-default=link_to '', post
             .panel-heading= post.title
             .panel-body= truncate(post.body, :length => 200)
 
@@ -73,21 +74,20 @@
       %div.col-md-3.col-xs-12
         %div.footer_widget{style:'text-align:left'}
           %h3 Social Media
-          %h3
-            %a{:href => "https://www.facebook.com", target:'_blank'}
-              %i.fa.fa-facebook{"aria-hidden" => "true"} &nbsp; &nbsp; Join us @ Facebook
-          %h3
-            %a{:href => "https://plus.google.com", target:'_blank'}
-              %i.fa.fa-google{"aria-hidden" => "true"} &nbsp; &nbsp; Join us @ Google Plus
-          %h3
-            %a{:href => "https://twitter.com", target:'_blank'}
-              %i.fa.fa-twitter{"aria-hidden" => "true"} &nbsp; &nbsp; Join us @ Twitter
+          %a{:href => "https://www.facebook.com", target:'_blank', class:'btn btn-default facebook', style:"padding:3% 17%; font-size:1.4em; margin:3% 0%; background-color:#3b5998; color:white;"}
+            %i.fa.fa-facebook{"aria-hidden" => "true"} &nbsp;Join us @ Facebook
+
+          %a{:href => "https://plus.google.com", target:'_blank', class:'btn btn-default google', style:"padding:3% 13%; font-size:1.4em;margin:3% 0%; background-color:#f54337; color:white; "}
+            %i.fa.fa-google{"aria-hidden" => "true"} &nbsp;Join us @ Google Plus
+
+          %a{:href => "https://twitter.com", target:'_blank', class:'btn btn-default twitter', style:"padding:3% 20%; font-size:1.4em;margin:3% 0%; background-color:#1da1f2; color:white; "}
+            %i.fa.fa-twitter{"aria-hidden" => "true"} &nbsp;Join us @ Twitter
 
 
       %div.col-md-3.col-xs-12
         %div.footer_widget
-          %h3 Tags
-          %div.tagcloud
+          %h3{align:'left'} Tags
+          %div.tagcloud{style:'padding-top:2%;'}
             %a{:href => "#islamic"} islamic
             %a{:href => "#kalma"} Kalma
             %a{:href => "#mosque"} Mosque
@@ -100,8 +100,8 @@
             %a{:href => "#zakat"} Zakat
 
       %div.col-md-3.col-xs-12
-        %h3 Quick Links
-        %ul.quick_links#quick_l{align:'left'}
+        %h3{align:'left'} Quick Links
+        %ul.quick_links#quick_l{align:'left', style:'margin-left:-10%;'}
           %li
             %a{:href => "#"}
               %span.fa.fa-arrow-right
@@ -128,7 +128,7 @@
               Mosque, Center For Peace
       %div.col-md-3.col-xs-12{align:'left'}
         %h3 Contact Us
-        %ul.quick_links#address
+        %ul.quick_links#address{style:'margin-left:-10%;'}
           %li
             %a{:href => "#"}
               The Church Branch, 123 Lorem Ipsum Avenue, New York United States, 012345
@@ -157,6 +157,24 @@
 
 
 :css
+  .facebook:hover{
+    background-color: #4e69e2 !important;
+  }
+
+  .google:hover{
+    background-color: #f6555d !important;
+  }
+
+  .twitter:hover{
+    background-color: #47b2f4 !important;
+  }
+
+  @media (max-width: 991px) {
+    .video{
+      padding-bottom: 56.25% !important;
+    }
+  }
+
   .border{
     border: 4px solid #563a3a;
     color: #ffffff;
@@ -178,7 +196,7 @@
     color: #563a3a;
   }
   .footer{
-    padding: 3%;
+    padding: 2% 0%;
     background-image: url(/assets/contact_bg.jpg);
   }
   ul{

@@ -5,7 +5,8 @@
       - Category.where(section:'Video').each do |cat|
         %li= link_to cat.name, videos_path(category_id: cat.id), class:'nav_btn'
       %br
-      = link_to 'Add Category', categories_path, class:'nav_btn'
+      - if can? :create, Category
+        = link_to 'Add Category', categories_path, class:'nav_btn'
 
   %div.col-sm-10
     .row{style:'padding:1%;'}
@@ -20,7 +21,8 @@
               %h4.single_line= truncate(video.title, :length => 70)
               %hr
               %p= truncate(video.body, :length => 125)
-    = link_to 'New Video', new_video_path, class:'btn btn-default'
+    - if can? :create, Video
+      = link_to 'New Video', new_video_path, class:'btn btn-default'
 
 :css
   .the-click {

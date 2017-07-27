@@ -5,7 +5,8 @@
       - Category.where(section:'Article').each do |cat|
         %li= link_to cat.name, posts_path(category_id: cat.id), class:'nav_btn'
       %br
-      = link_to 'Add Category', categories_path, class:'nav_btn'
+      - if can? :create, Category
+        = link_to 'Add Category', categories_path, class:'nav_btn'
 
 
   %div.col-sm-10
@@ -20,7 +21,7 @@
         = link_to like_post_path(@content), method: :put, class: "btn btn-default" do
           %span.glyphicon.glyphicon-heart
           = @content.get_upvotes.size
-        - if user_signed_in?
+        - if can? :edit, @content
           =link_to 'Edit', edit_post_path(@content),class:'btn btn-default'
           =link_to 'Delete', post_path(@content), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default'
       #comments

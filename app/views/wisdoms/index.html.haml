@@ -5,7 +5,8 @@
       - Category.where(section:'Wisdom').each do |cat|
         %li= link_to cat.name, wisdoms_path(category_id: cat.id), class:'nav_btn'
       %br
-      = link_to 'Add Category', categories_path, class:'nav_btn'
+      - if can? :create, Category
+        = link_to 'Add Category', categories_path, class:'nav_btn'
 
 
   %div.col-sm-10
@@ -22,12 +23,13 @@
               .panel-body
                 %p= truncate(wisdom.body, :length => 200)
                 %p= wisdom.body.to_s.html_safe
-              .btn-group.btn-group-justified
-                %a.btn.btn-primary{:href => edit_wisdom_path(wisdom)} Edit
-                %a.btn.btn-primary{:href => wisdom, method: :delete, data: { confirm: 'Are you sure?' }} Destroy
+              - if can? :edit, Wisdom
+                .btn-group.btn-group-justified
+                  %a.btn.btn-primary{:href => edit_wisdom_path(wisdom)} Edit
+                  %a.btn.btn-primary{:href => wisdom, method: :delete, data: { confirm: 'Are you sure?' }} Destroy
 
-
-      = link_to 'New Wisdom', new_wisdom_path, class:'btn btn-default'
+      - if can? :create, Wisdom
+        = link_to 'New Wisdom', new_wisdom_path, class:'btn btn-default'
 
 :css
 

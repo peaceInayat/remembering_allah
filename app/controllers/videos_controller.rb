@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  # layout 'video'
+  load_and_authorize_resource
   before_action :set_video, only: [:show, :edit, :update, :destroy, :upvote]
 
   # GET /videos

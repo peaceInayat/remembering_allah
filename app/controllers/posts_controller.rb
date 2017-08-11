@@ -7,9 +7,9 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     if params[:category_id].blank?
-      @posts = Post.all.order('created_at DESC')
+      @posts = Post.all.order('rank')
     else
-      @posts = Post.where(category_id: params[:category_id]).order("created_at DESC")
+      @posts = Post.where(category_id: params[:category_id]).order("rank")
     end
   end
 

@@ -1,0 +1,59 @@
+%div.articles_class_css
+  %div.sidenav#mysidenav{style:'background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+    %ul.nav.nav-pills.nav-stacked
+      %li= link_to 'All Articles', core_articles_path, class:'nav_btn'
+      - @core_articles.each do |article|
+        %li= link_to article.title, article, class:'nav_btn'
+      - if can? :create, Post
+        %br
+        = link_to 'New Article', new_core_article_path, class:'nav_btn'
+
+
+  %div#main
+    %div.row
+      %div.col-md-2.col-sm-4.hidden-xs{style:'background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+        %ul.nav.nav-pills.nav-stacked{style:'padding-top:5%;'}
+          %li= link_to 'All Articles', core_articles_path, class:'nav_btn'
+          - @core_articles.each do |article|
+            %li= link_to article.title, article, class:'nav_btn'
+          %br
+          - if can? :create, Post
+            = link_to 'New Article', new_core_article_path, class:'nav_btn'
+
+      %div.hidden-sm.visible-xs-block
+        %button.btn.btn-default{"data-target" => "#demo", "data-toggle" => "collapse", :type => "button", style:'width:100%;background-color:#1f508a;border-radius:0px;color:white;font-size:1.2em;'}
+          Select an Article
+          %span.caret
+        #demo.collapse{style:'background-color: #1f508a; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+          %ul.nav.nav-pills.nav-stacked{style:'padding:0% 4%;'}
+            %li= link_to 'All Articles', core_articles_path, class:'nav_btn'
+            - @core_articles.each do |article|
+              %li= link_to article.title, article, class:'nav_btn'
+            %br
+            - if can? :create, CoreArticle
+              = link_to 'New Article', new_core_article_path, class:'nav_btn'
+
+
+      %div.col-md-10.col-sm-8.col-xs-12
+        %div.visible-xs
+          %span{:style => "font-size:30px;cursor:pointer", id:'ooo'} ☰
+          %span{:style => "font-size:40px;cursor:pointer;display:none;", id:'ccc'} &times;
+        .container{style:'margin-top:2%;'}
+          .row
+            - @core_articles.each do |article|
+              .col-md-12
+                .panel.panel-default
+                  .panel-heading
+                    %h4.single_line
+                      =link_to article.title, article
+                    %hr
+                    %p.date= article.created_at.strftime("%B %d, %Y")
+                  .panel-body
+                    %p= truncate(article.body.to_s.html_safe, :length => 200)
+                    %p=article.body.to_s.html_safe
+                  - if can? :edit, article
+                    .btn-group.btn-group-justified
+                      %a.btn.btn-primary{:href => edit_post_path(article)} Edit
+                      %a.btn.btn-primary{:href => article, method: :delete, data: { confirm: 'Are you sure?' }} Destroy
+          - if can? :create, CoreArticle
+            = link_to 'New Article', new_core_article_path, class:'btn btn-default'

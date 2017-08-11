@@ -1,28 +1,42 @@
-%div.row
-  %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
-    %ul.nav.nav-pills.nav-stacked{style:'margin:5% 0% 0% 5%;'}
+%div.articles_class_css
+  %div.sidenav#mysidenav{style:'background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+    %ul.nav.nav-pills.nav-stacked
       %li= link_to 'All Videos', videos_path, class:'nav_btn'
-      - Category.where(section:'Video').each do |cat|
+      - Category.where(section:'Video').order('rank').each do |cat|
         %li= link_to cat.name, videos_path(category_id: cat.id), class:'nav_btn'
-      %br
       - if can? :create, Category
+        %br
         = link_to 'Add Category', categories_path, class:'nav_btn'
 
-  %div.col-sm-10
-    .row{style:'padding:1%;'}
-      - @videos.each do |video|
-        .col-sm-3.col-xs-12
-          .panel.panel-default
-            .panel-heading
-              .embed-responsive.embed-responsive-16by9
-                %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/#{video.url[32..42]}"}
-                %a.the-click{:href => video_path(video)}
-            .panel-body
-              %h4.single_line= truncate(video.title, :length => 70)
-              %hr
-              %p= truncate(video.body, :length => 125)
-    - if can? :create, Video
-      = link_to 'New Video', new_video_path, class:'btn btn-default'
+  %div#main
+    %div.row
+      %div.col-md-2.col-sm-4.hidden-xs{style:'background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+        %ul.nav.nav-pills.nav-stacked{style:'padding-top:5%;'}
+          %li= link_to 'All Videos', videos_path, class:'nav_btn'
+          - Category.where(section:'Video').order('rank').each do |cat|
+            %li= link_to cat.name, videos_path(category_id: cat.id), class:'nav_btn'
+          %br
+          - if can? :create, Category
+            = link_to 'Add Category', categories_path, class:'nav_btn'
+
+      %div.col-md-10.col-sm-8.col-xs-12
+        %div.visible-xs
+          %span{:style => "font-size:30px;cursor:pointer", id:'ooo'} ☰
+          %span{:style => "font-size:40px;cursor:pointer;display:none;", id:'ccc'} &times;
+        .row{style:'padding:1%;'}
+          - @videos.each do |video|
+            .col-sm-3.col-xs-12
+              .panel.panel-default
+                .panel-heading
+                  .embed-responsive.embed-responsive-16by9
+                    %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/#{video.url[32..42]}"}
+                    %a.the-click{:href => video_path(video)}
+                .panel-body
+                  %h4.single_line= truncate(video.title, :length => 70)
+                  %hr
+                  %p= truncate(video.body, :length => 125)
+        - if can? :create, Video
+          = link_to 'New Video', new_video_path, class:'btn btn-default'
 
 :css
   .the-click {
@@ -34,39 +48,7 @@
     z-index: 999;
   }
 
-  a:hover {
-    color: #fff;
-    background-color: rgba(245, 238, 238, 0.58);
-  }
-  .single_line {
-    text-overflow: ellipsis;
-    max-height: 26px;
-    line-height: 26px;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .panel-body {
-    padding: 5px 15px;
-  }
   hr{
     margin-top: 0px;
     margin-bottom: 5px;
-  }
-  .nav_btn{
-    display: block;
-    padding: 4%;
-    color: #442525;
-    font-size: 1.5em;
-    border-bottom: 1px solid #e0d8cf;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #f9f0e7;
-  }
-
-  .nav-pills > li > a{
-    border-radius: 0px;
-  }
-
-  .nav-pills > li > a:hover{
-    background-color: #442525;
   }

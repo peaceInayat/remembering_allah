@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 
+  has_many :core_articles
   has_many :posts
   has_many :videos
   has_many :wisdoms

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :core_articles do
+    member do
+      put "like",    to: "wisdoms#upvote"
+    end
+  end
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
   mount Ckeditor::Engine => '/ckeditor'
@@ -25,5 +30,6 @@ Rails.application.routes.draw do
 
   root 'home#welcome'
   get '/contact_us', to: 'home#contact_us'
+  get '/core_articles', to: 'home#core_articles'
 
 end

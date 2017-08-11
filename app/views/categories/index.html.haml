@@ -1,48 +1,60 @@
 %div{style:'margin:3%;'}
   %div.row
-    %div.col-sm-12{align:'center'}
-      .panel.panel-default
-        = render 'form'
-  %div.row
+    %div.col-sm-4.col-sm-offset-4.shadow{align:'center', style:'padding:1% 0 2.5% 0;'}
+      %h3 Create a Category
+      %br
+      = render 'form'
+  %div.row{style:'margin-top:2% !important;'}
     %div.col-sm-4
       .panel.panel-default
         %table.table.table-striped
           %thead
             %tr
               %th Article Categories
+              %th Rank
               %th
               %th
           %tbody
             - @a_cats.each do |category|
               %tr
                 %td= category.name
-                %td= link_to 'Edit', edit_category_path(category)
-                %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
+                %td= category.rank
+                %td= link_to 'Edit', edit_category_path(category), class:'btn btn-default'
+                %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default'
     %div.col-sm-4
       .panel.panel-default
         %table.table.table-striped
           %thead
             %tr
               %th Wisdom Categories
+              %th Rank
               %th
               %th
           %tbody
             - @w_cats.each do |category|
               %tr
                 %td= category.name
-                %td= link_to 'Edit', edit_category_path(category)
-                %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
+                %td= category.rank
+                %td= link_to 'Edit', edit_category_path(category), class:'btn btn-default'
+                %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default'
     %div.col-sm-4
       .panel.panel-default
         %table.table.table-striped
           %thead
             %tr
               %th Video Categories
+              %th Rank
               %th
               %th
           %tbody
             - @v_cats.each do |category|
               %tr
                 %td= category.name
-                %td= link_to 'Edit', edit_category_path(category)
-                %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
+                %td= category.rank
+                %td= link_to 'Edit', edit_category_path(category), class:'btn btn-default'
+                %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default'
+
+:css
+  td{
+    font-size: 1.2em;
+  }

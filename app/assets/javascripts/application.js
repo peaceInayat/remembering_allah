@@ -16,3 +16,32 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require_tree .
+
+$(document).ready(function(){
+
+    $('#ooo').click(function(){
+        openNav();
+        $(this).css('display', 'none');
+        $('.sidenav').css('padding', '3%');
+        $("#ccc").css('display', 'inline');
+    });
+
+    $('#ccc').click(function(){
+        closeNav();
+        $('.sidenav').css('padding', '0%');
+        $(this).css('display', 'none');
+        $("#ooo").css('display', 'inline');
+    });
+
+    function openNav() {
+
+        $("#mysidenav").css('width', 250);
+        $("#main").css('margin-left', 250);
+    };
+
+    function closeNav() {
+
+        $("#mysidenav").css('width', 0);
+        $("#main").css('margin-left', 0);
+    };
+});

@@ -6,9 +6,9 @@ class VideosController < ApplicationController
   # GET /videos.json
   def index
     if params[:category_id].blank?
-      @videos = Video.all.order("created_at DESC")
+      @videos = Video.all.order("rank")
     else
-      @videos = Video.where(category_id: params[:category_id]).order("created_at DESC")
+      @videos = Video.where(category_id: params[:category_id]).order("rank")
     end
   end
 

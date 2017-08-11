@@ -20,6 +20,9 @@ class Ability
       cannot :create, Wisdom
       cannot :update, Wisdom
       cannot :destroy, Wisdom
+      cannot :create, CoreArticle
+      cannot :update, CoreArticle
+      cannot :destroy, CoreArticle
 
       can :destroy, Comment do |comment|
         comment.user == user

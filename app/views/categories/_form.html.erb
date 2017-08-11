@@ -2,10 +2,12 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %><br>
+
+
+    <%= f.text_field :name, placeholder:'Name', style:'padding:.6%;' %><br><br>
+    <%= f.text_field :rank, placeholder:'Rank', style:'padding:.6%;' %><br>
     <br>
-    <%= f.select :section, options_for_select([['article' ,'Article'], ['wisdom', 'Wisdom'], ['video', 'Video']]) %>
+    <%= f.select :section, options_for_select([['article' ,'Article'], ['wisdom', 'Wisdom'], ['video', 'Video']]),{}, style:'padding:1.3% 6%;' %>
     <br>
   </div>
 <br>

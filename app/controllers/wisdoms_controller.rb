@@ -6,9 +6,9 @@ class WisdomsController < ApplicationController
   # GET /wisdoms.json
   def index
     if params[:category_id].blank?
-      @wisdoms = Wisdom.all.order('created_at DESC')
+      @wisdoms = Wisdom.all.order('rank')
     else
-      @wisdoms = Wisdom.where(category_id: params[:category_id]).order("created_at DESC")
+      @wisdoms = Wisdom.where(category_id: params[:category_id]).order("rank")
     end
   end
 

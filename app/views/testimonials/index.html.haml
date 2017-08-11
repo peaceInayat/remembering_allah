@@ -12,7 +12,7 @@
             %p.testimonial=@testi_first.body
             %div.row{style:'padding-top:4%;'}
               %div.col-sm-3
-                = image_tag @testi_first.image.url(:thumb), style:'height:120px; width:150px;', class:'img-thumbnail'
+                = image_tag @testi_first.image.url(:thumb), style:'height:120px; width:150px;', class:'img-circle'
               %div.col-sm-9
                 %p.reviewer=@testi_first.name
                 %p=@testi_first.profession

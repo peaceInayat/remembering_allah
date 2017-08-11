@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170724065730) do
+ActiveRecord::Schema.define(version: 20170802050214) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "section",    limit: 255
+    t.integer  "rank",       limit: 4
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -44,6 +45,15 @@ ActiveRecord::Schema.define(version: 20170724065730) do
     t.string   "content_type", limit: 255
   end
 
+  create_table "core_articles", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.text     "body",       limit: 65535
+    t.integer  "user_id",    limit: 4
+    t.integer  "rank",       limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title",       limit: 255
     t.text     "body",        limit: 65535
@@ -51,6 +61,7 @@ ActiveRecord::Schema.define(version: 20170724065730) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.integer  "category_id", limit: 4
+    t.integer  "rank",        limit: 4
   end
 
   create_table "testimonials", force: :cascade do |t|
@@ -96,6 +107,7 @@ ActiveRecord::Schema.define(version: 20170724065730) do
     t.datetime "updated_at",                null: false
     t.integer  "category_id", limit: 4
     t.integer  "user_id",     limit: 4
+    t.integer  "rank",        limit: 4
   end
 
   create_table "votes", force: :cascade do |t|
@@ -120,6 +132,7 @@ ActiveRecord::Schema.define(version: 20170724065730) do
     t.integer  "category_id", limit: 4
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.integer  "rank",        limit: 4
   end
 
 end

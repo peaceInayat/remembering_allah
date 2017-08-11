@@ -7,9 +7,9 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @a_cats = Category.where(section:'Article')
-    @w_cats = Category.where(section:'Wisdom')
-    @v_cats = Category.where(section:'Video')
+    @a_cats = Category.where(section:'Article').order('rank')
+    @w_cats = Category.where(section:'Wisdom').order('rank')
+    @v_cats = Category.where(section:'Video').order('rank')
     @category = Category.new
   end
 
@@ -48,7 +48,7 @@ class CategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to @category, notice: 'Category was successfully updated.' }
+        format.html { redirect_to categories_path, notice: 'Category was successfully updated.' }
         format.json { render :show, status: :ok, location: @category }
       else
         format.html { render :edit }
@@ -75,6 +75,7 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:name, :section)
+      logger.info "--------------------------#{params}"
+      params.require(:category).permit(:name, :section, :rank)
     end
 end

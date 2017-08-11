@@ -1,0 +1,42 @@
+.container{style:'margin-top:2.6%;'}
+  .row
+    .col-md-5.col-sm-12.shadow{style:'padding-bottom:6%;'}
+      %h2.center_l LOG IN
+      = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .form-inputs
+          = f.input :email, required: false, autofocus: true
+          = f.input :password, required: false
+          = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+        = f.button :submit, "Log in"
+        = link_to "Forgot your password?", new_password_path(resource_name), class:'btn btn-default'
+      %br
+      - resource_class.omniauth_providers.each do |provider|
+        - if provider.to_s.titleize == 'Facebook'
+          = link_to "Sign In with Facebook", omniauth_authorize_path(resource_name, provider), class:'btn btn-default facebook social', style:'background-color:#3b5998; color:white; width:49.5%;'
+        - if provider.to_s.titleize == 'Google Oauth2'
+          = link_to "Sign In with Google", omniauth_authorize_path(resource_name, provider), class:'btn btn-default google social', style:'background-color:#f54337; color:white;width:49.5%;'
+
+
+    .col-md-2.col-sm-hidden
+    .col-md-5.col-sm-12.shadow{style:'padding-bottom:3%;'}
+      %h2.center_l SIGN UP
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = f.error_notification
+        .form-inputs
+          = f.input :email, required: true, autofocus: true
+          = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable)
+          = f.input :password_confirmation, required: true
+        .form-actions
+          = f.button :submit, "Sign up"
+      %br
+      - resource_class.omniauth_providers.each do |provider|
+        - if provider.to_s.titleize == 'Facebook'
+          = link_to "Sign Up with Facebook", omniauth_authorize_path(resource_name, provider), class:'btn btn-default facebook social', style:'background-color:#3b5998; color:white; width:49.5%;'
+        - if provider.to_s.titleize == 'Google Oauth2'
+          = link_to "Sign Up with Google", omniauth_authorize_path(resource_name, provider), class:'btn btn-default google social', style:'background-color:#f54337; color:white;width:49.5%;'
+
+:css
+  .center_l{
+    text-align: center;
+    text-decoration: underline;
+  }

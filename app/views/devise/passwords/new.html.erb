@@ -1,15 +1,27 @@
-<h2>Forgot your password?</h2>
+<div class="container" style="margin-top: 3%;">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 shadow" style="padding-bottom: 3%;">
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+      <h2>Forgot your password?</h2>
+
+      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :email, required: true, autofocus: true %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Send me reset password instructions" %>
+          </div>
+      <% end %>
+      <br>
+
+      <%= link_to "Log in", new_session_path(resource_name), class:'btn btn-default social', style:'width:49.5%; background-color:#051642; color:white;' %>
+      <%= link_to "Sign up", new_registration_path(resource_name), class:'btn btn-default social', style:'width:49.5%; background-color:#f54337; color:white;' %><br />
+
+
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

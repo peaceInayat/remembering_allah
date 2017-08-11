@@ -66,6 +66,21 @@
   margin-top: 15px;
 }
 
+.shadow{
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.12), 0 1px 6px 0 rgba(0,0,0,0.12);
+  border: 0px;
+}
+
+.row{
+  margin:0px !important;
+}
+
+@media (max-width: 414px) {
+  .social{
+    width: 100% !important;
+  }
+}
+
 
 #faq_nav {
   a {
@@ -93,4 +108,16 @@ footer.navbar-fixed-bottom {
 
 .navbar-toggle{
   margin-top: 4.5% !important;
+}
+
+.facebook:hover{
+  background-color: #4e69e2 !important;
+}
+
+.google:hover{
+  background-color: #f6555d !important;
+}
+
+.twitter:hover{
+  background-color: #47b2f4 !important;
 }

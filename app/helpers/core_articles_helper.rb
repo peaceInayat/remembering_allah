@@ -1,0 +1,2 @@
+module CoreArticlesHelper
+end

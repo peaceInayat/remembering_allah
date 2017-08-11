@@ -1,71 +1,47 @@
-%div.row
-  %div.col-sm-2{style:'background-color: #f9f0e7;height:100vh; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
-    %ul.nav.nav-pills.nav-stacked{style:'margin:5% 0% 0% 5%;'}
+%div.articles_class_css
+  %div.sidenav#mysidenav{style:'background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+    %ul.nav.nav-pills.nav-stacked
       %li= link_to 'All Gems', wisdoms_path, class:'nav_btn'
-      - Category.where(section:'Wisdom').each do |cat|
+      - Category.where(section:'Wisdom').order('rank').each do |cat|
         %li= link_to cat.name, wisdoms_path(category_id: cat.id), class:'nav_btn'
-      %br
       - if can? :create, Category
+        %br
         = link_to 'Add Category', categories_path, class:'nav_btn'
 
 
-  %div.col-sm-10
-    .container{style:'margin-top:2%;'}
-      .row
-        - @wisdoms.each do |wisdom|
-          .col-md-12
-            .panel.panel-default
-              .panel-heading
-                %h4.single_line
-                  =link_to wisdom.title, wisdom
-                %hr
-                %p.date= wisdom.created_at.strftime("%B %d, %Y")
-              .panel-body
-                %p= truncate(wisdom.body.to_s.html_safe, :length => 200)
-                %p= wisdom.body.to_s.html_safe
-              - if can? :edit, Wisdom
-                .btn-group.btn-group-justified
-                  %a.btn.btn-primary{:href => edit_wisdom_path(wisdom)} Edit
-                  %a.btn.btn-primary{:href => wisdom, method: :delete, data: { confirm: 'Are you sure?' }} Destroy
+  %div#main
+    %div.row
+      %div.col-md-2.col-sm-4.hidden-xs{style:'background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+        %ul.nav.nav-pills.nav-stacked{style:'padding-top:5%;'}
+          %li= link_to 'All Gems', wisdoms_path, class:'nav_btn'
+          - Category.where(section:'Wisdom').order('rank').each do |cat|
+            %li= link_to cat.name, wisdoms_path(category_id: cat.id), class:'nav_btn'
+          %br
+          - if can? :create, Category
+            = link_to 'Add Category', categories_path, class:'nav_btn'
 
-      - if can? :create, Wisdom
-        = link_to 'New Wisdom', new_wisdom_path, class:'btn btn-default'
 
-:css
+      %div.col-md-10.col-sm-8.col-xs-12
+        %div.visible-xs
+          %span{:style => "font-size:30px;cursor:pointer", id:'ooo'} ☰
+          %span{:style => "font-size:40px;cursor:pointer;display:none;", id:'ccc'} &times;
+        .container{style:'margin-top:2%;'}
+          .row
+            - @wisdoms.each do |wisdom|
+              .col-md-12
+                .panel.panel-default
+                  .panel-heading
+                    %h4.single_line
+                      =link_to wisdom.title, wisdom
+                    %hr
+                    %p.date= wisdom.created_at.strftime("%B %d, %Y")
+                  .panel-body
+                    %p= truncate(wisdom.body.to_s.html_safe, :length => 200)
+                    %p= wisdom.body.to_s.html_safe
+                  - if can? :edit, Wisdom
+                    .btn-group.btn-group-justified
+                      %a.btn.btn-primary{:href => edit_wisdom_path(wisdom)} Edit
+                      %a.btn.btn-primary{:href => wisdom, method: :delete, data: { confirm: 'Are you sure?' }} Destroy
 
-  a:hover {
-    color: #fff;
-    text-decoration: none;
-    background-color: rgba(245, 238, 238, 0.58);
-  }
-  .single_line {
-    text-overflow: ellipsis;
-    max-height: 26px;
-    line-height: 26px;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .panel-body {
-    padding: 5px 15px;
-  }
-  hr{
-    margin: 0px;
-  }
-  .nav_btn{
-    display: block;
-    padding: 4%;
-    color: #442525;
-    font-size: 1.5em;
-    border-bottom: 1px solid #e0d8cf;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #f9f0e7;
-  }
-
-  .nav-pills > li > a{
-    border-radius: 0px;
-  }
-
-  .nav-pills > li > a:hover{
-    background-color: #442525;
-  }
+          - if can? :create, Wisdom
+            = link_to 'New Wisdom', new_wisdom_path, class:'btn btn-default'

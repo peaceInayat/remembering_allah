@@ -15158,6 +15158,10 @@ click:function(a){var b=a.elementMode==CKEDITOR.ELEMENT_MODE_INLINE?a.container.
 
 
 }).call(this);
+(function() {
+
+
+}).call(this);
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -15176,4 +15180,32 @@ click:function(a){var b=a.elementMode==CKEDITOR.ELEMENT_MODE_INLINE?a.container.
 
 
 
-;
+
+$(document).ready(function(){
+
+    $('#ooo').click(function(){
+        openNav();
+        $(this).css('display', 'none');
+        $('.sidenav').css('padding', '3%');
+        $("#ccc").css('display', 'inline');
+    });
+
+    $('#ccc').click(function(){
+        closeNav();
+        $('.sidenav').css('padding', '0%');
+        $(this).css('display', 'none');
+        $("#ooo").css('display', 'inline');
+    });
+
+    function openNav() {
+
+        $("#mysidenav").css('width', 250);
+        $("#main").css('margin-left', 250);
+    };
+
+    function closeNav() {
+
+        $("#mysidenav").css('width', 0);
+        $("#main").css('margin-left', 0);
+    };
+});

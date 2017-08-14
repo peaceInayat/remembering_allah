@@ -11,7 +11,7 @@
 
   %div#main
     %div.row
-      %div.col-md-2.col-sm-4.hidden-xs{style:'background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+      %div.col-md-2.col-sm-4.hidden-xs{style:'margin-top:0.8%;background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
         %ul.nav.nav-pills.nav-stacked{style:'padding-top:5%;'}
           %li= link_to 'All Articles', core_articles_path, class:'nav_btn'
           - @core_articles.each do |article|
@@ -19,20 +19,6 @@
           %br
           - if can? :create, Post
             = link_to 'New Article', new_core_article_path, class:'nav_btn'
-
-      %div.hidden-sm.visible-xs-block
-        %button.btn.btn-default{"data-target" => "#demo", "data-toggle" => "collapse", :type => "button", style:'width:100%;background-color:#1f508a;border-radius:0px;color:white;font-size:1.2em;'}
-          Select an Article
-          %span.caret
-        #demo.collapse{style:'background-color: #1f508a; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
-          %ul.nav.nav-pills.nav-stacked{style:'padding:0% 4%;'}
-            %li= link_to 'All Articles', core_articles_path, class:'nav_btn'
-            - @core_articles.each do |article|
-              %li= link_to article.title, article, class:'nav_btn'
-            %br
-            - if can? :create, CoreArticle
-              = link_to 'New Article', new_core_article_path, class:'nav_btn'
-
 
       %div.col-md-10.col-sm-8.col-xs-12
         %div.visible-xs

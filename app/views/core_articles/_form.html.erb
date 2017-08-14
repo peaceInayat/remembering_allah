@@ -10,7 +10,14 @@
         </div>
     <% end %>
     <%= f.label :title %><br>
-    <%= f.text_area :title, rows:'3' %><br>
+    <%= f.text_area :title, rows:'3' %>
+    <br>
+    <br>
+    <%= f.label :short_description %><br>
+    <%= f.text_area :short_description, rows:'5' %>
+
+    <br>
+    <%= f.file_field :image %>
     <br>
     <%= f.label :body %><br>
 

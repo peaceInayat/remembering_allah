@@ -77,6 +77,6 @@ class CoreArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def core_article_params
-      params.require(:core_article).permit(:title, :body, :user_id, :rank)
+      params.require(:core_article).permit(:title, :body, :user_id, :rank, :image, :short_description)
     end
 end

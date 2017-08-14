@@ -8,21 +8,21 @@ class Ability
       can :manage, :all
     else
       can :read, :all
-      cannot :create, Post
-      cannot :update, Post
-      cannot :destroy, Post
-      cannot :create, Video
-      cannot :update, Video
-      cannot :destroy, Video
-      cannot :create, Testimonial
-      cannot :update, Testimonial
-      cannot :destroy, Testimonial
-      cannot :create, Wisdom
-      cannot :update, Wisdom
-      cannot :destroy, Wisdom
-      cannot :create, CoreArticle
-      cannot :update, CoreArticle
-      cannot :destroy, CoreArticle
+      # cannot :create, Post
+      # cannot :update, Post
+      # cannot :destroy, Post
+      # cannot :create, Video
+      # cannot :update, Video
+      # cannot :destroy, Video
+      # cannot :create, Testimonial
+      # cannot :update, Testimonial
+      # cannot :destroy, Testimonial
+      # cannot :create, Wisdom
+      # cannot :update, Wisdom
+      # cannot :destroy, Wisdom
+      # cannot :create, CoreArticle
+      # cannot :update, CoreArticle
+      # cannot :destroy, CoreArticle
 
       can :destroy, Comment do |comment|
         comment.user == user

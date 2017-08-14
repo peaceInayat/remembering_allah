@@ -1,0 +1,19 @@
+%div.container#post_content{style:'margin-top:2%;background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+  %h1.justify.title= @gallery.title
+  %p.date= @gallery.event_date
+  %hr
+  %p.justify.body= @gallery.body
+  %hr
+  .row
+    - @gallery.pics.each do |pic|
+      .col-sm-3
+        = image_tag pic.image_file_name,  class:'img-responsive thumbnail'
+
+  .btn-group.pull-right
+    = link_to 'Back', galleries_path, class:'btn btn-default'
+    - if can? :edit, @gallery
+      =link_to 'Edit', edit_gallery_path(@gallery),class:'btn btn-default'
+      =link_to 'Delete', gallery_path(@gallery), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default'
+    %br
+    %br
+    %br

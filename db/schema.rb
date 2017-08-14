@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170802050214) do
+ActiveRecord::Schema.define(version: 20170813145308) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -46,22 +46,61 @@ ActiveRecord::Schema.define(version: 20170802050214) do
   end
 
   create_table "core_articles", force: :cascade do |t|
+    t.string   "title",              limit: 255
+    t.text     "body",               limit: 65535
+    t.integer  "user_id",            limit: 4
+    t.integer  "rank",               limit: 4
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
+    t.text     "short_description",  limit: 65535
+  end
+
+  create_table "galleries", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.text     "body",       limit: 65535
-    t.integer  "user_id",    limit: 4
     t.integer  "rank",       limit: 4
+    t.string   "event_date", limit: 255
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
 
+  create_table "pics", force: :cascade do |t|
+    t.integer  "gallery_id",         limit: 4
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.integer  "gallery_id",         limit: 4
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
+  end
+
   create_table "posts", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.text     "body",        limit: 65535
-    t.integer  "user_id",     limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.integer  "category_id", limit: 4
-    t.integer  "rank",        limit: 4
+    t.string   "title",              limit: 255
+    t.text     "body",               limit: 65535
+    t.integer  "user_id",            limit: 4
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "category_id",        limit: 4
+    t.integer  "rank",               limit: 4
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
+    t.text     "short_description",  limit: 65535
   end
 
   create_table "testimonials", force: :cascade do |t|
@@ -126,13 +165,18 @@ ActiveRecord::Schema.define(version: 20170802050214) do
   add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
 
   create_table "wisdoms", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.text     "body",        limit: 65535
-    t.integer  "user_id",     limit: 4
-    t.integer  "category_id", limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.integer  "rank",        limit: 4
+    t.string   "title",              limit: 255
+    t.text     "body",               limit: 65535
+    t.integer  "user_id",            limit: 4
+    t.integer  "category_id",        limit: 4
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "rank",               limit: 4
+    t.text     "short_description",  limit: 65535
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
   end
 
 end

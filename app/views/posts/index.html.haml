@@ -10,7 +10,7 @@
 
   %div#main
     %div.row
-      %div.col-md-2.col-sm-4.hidden-xs{style:'background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+      %div.col-md-2.col-sm-4.hidden-xs{style:'margin-top:0.8%;background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
         %ul.nav.nav-pills.nav-stacked{style:'padding-top:5%;'}
           %li= link_to 'All Posts', posts_path, class:'nav_btn'
           - Category.where(section:'Article').order('rank').each do |cat|
@@ -34,8 +34,14 @@
                     %hr
                     %p.date= article.created_at.strftime("%B %d, %Y")
                   .panel-body
-                    %p= truncate(article.body.to_s.html_safe, :length => 200)
-                    %p=article.body.to_s.html_safe
+                    .row
+                      .col-sm-5.image_center
+                        = image_tag article.image.url(:thumb), class:'img-responsive thumbnail'
+                      .col-sm-7
+                        .visible-xs
+                          %br
+                          %hr
+                        %p= truncate(article.short_description, :length => 200)
                   - if can? :edit, article
                     .btn-group.btn-group-justified
                       %a.btn.btn-primary{:href => edit_post_path(article)} Edit

@@ -10,7 +10,14 @@
         </div>
     <% end %>
     <%= f.label :title %><br>
-    <%= f.text_area :title, rows:'3' %><br>
+    <%= f.text_area :title, rows:'3' %>
+
+    <br>
+    <br>
+    <p><b>Short Description</b> (At max 300 Characters)</p>
+    <%= f.text_area :short_description, rows:'5', maxlength:'300' %>
+    <br>
+    <%= f.file_field :image %>
     <br>
     <%= f.label :body %><br>
 

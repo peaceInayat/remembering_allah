@@ -17,10 +17,33 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        = link_to image_tag('logo.png'), root_path
-      #myNavbar.collapse.navbar-collapse{style:'padding-top:0.58%'}
+        .hidden-xs
+          = link_to image_tag('logo_big.png'), root_path
+        .visible-xs
+          = link_to image_tag('logo_small.png'), root_path
+      #myNavbar.collapse.navbar-collapse{style:'padding-top:0.9%'}
         %div
-          %ul.nav.navbar-nav.navbar-left#n_left
+          -#%ul.nav.navbar-nav.navbar-left#n_left
+          -#  %li
+          -#    %a{:href => root_path}Home
+          -#  %li.dropdown
+          -#    %a.dropbtn{style:'background-color:#000;'}
+          -#      About Us
+          -#      %span.caret
+          -#    .dropdown-content
+          -#      %a{:href => root_path} Who we Are
+          -#      %a{:href => galleries_path} Gallery
+          -#      %a{:href => root_path} Publications
+          -#  %li
+          -#    %a{:href => core_articles_path}Breath of Quran
+          -#  %li
+          -#    %a{:href => posts_path}Blog
+          -#  %li
+          -#    %a{:href => videos_path}Videos
+          -#  %li
+          -#    %a{:href => wisdoms_path}Wisdom Corner
+
+          %ul.nav.navbar-nav.navbar-right
             %li
               %a{:href => root_path}Home
             %li.dropdown
@@ -29,8 +52,7 @@
                 %span.caret
               .dropdown-content
                 %a{:href => root_path} Who we Are
-                %a{:href => root_path} Gallery
-                %a{:href => testimonials_path} Testimonials
+                %a{:href => galleries_path} Gallery
                 %a{:href => root_path} Publications
             %li
               %a{:href => core_articles_path}Breath of Quran
@@ -40,8 +62,6 @@
               %a{:href => videos_path}Videos
             %li
               %a{:href => wisdoms_path}Wisdom Corner
-
-          %ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
               %li= link_to "My Account", edit_user_registration_path
               %li= link_to "Log Out", destroy_user_session_path, method: :delete
@@ -50,9 +70,9 @@
             %li
               %a{:href => contact_us_path}Contact Us
 
-  .container
-    - flash.each do |name, msg|
-      = content_tag :div, msg, class: "alert alert-info"
+  -#.container
+  -#  - flash.each do |name, msg|
+  -#    = content_tag :div, msg, class: "alert alert-info"
   = yield
 
   %footer{style:'background: #000;padding: 2rem 0; color: white;text-align: center;clear: both;left:0;bottom:0;position:absolute;width:100%;z-index: 10; height: 60px;'}

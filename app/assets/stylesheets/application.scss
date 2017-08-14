@@ -16,8 +16,70 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+.testimonial_div{
+
+  .blockquote-reverse footer:after{
+    content: '' !important;
+  }
+
+  .sss{
+    color: white;
+    font-size: 0.88em;
+    text-align: justify;
+    font-style: italic;
+  }
+
+  .row {
+    display: table;
+  }
+
+  [class*="col-sm-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .testimonial{
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: justify;
+    font-style: italic;
+  }
+  .reviewer{
+    color: #cfcfcf;
+    font-size: 1.2em;
+  }
+  .qua{
+    margin-top: -1%;
+  }
+  blockquote{
+    text-align: justify;
+    border: none;
+  }
+  .white{
+    color: #ffffff;
+  }
+  .carousel-control:hover{
+    opacity: 1;
+  }
+  .carousel-control{
+    opacity: 0.7;
+  }
+  a:hover{
+    background-color: transparent;
+  }
+  .container{
+    padding: 0%;
+  }
+  .item{
+    padding: 5% 0% 20% 0%;
+  }
+
+}
+
 #post_content {
-  padding: 1em 3em;
+//  padding: 1em 3em;
   .title {
     font-weight: 500;
     text-decoration: none;
@@ -72,12 +134,16 @@
       }
     }
     input[type="text"], textarea {
-      width: 50%;
+      width: 100%;
     }
   }
 }
 
 .articles_class_css {
+
+  .container{
+    padding: 0%;
+  }
 
   .sidenav {
     width: 0;
@@ -159,11 +225,16 @@
   }
 
   a:visited{
-    color: white;
+//    color: white;
   }
 
   p.body {
     padding-top: 2%;
+    text-align: justify;
   }
 
+}
+
+.justify{
+  text-align: justify;
 }

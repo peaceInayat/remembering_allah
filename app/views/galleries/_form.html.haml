@@ -1,0 +1,38 @@
+= form_for @gallery, html: { class: 'form-horizontal', multipart: true } do |f|
+
+  .form-inputs
+    = f.text_field :title, placeholder:'Title', style:'padding:.6%;width: 100%'
+    %br
+    %br
+    = f.text_field :event_date, placeholder:'Event Date (eg: 1st Jan 2017)', style:'padding:.6%;width:100%;'
+    %br
+    %br
+    = f.text_area :body, placeholder:'Description', style:'padding:.6%;width:100%', rows:"5"
+    %br
+    %br
+    = f.text_field :rank, placeholder:'Rank (Any Integer)', style:'padding:.6%;width:100%'
+
+    %br
+    %br
+
+
+  .control-group
+    %p
+      %b Pictures
+      (At max 4, each size less than 500 kb and size at max 500*500)
+    .controls
+      = file_field_tag "images[]", type: :file, multiple: true
+  %br
+
+  .row
+    - @gallery.pics.each do |pic|
+      .col-sm-3
+        = image_tag pic.image_file_name,  class:'img-responsive thumbnail', style:'margin-bottom:0%;'
+        =link_to 'Delete', pic_path(pic_id:pic.id, gallery_id:@gallery.id), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default', style:'width:100%;'
+
+  %br
+
+  .form-actions
+    = f.submit nil, class: 'btn btn-primary'
+    -#= link_to t('.cancel', default: t("helpers.links.cancel")),
+    -#  galleries_path, class: 'btn btn-mini'

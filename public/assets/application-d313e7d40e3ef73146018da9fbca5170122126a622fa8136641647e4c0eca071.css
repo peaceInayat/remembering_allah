@@ -9013,11 +9013,74 @@ button.close {
     display: none !important;
   }
 }
-/* line 20, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
-#post_content {
-  padding: 1em 3em;
+/* line 23, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div .blockquote-reverse footer:after {
+  content: '' !important;
 }
-/* line 22, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 27, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div .sss {
+  color: white;
+  font-size: 0.88em;
+  text-align: justify;
+  font-style: italic;
+}
+/* line 34, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div .row {
+  display: table;
+}
+/* line 38, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div [class*="col-sm-"] {
+  float: none;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 44, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div .testimonial {
+  color: #ffffff;
+  font-size: 1.2em;
+  text-align: justify;
+  font-style: italic;
+}
+/* line 50, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div .reviewer {
+  color: #cfcfcf;
+  font-size: 1.2em;
+}
+/* line 54, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div .qua {
+  margin-top: -1%;
+}
+/* line 57, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div blockquote {
+  text-align: justify;
+  border: none;
+}
+/* line 61, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div .white {
+  color: #ffffff;
+}
+/* line 64, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div .carousel-control:hover {
+  opacity: 1;
+}
+/* line 67, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div .carousel-control {
+  opacity: 0.7;
+}
+/* line 70, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div a:hover {
+  background-color: transparent;
+}
+/* line 73, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div .container {
+  padding: 0%;
+}
+/* line 76, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.testimonial_div .item {
+  padding: 5% 0% 20% 0%;
+}
+
+/* line 84, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content .title {
   font-weight: 500;
   text-decoration: none;
@@ -9025,69 +9088,73 @@ button.close {
   font-size: 2.5em;
   margin-bottom: 0;
 }
-/* line 29, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 91, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content .body {
   font-size: 1.1em;
   line-height: 1.75;
 }
-/* line 33, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 95, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content .date_and_author {
   color: #9eafba;
   margin: .5em 0 2em 0;
 }
-/* line 38, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 100, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments h2 {
   margin: 3em 0 1em 0;
   border-bottom: 1px solid #d6dce0;
   padding-bottom: 0.5em;
 }
-/* line 43, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 105, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments h3 {
   margin-top: 2em;
 }
-/* line 46, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 108, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment {
   border-bottom: 1px solid #d6dce0;
   padding: 1.5em 2em;
 }
-/* line 49, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 111, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .clear_both {
   clear: both;
 }
-/* line 52, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 114, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment:after {
   clear: both;
 }
-/* line 55, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 117, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .comment_content {
   float: left;
 }
-/* line 57, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 119, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .comment_content .comment_name {
   margin: 1em 0 0 0;
   font-size: 0.7em;
   text-transform: uppercase;
 }
-/* line 62, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 124, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .comment_content .comment_body {
   font-size: 1.2em;
   margin: 0.2em 0 0 0;
 }
-/* line 66, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 128, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .comment_content .comment_time {
   margin-top: 1.2em;
   font-size: .8em;
 }
-/* line 71, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 133, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .button {
   float: right;
 }
-/* line 75, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 137, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments input[type="text"], #post_content #comments textarea {
-  width: 50%;
+  width: 100%;
 }
 
-/* line 83, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 145, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.articles_class_css .container {
+  padding: 0%;
+}
+/* line 149, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .sidenav {
   width: 0;
   position: fixed;
@@ -9100,7 +9167,7 @@ button.close {
   margin-top: 90px;
   margin-left: 3%;
 }
-/* line 96, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 162, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -9109,11 +9176,11 @@ button.close {
   display: block;
   transition: 0.3s;
 }
-/* line 105, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 171, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .sidenav a:hover, .articles_class_css .offcanvas a:focus {
   color: #f1f1f1;
 }
-/* line 109, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 175, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -9121,18 +9188,18 @@ button.close {
   font-size: 36px;
   margin-left: 50px;
 }
-/* line 117, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 183, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css #main {
   transition: margin-left .5s;
   padding: 16px;
 }
-/* line 124, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 190, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css a:hover {
   color: #fff;
   text-decoration: none;
   background-color: rgba(245, 238, 238, 0.58);
 }
-/* line 129, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 195, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .single_line {
   text-overflow: ellipsis;
   max-height: 26px;
@@ -9141,15 +9208,15 @@ button.close {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 137, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 203, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .panel-body {
   padding: 5px 15px;
 }
-/* line 140, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 206, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css hr {
   margin: 0px;
 }
-/* line 143, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 209, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .nav_btn {
   display: block;
   padding: 4%;
@@ -9158,21 +9225,23 @@ button.close {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #949f9f;
 }
-/* line 152, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 218, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .nav-pills > li > a {
   border-radius: 0px;
   font-size: 1.7em;
 }
-/* line 157, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 223, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .nav-pills > li > a:hover {
   background-color: #fff;
   color: #1f508a;
 }
-/* line 162, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
-.articles_class_css a:visited {
-  color: white;
-}
-/* line 166, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 232, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css p.body {
   padding-top: 2%;
+  text-align: justify;
+}
+
+/* line 239, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.justify {
+  text-align: justify;
 }

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :galleries
   resources :core_articles do
     member do
       put "like",    to: "wisdoms#upvote"
@@ -31,5 +32,6 @@ Rails.application.routes.draw do
   root 'home#welcome'
   get '/contact_us', to: 'home#contact_us'
   get '/core_articles', to: 'home#core_articles'
+  resources :pics
 
 end

@@ -5,8 +5,9 @@ class TestimonialsController < ApplicationController
   # GET /testimonials
   # GET /testimonials.json
   def index
-    @testi_first = Testimonial.first
-    @testimonials = Testimonial.where("id > ?", @testi_first.id)
+    # @testi_first = Testimonial.first
+    # @testimonials = Testimonial.where("id > ?", @testi_first.id)
+    render '_index.html.haml'
   end
 
   # GET /testimonials/1
@@ -42,7 +43,7 @@ class TestimonialsController < ApplicationController
   def update
     respond_to do |format|
       if @testimonial.update(testimonial_params)
-        format.html { redirect_to @testimonial, notice: 'Testimonial was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Testimonial was successfully updated.' }
         format.json { render :show, status: :ok, location: @testimonial }
       else
         format.html { render :edit }

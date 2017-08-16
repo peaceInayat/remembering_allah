@@ -76,15 +76,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_index.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_index.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/testimonials/_index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1575">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="45" max-vertical-offset="1575">
               <caret line="3" column="78" selection-start-line="3" selection-start-column="78" selection-end-line="3" selection-end-column="78" />
               <folding>
                 <marker date="1502804459744" expanded="false" signature="2828:2848" placeholder="{...}" />
                 <marker date="1502804459744" expanded="true" signature="2828:2852" placeholder="{...}" />
                 <marker date="1502804459744" expanded="true" signature="2865:2891" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.html.haml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home/welcome.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49534452" vertical-offset="709" max-vertical-offset="4065">
+              <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+              <folding>
+                <marker date="1502872863785" expanded="true" signature="10701:10765" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="10713:10761" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="10776:10832" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="10843:10907" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="10918:10940" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="10945:10967" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="10984:11040" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="11050:11126" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="11131:11158" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="11177:11243" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="11273:11591" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="11627:11683" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="11700:11736" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="11755:11783" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="11802:11828" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="11838:11905" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="11926:11949" placeholder="{...}" />
+                <marker date="1502872863785" expanded="true" signature="11975:11998" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -105,16 +134,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="1200">
               <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="publication.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/publication.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -157,7 +176,6 @@
         <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/core_articles_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/post.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/welcome.html.haml" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.haml" />
         <option value="$PROJECT_DIR$/app/views/testimonials/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/testimonials/edit.html.erb" />
@@ -186,6 +204,7 @@
         <option value="$PROJECT_DIR$/app/controllers/testimonials_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/testimonials/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/testimonials/_index.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/home/welcome.html.haml" />
       </list>
     </option>
   </component>
@@ -631,17 +650,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2642344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27086788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36879432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38905776" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -678,6 +697,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/publications/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="300">
+          <caret line="10" column="66" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20170813091340_add_column_to_pics.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12626262" vertical-offset="0" max-vertical-offset="594">
@@ -921,13 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/welcome.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1969" max-vertical-offset="4065">
-          <caret line="141" column="34" selection-start-line="141" selection-start-column="14" selection-end-line="141" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/who_we_are.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="675">
@@ -1036,6 +1056,33 @@
             <marker date="1502804459744" expanded="false" signature="2828:2848" placeholder="{...}" />
             <marker date="1502804459744" expanded="true" signature="2828:2852" placeholder="{...}" />
             <marker date="1502804459744" expanded="true" signature="2865:2891" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/welcome.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49534452" vertical-offset="709" max-vertical-offset="4065">
+          <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+          <folding>
+            <marker date="1502872863785" expanded="true" signature="10701:10765" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="10713:10761" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="10776:10832" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="10843:10907" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="10918:10940" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="10945:10967" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="10984:11040" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="11050:11126" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="11131:11158" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="11177:11243" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="11273:11591" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="11627:11683" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="11700:11736" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="11755:11783" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="11802:11828" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="11838:11905" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="11926:11949" placeholder="{...}" />
+            <marker date="1502872863785" expanded="true" signature="11975:11998" placeholder="{...}" />
           </folding>
         </state>
       </provider>

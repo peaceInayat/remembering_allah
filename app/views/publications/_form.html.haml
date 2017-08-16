@@ -1,0 +1,11 @@
+= simple_form_for(@publication) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :title, :input_html => {:rows => 2, maxlength: 300}
+    = f.input :event_date, placeholder:'Event Date (eg: January 1, 2017)'
+    = f.input :body, :input_html => {:rows => 10, maxlength: 500}, placeholder:'At max 500 Characters'
+    = f.input :rank, placeholder:'Any Integer'
+    = f.input :image, as: :file
+    = f.input :document, as: :file
+  .form-actions
+    = f.button :submit

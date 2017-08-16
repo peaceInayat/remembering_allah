@@ -19,32 +19,30 @@
           - if can? :create, Category
             = link_to 'Add Category', categories_path, class:'nav_btn', style:'margin-bottom:8%;'
 
-      %div.col-md-10.col-sm-8.col-xs-12
+      %div.col-md-10.col-sm-8.col-xs-12.mobile_view_w_100
+        %div
+        - if can? :create, Post
+          = link_to 'New Article', new_post_path, class:'btn btn-default pull-right', style:'margin:1.7%;'
+          %br
+          %br
         %div.visible-xs
           %span{:style => "font-size:30px;cursor:pointer", id:'ooo'} ☰
           %span{:style => "font-size:40px;cursor:pointer;display:none;", id:'ccc'} &times;
         .container{style:'margin-top:2%;'}
-          .row
-            - @posts.each do |article|
-              .col-md-12
-                .panel.panel-default
-                  .panel-heading
-                    %h4.single_line
-                      =link_to article.title, article
-                    %hr
-                    %p.date= article.created_at.strftime("%B %d, %Y")
-                  .panel-body
-                    .row
-                      .col-sm-5.image_center
-                        = image_tag article.image.url(:thumb), class:'img-responsive thumbnail'
-                      .col-sm-7
-                        .visible-xs
-                          %br
-                          %hr
-                        %p= truncate(article.short_description, :length => 200)
-                  - if can? :edit, article
-                    .btn-group.btn-group-justified
-                      %a.btn.btn-primary{:href => edit_post_path(article)} Edit
-                      %a.btn.btn-primary{:href => article, method: :delete, data: { confirm: 'Are you sure?' }} Destroy
-          - if can? :create, Post
-            = link_to 'New Article', new_post_path, class:'btn btn-default'
+          - @posts.each do |article|
+            .panel.panel-default
+              .panel-heading
+                %h4.single_line
+                  =link_to article.title, article
+                %hr
+                %p.date= article.created_at.strftime("%B %d, %Y")
+              .panel-body
+                .row
+                  .col-sm-5.image_center
+                    = image_tag article.image.url(:thumb), class:'img-responsive thumbnail no_bottom'
+                  .col-sm-7
+                    %p.justify= article.short_description
+              - if can? :edit, article
+                .btn-group.btn-group-justified
+                  %a.btn.btn-primary{:href => edit_post_path(article)} Edit
+                  %a.btn.btn-primary{:href => article, method: :delete, data: { confirm: 'Are you sure?' }} Destroy

@@ -2,15 +2,13 @@
 
   <h1>Editing Testimonial</h1>
 
-  <%= image_tag @testimonial.image.url(:thumb) %>
+  <%#= image_tag @testimonial.image.url(:thumb) %>
 
   <br><br>
 
   <%= render 'form' %>
 
   <br>
-
-  <%= link_to 'Show', @testimonial, class:'btn btn-default' %> |
-  <%= link_to 'Back', testimonials_path, class:'btn btn-default' %>
+  <%= link_to 'Back', root_path, class:'btn btn-default' %>
 
 </div>

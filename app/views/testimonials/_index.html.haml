@@ -1,6 +1,7 @@
 %div.testimonial_div{style:'background:#685050;'}
-  - @testi_first = Testimonial.first
-  -  @testimonials = Testimonial.where("id > ?", @testi_first.id)
+  - ts = Testimonial.all.order('rank')
+  - @testi_first = ts.first
+  -  @testimonials = Testimonial.where("id != ?", @testi_first.id).order('rank')
   %div.container#myCarousel_tes.carousel.slide{"data-ride" => "carousel"}
     %ol.carousel-indicators
       %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel_tes"}
@@ -12,8 +13,8 @@
         %row
           %col-md-offset-2.col-md-8.col-md-offset-2
             %blockquote.blockquote-reverse
-              %p.sss=@testi_first.body
-              %footer
+              %p.sss=@testi_first.body.to_s.html_safe
+              %footer.pull-right
                 %p.reviewer=@testi_first.name
                 %p.qua=@testi_first.profession
             -#%p.testimonial=@testi_first.body
@@ -34,8 +35,8 @@
           %row
             %col-md-offset-2.col-md-8.col-md-offset-2
               %blockquote.blockquote-reverse
-                %p.sss=testimonial.body
-                %footer
+                %p.more.sss=testimonial.body.to_s.html_safe
+                %footer.pull-right
                   %p.reviewer=testimonial.name
                   %p.qua=testimonial.profession
           %row
@@ -52,3 +53,49 @@
     %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel_tes"}
       %span.glyphicon.glyphicon-chevron-right.white
       %span.sr-only Next
+
+:css
+  .morecontent span {
+    display: none;
+  }
+  .morelink {
+    display: inline;
+  }
+
+:javascript
+  $(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 700;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Show more >";
+    var lesstext = "Show less";
+
+
+    $('.more').each(function() {
+        var content = $(this).html();
+
+        if(content.length > showChar) {
+
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+            $(this).html(html);
+        }
+
+    });
+
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+  });

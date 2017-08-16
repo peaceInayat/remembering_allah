@@ -19,24 +19,27 @@
           - if can? :create, Category
             = link_to 'Add Category', categories_path, class:'nav_btn', style:'margin-bottom:8%;'
 
-      %div.col-md-10.col-sm-8.col-xs-12
+      %div.col-md-10.col-sm-8.col-xs-12.mobile_view_w_100
+        %div
+        - if can? :create, Video
+          = link_to 'New Video', new_video_path, class:'btn btn-default pull-right'
+          %br
+          %br
         %div.visible-xs
           %span{:style => "font-size:30px;cursor:pointer", id:'ooo'} ☰
           %span{:style => "font-size:40px;cursor:pointer;display:none;", id:'ccc'} &times;
         .row{style:'padding:1%;'}
           - @videos.each do |video|
-            .col-sm-3.col-xs-12
+            .col-sm-3.col-xs-12.mobile_view_w_100_r
               .panel.panel-default
                 .panel-heading
                   .embed-responsive.embed-responsive-16by9
                     %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/#{video.url[32..42]}"}
                     %a.the-click{:href => video_path(video)}
-                .panel-body
+                .panel-body.video_text_spacing
                   %h4.single_line= truncate(video.title, :length => 70)
                   %hr
-                  %p= truncate(video.body, :length => 125)
-        - if can? :create, Video
-          = link_to 'New Video', new_video_path, class:'btn btn-default'
+                  %p.date= video.created_at.strftime("%B %d, %Y")
 
 :css
   .the-click {

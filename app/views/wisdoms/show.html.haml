@@ -19,12 +19,12 @@
         = link_to 'Add Category', categories_path, class:'nav_btn', style:'margin-bottom:8%;'
 
 
-    %div.col-md-10.col-sm-8.col-xs-12
+    %div.col-md-10.col-sm-8.col-xs-12.mobile_view_w_100
       %div.visible-xs
         %span{:style => "font-size:30px;cursor:pointer", id:'ooo'} ☰
         %span{:style => "font-size:40px;cursor:pointer;display:none;", id:'ccc'} &times;
       #post_content.container
-        %h1.title= @content.title
+        %h1.title.justify= @content.title
         %p.date
           Submitted #{time_ago_in_words(@content.created_at)} Ago By
           %strong= @content.user.name

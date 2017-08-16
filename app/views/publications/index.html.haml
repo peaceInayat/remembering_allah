@@ -1,0 +1,27 @@
+%div.container
+  %div
+    - if can? :create, Publication
+      = link_to 'New Publication', new_publication_path, class:'btn btn-default pull-right', style:'margin:1.7%;'
+      %br
+      %br
+
+  - @publications.each do |publication|
+    %div.container#post_content{style:'margin-top:2%;background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+      %h1.justify.title= publication.title
+      %p.date= publication.event_date
+      %hr
+      .row
+        .col-md-5
+          = image_tag publication.image.url(:thumb), class:'img-responsive thumbnail'
+        .col-md-7
+          %p.justify.body= publication.body
+
+      .btn-group.pull-right
+        = link_to 'Download', publication, class:'btn btn-default'
+        - if can? :edit, publication
+          = link_to 'Show', publication, class:'btn btn-default'
+          =link_to 'Edit', edit_publication_path(publication),class:'btn btn-default'
+          =link_to 'Delete', publication_path(publication), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default'
+        %br
+        %br
+        %br

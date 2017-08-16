@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :publications
   resources :galleries
   resources :core_articles do
     member do
@@ -30,6 +31,7 @@ Rails.application.routes.draw do
   end
 
   root 'home#welcome'
+  get '/who_we_are', to: 'home#who_we_are'
   get '/contact_us', to: 'home#contact_us'
   get '/core_articles', to: 'home#core_articles'
   resources :pics

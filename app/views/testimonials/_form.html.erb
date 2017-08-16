@@ -2,10 +2,14 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%=h "Use <br> for new line" %>
+    <br>
+    <br>
     <%= f.input :body, :input_html => {:rows => 10} %>
+    <%= f.input :rank %>
     <%= f.input :name %>
     <%= f.input :profession %>
-    <%= f.input :image, as: :file %>
+    <%#= f.input :image, as: :file %>
   </div>
 
   <div class="form-actions">

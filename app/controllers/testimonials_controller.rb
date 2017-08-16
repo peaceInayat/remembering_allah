@@ -43,7 +43,7 @@ class TestimonialsController < ApplicationController
   def update
     respond_to do |format|
       if @testimonial.update(testimonial_params)
-        format.html { redirect_to root_path, notice: 'Testimonial was successfully updated.' }
+        format.html { redirect_to testimonials_path, notice: 'Testimonial was successfully updated.' }
         format.json { render :show, status: :ok, location: @testimonial }
       else
         format.html { render :edit }
@@ -70,6 +70,6 @@ class TestimonialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def testimonial_params
-      params.require(:testimonial).permit(:body, :name, :profession, :image)
+      params.require(:testimonial).permit(:body, :name, :profession, :image, :rank)
     end
 end

@@ -21,7 +21,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f0e7;
+  background-color: #ededed;
   min-width: 200px;
   font-size: 0.9em;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -38,7 +38,7 @@
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #442525; color: white !important; text-decoration: none;}
+.dropdown-content a:hover {background-color: #fff; color: #000 !important; text-decoration: none;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -107,7 +107,7 @@ footer.navbar-fixed-bottom {
 }
 
 .navbar-toggle{
-  margin-top: 4.5% !important;
+  margin-top: 21px !important;
 }
 
 .facebook:hover{

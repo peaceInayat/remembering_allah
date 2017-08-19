@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @misc.code %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @misc.body %>
+</p>
+
+<%= link_to 'Edit', edit_misc_path(@misc) %> |
+<%= link_to 'Back', miscs_path %>

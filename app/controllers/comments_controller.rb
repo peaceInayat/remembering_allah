@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!, notice:'Please Login to Continue'
   load_and_authorize_resource
-  before_action :authenticate_user!
 
   def create
     if params[:post_id].blank?

@@ -11,38 +11,18 @@
 
 %body{style:"margin:75px 0px;min-height:100%;"}
   %nav.navbar.navbar-inverse.navbar-fixed-top{style:'background-color:#000;'}
-    .container-fluid
+    .container-fluid.collapse_early
       .navbar-header
         %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button"}
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        .hidden-xs
+        .visible-lg
           = link_to image_tag('logo_big.png'), root_path
-        .visible-xs
+        .hidden-lg
           = link_to image_tag('logo_small.png'), root_path
       #myNavbar.collapse.navbar-collapse{style:'padding-top:0.9%'}
         %div
-          -#%ul.nav.navbar-nav.navbar-left#n_left
-          -#  %li
-          -#    %a{:href => root_path}Home
-          -#  %li.dropdown
-          -#    %a.dropbtn{style:'background-color:#000;'}
-          -#      About Us
-          -#      %span.caret
-          -#    .dropdown-content
-          -#      %a{:href => root_path} Who we Are
-          -#      %a{:href => galleries_path} Gallery
-          -#      %a{:href => root_path} Publications
-          -#  %li
-          -#    %a{:href => core_articles_path}Breath of Quran
-          -#  %li
-          -#    %a{:href => posts_path}Blog
-          -#  %li
-          -#    %a{:href => videos_path}Videos
-          -#  %li
-          -#    %a{:href => wisdoms_path}Wisdom Corner
-
           %ul.nav.navbar-nav.navbar-right
             %li
               %a{:href => root_path}Home

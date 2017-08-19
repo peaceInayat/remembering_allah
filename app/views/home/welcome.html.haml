@@ -1,5 +1,9 @@
-%div{style:'background-color:#f9f0e7; padding: 1% 0 .2% 0;'}
-  %marquee{style:'font-size: 1.2em;color:#000'} Alhamdulillah. In Sha Allah our next event is going to be this Sunday.
+%div{style:'background-color:#fafafa; padding: 1% 0 .2% 0;'}
+  - if can? :edit, Misc
+    %marquee{style:'font-size: 1.2em;color:#000;width:90%;'}= Misc.find_by_code('marquee').body
+    = link_to 'Edit', edit_misc_path(id:1, code:'marquee'), class:'btn btn-default pull-right'
+  - else
+    %marquee{style:'font-size: 1.2em;color:#000;'}= Misc.find_by_code('marquee').body
 
 #myCarousel.carousel.slide.hidden-xs{"data-ride" => "carousel"}
   %ol.carousel-indicators
@@ -11,17 +15,17 @@
     %li{"data-slide-to" => "5", "data-target" => "#myCarousel"}
   .carousel-inner
     .item.active
-      = image_tag "slider1.jpg"
+      = image_tag "slider6.jpg"
     .item
       = image_tag "slider2.jpg"
     .item
-      = image_tag "slider3.jpg"
+      = image_tag "slider1.jpg"
     .item
       = image_tag "slider4.jpg"
     .item
       = image_tag "slider5.jpg"
     .item
-      = image_tag "slider6.jpg"
+      = image_tag "slider3.jpg"
   %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
     %span.glyphicon.glyphicon-chevron-left
     %span.sr-only Previous
@@ -39,17 +43,17 @@
     %li{"data-slide-to" => "5", "data-target" => "#myCarouselmin"}
   .carousel-inner
     .item.active
-      = image_tag "slider_min_1.jpg"
+      = image_tag "slider_min_6.jpg"
     .item
       = image_tag "slider_min_2.jpg"
     .item
-      = image_tag "slider_min_3.jpg"
+      = image_tag "slider_min_1.jpg"
     .item
       = image_tag "slider_min_4.jpg"
     .item
       = image_tag "slider_min_5.jpg"
     .item
-      = image_tag "slider_min_6.jpg"
+      = image_tag "slider_min_3.jpg"
   %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarouselmin"}
     %span.glyphicon.glyphicon-chevron-left
     %span.sr-only Previous
@@ -58,22 +62,28 @@
     %span.sr-only Next
 
 
-%div.container-fuild{style:'background-color: #f9f0e7;'}
+%div.container-fuild{style:'background-color: #fafafa;padding:2%;'}
   %div.row
-    %div.col-md-4.col-xs-12.video{style:'position: relative; height: 0; padding-bottom: 24.4%;'}
-      %iframe{:align => "middle", :src => "https://www.youtube.com/embed/y9nZuLZYBLI", allowfullscreen:'true', style:'position: absolute; top: 0;left: 0;width: 100%; height: 100%;', protocol:'https'}
+    %div.col-md-4.col-xs-12.video
+      %h2{style:'color:#000; font-family:cursive;'} Founder's Message:
+      %br
+      %div{style:'position: relative; height: 0; padding-bottom: 73.5%;'}
+        %iframe{:align => "middle", :src => "https://www.youtube.com/embed/y9nZuLZYBLI", allowfullscreen:'true', style:'position: absolute; width: 100%; height: 100%;', protocol:'https'}
     %div.col-md-8.col-xs-12.who_we_are
       %h2 What is Remembering Allah?
       %p The world today is seeing the worst of humanity. Not only individuals, but communities and countries are in crisis-political, social, as well as spiritual.  As a result we find ourselves wandering in search of peace, harmony and unity like never before. We wander to find solutions, we wander to seek answers, we wander to make things better but most often we end up seeing more extremism, more hatred, more animosity, blindness and ignorance. In a culture of widespread consumerism, we are not only mindlessly consuming things but also ideas. While it has never been wrong to adhere to or follow ideas it is the mindless consumption that is the issue. We are living in tragic times where we hardly spend any time in meditating upon, thinking and evaluating what we are consuming.
       %p Remembering Allah is to remember, recall and remind ourselves, to think about, to ponder over, to inspect and introspect what is it that God wants from us? How do we remember Him? How can we counter hatred, bloodshed, enmity, animosity? How do we make this world a better place for one and all?  Certainly, the obvious answer to all these questions is – through love, forgiveness, mercy, generosity, spreading goodness and kindness unlimited. Now, if you really look through these you will find, what is love, forgiveness ..., if not the very essence of Religion and God/Allah?!
       %p Thus, Remembering Allah is an endeavour to help remind people about this spirit of love by sharing lessons from stories of the prophets mentioned in the Quran; by researching and producing material on re-establishing one’s connection with his/her inherent nature of love; and hence, God. Look forward to our blog, videos, books and articles to know more.
 
-%div{style:'background-color: #107487; padding-bottom: 3%; padding-top:1%;'}
-  %div.container{align:'center'}
-    %h2 Breath of Quran
-%div{style:'background-color: #685050; padding-bottom: 3%; padding-top:1%;'}
-  %div.container
-    %h2{style: 'text-align:center'} Heading
+%div{style:'background-color: #fff; padding: 3% 0;'}
+  %h1{style:'margin:-1% 0 0% 3%;color:#002a60;font-weight:500; display: inline-block;border-bottom: 5px dotted #002a60;'} HIGHLIGHTS :-
+  .container.no_padding
+    %h2{style: 'text-align:center; color:#0782C1;'} Then do they not reflect upon the Qur'an, or are there locks upon [their] hearts? [Qur'an 47:24]
+    %br
+  %div.container.boq_bg{align:'center'}
+    %a.boq.img-responsive{href:'#', style:'padding:9%;font-size:8em;display:block;'} Breath of Quran
+  %div.container.no_padding
+    %h2{style: 'text-align:center; color:#0782C1;'} Then do they not reflect upon the Qur'an, or are there locks upon [their] hearts? [Qur'an 47:24]
     %br
     %div.row{style: 'text-align:center'}
       %div.col-md-4.col-xs-12
@@ -85,17 +95,46 @@
       %div.col-md-4.col-xs-12
         %div.border
           %div.popping{"data-content" => "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look eveThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look eveThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look eve", "data-placement" => "bottom", "data-toggle" => "popover", :title => "Pondering over the verses of the Qur’an"} Tafakkur
-%div.container-fuild{style:'background-color: #f9f0e7; padding: 1%;'}
+%div.container-fuild{style:'background-color: #fafafa;padding-bottom: 20px;'}
   %div{align:'center'}
-    %strong Our Recent
-    %h3 Blog Posts
-  %div.container-fluid
+    %h2.blue{style:'padding:25px 0 20px 0; font-family:cursive;'} Blog Highlights
+  %div.container-fluid.articles_class_css.mobile_view_w_100
     %div.row
-      - @recent_posts.reverse.each do |post|
+      - @recent_posts.reverse.each do |article|
         %div.col-md-4.col-xs-12
           .panel.panel-default
-            .panel-heading=link_to post.title, post
-            .panel-body= truncate(post.body, :length => 200)
+            .panel-heading
+              %h4.single_line
+                =link_to truncate(article.title, :length => 100), article
+              %hr
+              %p.date= article.created_at.strftime("%B %d, %Y")
+            .panel-body
+              .row
+                .col-sm-5.image_center
+                  = image_tag article.image.url(:thumb), class:'img-responsive thumbnail no_bottom'
+                .col-sm-7
+                  %p.justify= truncate(article.short_description, :length => 250)
+  %div{align:'right'}
+    = link_to '... see more->', posts_path, style:'margin-right: 22px; font-size: 1.65em;'
+
+%div.container-fuild{style:'background-color: #fff; padding-bottom: 20px;'}
+  %div{align:'center'}
+    %h2.blue{style:'padding:9px 0 20px 0; font-family:cursive;'} Video Highlights
+  %div.container-fluid.articles_class_css.mobile_view_w_100
+    %div.row
+      - @recent_videos.each do |video|
+        .col-sm-4.col-xs-12.mobile_view_w_100_r
+          .panel.panel-default
+            .panel-heading
+              .embed-responsive.embed-responsive-16by9
+                %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/#{video.url[32..42]}"}
+                %a.the-click{:href => video_path(video)}
+            .panel-body.video_text_spacing
+              %h4.single_line= truncate(video.title, :length => 70)
+              %hr
+              %p.date= video.created_at.strftime("%B %d, %Y")
+  %div{align:'right'}
+    = link_to '... see more->', videos_path, style:'margin-right: 22px; font-size: 1.65em;'
 
 = render 'testimonials/index.html.haml'
 
@@ -104,7 +143,7 @@
     %div.row{style: 'text-align:center'}
       %div.col-md-3.col-xs-12
         %div.footer_widget{style:'text-align:center'}
-          %h3 Social Media
+          %h3.blue{align:'left'} Social Media
           %a{:href => "https://www.facebook.com", target:'_blank', class:'btn btn-default facebook', style:"width:100%; font-size:1.4em; margin:3% 0%; background-color:#3b5998; color:white;"}
             %i.fa.fa-facebook{"aria-hidden" => "true"} &nbsp;Join us @ Facebook
 
@@ -117,7 +156,7 @@
 
       %div.col-md-3.col-xs-12
         %div.footer_widget
-          %h3{align:'left'} Tags
+          %h3.blue{align:'left'} Tags
           %div.tagcloud{style:'padding-top:2%;'}
             %a{:href => "#islamic"} islamic
             %a{:href => "#kalma"} Kalma
@@ -130,9 +169,9 @@
             %a{:href => "#salat"} Salat
             %a{:href => "#zakat"} Zakat
 
-      %div.col-md-3.col-xs-12
-        %h3{align:'left'} Quick Links
-        %ul.quick_links#quick_l{align:'left', style:'margin-left:-10%;'}
+      %div.col-md-3.col-xs-12{align:'left'}
+        %h3.blue Quick Links
+        %ul.quick_links#quick_l{style:'margin-left:-10%;'}
           %li
             %a{:href => "#"}
               %span.fa.fa-arrow-right
@@ -158,7 +197,7 @@
               %i.fa.fa-arrow-right
               Mosque, Center For Peace
       %div.col-md-3.col-xs-12{align:'left'}
-        %h3 Contact Us
+        %h3.blue Contact Us
         %ul.quick_links#address{style:'margin-left:-10%;'}
           %li
             %a{:href => "#"}
@@ -191,19 +230,22 @@
 
   @media (max-width: 991px) {
     .video{
-      padding-bottom: 56.25% !important;
+
     }
   }
 
   .border{
-    border: 4px solid #563a3a;
-    color: #ffffff;
+    border: 4px solid #0782C1;
+    color: #0782C1;
+    margin: 1% 0%;
   }
   .popping{
     cursor: pointer;
-    padding: 10%;
-    font-size: 2em;
+    padding: 18%;
+    background-color: #f5f5f5;
+    font-size: 3em;
   }
+
   .popover{
     color: #333;
   }
@@ -212,12 +254,26 @@
   }
 
   .border:hover{
-    border: 4px solid #F0F2F4;
-    color: #563a3a;
+    border: 4px solid #000;
+    color: #000;
   }
+
+   @media (max-width: 608px) {
+      .boq_bg{
+        background-image: url(/assets/boqm.png) !important;
+      }
+   }
+
+  .boq_bg{
+    background-image: url(/assets/boq.png);
+    background-size:cover;
+    margin-bottom:2%;
+    padding: 0% !important;
+  }
+
   .footer{
     padding: 2% 0%;
-    background-image: url(/assets/contact_bg.jpg);
+    /*background-image: url(/assets/contact_bg.jpg);*/
   }
   ul{
     list-style: none;
@@ -227,10 +283,10 @@
     line-height: 36px;
   }
   .footer_widget .tagcloud a {
-    background-color: #f6f3e7;
-    border: 1px solid #442525;
+    /*background-color: #f6f3e7;*/
+    border: 1px solid #000;
     border-radius: 20px;
-    color: #442525;
+    color: #000;
     float: left;
     font-family: "Lato",sans-serif;
     font-size: 14px!important;
@@ -241,11 +297,11 @@
     text-decoration: none;
   }
   .footer_widget .tagcloud a:hover {
-    background-color: #442525;
-    color: #f6f3e7;
+    background-color: #000;
+    color: #fff;
   }
   .quick_links a{
-    color: #442525 !important;
+    color: #000 !important;
   }
   #quick_l a:hover{
     font-weight: bold;

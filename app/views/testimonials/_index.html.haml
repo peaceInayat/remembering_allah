@@ -1,8 +1,8 @@
-%div.testimonial_div{style:'background:#685050;'}
+%div.testimonial_div{style:'background:#232323;'}
   - ts = Testimonial.all.order('rank')
   - @testi_first = ts.first
   -  @testimonials = Testimonial.where("id != ?", @testi_first.id).order('rank')
-  %div.container#myCarousel_tes.carousel.slide{"data-ride" => "carousel"}
+  %div#myCarousel_tes.carousel.slide{"data-ride" => "carousel"}
     %ol.carousel-indicators
       %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel_tes"}
       - @testimonials.count.times do |i|
@@ -11,10 +11,10 @@
     .carousel-inner
       .item.active
         %row
-          %col-md-offset-2.col-md-8.col-md-offset-2
+          %col-md-10.col-md-offset-1.col-sm-12
             %blockquote.blockquote-reverse
               %p.sss=@testi_first.body.to_s.html_safe
-              %footer.pull-right
+              %footer.pull-right{style:'padding:0 12%;'}
                 %p.reviewer=@testi_first.name
                 %p.qua=@testi_first.profession
             -#%p.testimonial=@testi_first.body
@@ -33,7 +33,7 @@
       - @testimonials.each do |testimonial|
         .item
           %row
-            %col-md-offset-2.col-md-8.col-md-offset-2
+            %col-md-10.col-md-offset-1.col-sm-12
               %blockquote.blockquote-reverse
                 %p.more.sss=testimonial.body.to_s.html_safe
                 %footer.pull-right
@@ -65,7 +65,7 @@
 :javascript
   $(document).ready(function() {
     // Configure/customize these variables.
-    var showChar = 700;  // How many characters are shown by default
+    var showChar = 600;  // How many characters are shown by default
     var ellipsestext = "...";
     var moretext = "Show more >";
     var lesstext = "Show less";

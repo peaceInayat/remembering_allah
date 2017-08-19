@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :miscs
   resources :publications
   resources :galleries
   resources :core_articles do

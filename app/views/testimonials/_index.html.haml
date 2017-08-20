@@ -1,8 +1,11 @@
-%div.testimonial_div{style:'background:#232323;'}
+%div.testimonial_div{style:'background:#fafafa;'}
+
   - ts = Testimonial.all.order('rank')
   - @testi_first = ts.first
   -  @testimonials = Testimonial.where("id != ?", @testi_first.id).order('rank')
   %div#myCarousel_tes.carousel.slide{"data-ride" => "carousel"}
+    %div{align:'center'}
+      %h2.blue{style:'padding:25px 0 0 0; font-family:cursive;'} Testimonials
     %ol.carousel-indicators
       %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel_tes"}
       - @testimonials.count.times do |i|
@@ -60,6 +63,12 @@
   }
   .morelink {
     display: inline;
+  }
+  .carousel-indicators li{
+    border: 1px solid #696969;
+  }
+  .carousel-indicators .active{
+    background-color: #696969 !important;
   }
 
 :javascript

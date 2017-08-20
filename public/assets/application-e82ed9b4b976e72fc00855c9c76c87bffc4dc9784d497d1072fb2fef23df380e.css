@@ -9436,7 +9436,7 @@ a.boq:visited {
 }
 /* line 110, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .sss {
-  color: #fff;
+  color: #000;
   font-size: 1.15em;
   line-height: 1.45em;
   padding: 0 12%;
@@ -9503,7 +9503,7 @@ a.boq:visited {
 }
 /* line 168, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .item {
-  padding: 1.8% 0 0 0;
+  padding: 0.8% 0 0 0;
 }
 
 /* line 176, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */

@@ -3,8 +3,8 @@
     %ul.nav.nav-pills.nav-stacked
       %li= link_to 'All Articles', core_articles_path, class:'nav_btn'
       - @core_articles.each do |article|
-        %li= link_to article.title, article, class:'nav_btn'
-      - if can? :create, Post
+        %li= link_to article.title_keyword, article, class:'nav_btn'
+      - if can? :create, CoreArticle
         %br
         = link_to 'New Article', new_core_article_path, class:'nav_btn'
 
@@ -15,9 +15,9 @@
         %ul.nav.nav-pills.nav-stacked{style:'padding-top:5%;'}
           %li= link_to 'All Articles', core_articles_path, class:'nav_btn'
           - @core_articles.each do |article|
-            %li= link_to article.title, article, class:'nav_btn justify'
+            %li= link_to article.title_keyword, article, class:'nav_btn justify'
           %br
-          - if can? :create, Post
+          - if can? :create, CoreArticle
             = link_to 'New Article', new_core_article_path, class:'nav_btn', style:'margin-bottom:8%;'
 
       %div.col-md-10.col-sm-8.col-xs-12.mobile_view_w_100
@@ -44,5 +44,5 @@
                     %p.justify= article.short_description
               - if can? :edit, article
                 .btn-group.btn-group-justified
-                  %a.btn.btn-primary{:href => edit_post_path(article)} Edit
+                  %a.btn.btn-primary{:href => edit_core_article_path(article)} Edit
                   %a.btn.btn-primary{:href => article, method: :delete, data: { confirm: 'Are you sure?' }} Destroy

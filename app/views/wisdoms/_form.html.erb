@@ -10,19 +10,29 @@
         </div>
     <% end %>
     <%= f.label :title %><br>
-    <%= f.text_area :title, rows:'3' %><br>
-    <br>
-    <%= f.label :short_description %><br>
-    <%= f.text_area :short_description, rows:'5' %><br>
-    <br>
-    <%= f.file_field :image %>
-    <br>
+    <%= f.text_area :title, rows:'3' %>
 
+    <br>
+    <br>
+    <p><b>Short Description for Index Page</b> (At max 300 Characters)</p>
+    <%= f.text_area :short_description, rows:'5', maxlength:'500' %>
+    <br>
+    <br>
+    <p><b>Picture for Index Page</b></p>
+    <%= f.file_field :image %>
+
+    <% if @wisdom.image? %>
+        <div>
+          <%= image_tag @wisdom.image.url(:thumb),  class:'img-responsive thumbnail', style:'margin-bottom:0%;' %>
+        </div>
+    <% end %>
+
+    <br>
     <%= f.label :body %><br>
 
-    <%= f.cktext_area :body, :class => "form-control" %><br>
-
+    <%= f.cktext_area :body, :class => "form-control" %>
     <br>
+    <p><b>Choose Category</b></p>
     <%= f.collection_select :category_id, Category.where(section:'Wisdom'), :id, :name %>
     <br>
     <br>

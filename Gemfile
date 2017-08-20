@@ -38,3 +38,5 @@ gem 'ckeditor', '~> 4.2'
 gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'omniauth-google-oauth2', '~> 0.4.1'
+
+gem 'social-share-button', '~> 0.1.6'

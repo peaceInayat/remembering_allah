@@ -14,16 +14,25 @@
 
     <br>
     <br>
-    <p><b>Short Description</b> (At max 300 Characters)</p>
+    <p><b>Short Description for Index Page</b> (At max 300 Characters)</p>
     <%= f.text_area :short_description, rows:'5', maxlength:'500' %>
     <br>
+    <br>
+    <p><b>Picture for Index Page</b></p>
     <%= f.file_field :image %>
+
+    <% if @post.image? %>
+      <div>
+        <%= image_tag @post.image.url(:thumb),  class:'img-responsive thumbnail', style:'margin-bottom:0%;' %>
+      </div>
+    <% end %>
+
     <br>
     <%= f.label :body %><br>
 
-    <%= f.cktext_area :body, :class => "form-control" %><br>
-
+    <%= f.cktext_area :body, :class => "form-control" %>
     <br>
+    <p><b>Choose Category</b></p>
     <%= f.collection_select :category_id, Category.where(section:'Article'), :id, :name %>
     <br>
     <br>

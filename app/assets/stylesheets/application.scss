@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require social-share-button
  *= require_self
  */
 @import "bootstrap-sprockets";
@@ -18,6 +19,12 @@
 
 .blue{
   color: #0782C1;
+}
+
+.social-share-button-facebook {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
 }
 
 .collapse_early{

@@ -13,15 +13,27 @@
     <%= f.text_area :title, rows:'3' %>
     <br>
     <br>
-    <%= f.label :short_description %><br>
-    <%= f.text_area :short_description, rows:'5' %>
-
+    <%= f.label :title_keyword %><br>
+    <%= f.text_area :title_keyword,rows:'1', maxlength:'25' %>
     <br>
+    <br>
+    <p><b>Short Description for Index Page</b> (At max 300 Characters)</p>
+    <%= f.text_area :short_description, rows:'5', maxlength:'500' %>
+    <br>
+    <br>
+    <p><b>Picture for Index Page</b></p>
     <%= f.file_field :image %>
+
+    <% if @core_article.image? %>
+        <div>
+          <%= image_tag @core_article.image.url(:thumb),  class:'img-responsive thumbnail', style:'margin-bottom:0%;' %>
+        </div>
+    <% end %>
+
     <br>
     <%= f.label :body %><br>
 
-    <%= f.cktext_area :body, :class => "form-control" %><br>
+    <%= f.cktext_area :body, :class => "form-control" %>
 
     <br>
     <br>

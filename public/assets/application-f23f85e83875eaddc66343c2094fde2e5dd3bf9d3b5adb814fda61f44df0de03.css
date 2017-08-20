@@ -217,6 +217,326 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+/*
+
+        Creating a sprite from following images:
+
+        app/assets/images/sprites/social-share-button/baidu.png (16x16)
+        app/assets/images/sprites/social-share-button/delicious.png (16x16)
+        app/assets/images/sprites/social-share-button/douban.png (16x16)
+        app/assets/images/sprites/social-share-button/email.png (16x16)
+        app/assets/images/sprites/social-share-button/facebook.png (16x16)
+        app/assets/images/sprites/social-share-button/flickr.png (16x16)
+        app/assets/images/sprites/social-share-button/google_bookmark.png (16x16)
+        app/assets/images/sprites/social-share-button/google_plus.png (16x16)
+        app/assets/images/sprites/social-share-button/kaixin001.png (16x16)
+        app/assets/images/sprites/social-share-button/pinterest.png (16x16)
+        app/assets/images/sprites/social-share-button/plurk.png (16x16)
+        app/assets/images/sprites/social-share-button/qq.png (16x16)
+        app/assets/images/sprites/social-share-button/renren.png (16x16)
+        app/assets/images/sprites/social-share-button/tqq.png (16x16)
+        app/assets/images/sprites/social-share-button/tumblr.png (16x16)
+        app/assets/images/sprites/social-share-button/twitter.png (16x16)
+        app/assets/images/sprites/social-share-button/weibo.png (16x16)
+
+        Output files:
+          app/assets/images/sprites/social-share-button.png
+          app/assets/stylesheets/social-share-button.scss
+
+        Output size:
+          80x64
+
+*/
+/* line 32, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-baidu {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px 0px no-repeat;
+}
+
+/* line 33, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-delicious {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px 0px no-repeat;
+}
+
+/* line 34, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-douban {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px -16px no-repeat;
+}
+
+/* line 35, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-email {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px -16px no-repeat;
+}
+
+/* line 36, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-facebook {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px 0px no-repeat;
+}
+
+/* line 37, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-flickr {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px -16px no-repeat;
+}
+
+/* line 38, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-google_bookmark {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px -32px no-repeat;
+}
+
+/* line 39, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-google_plus {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px -32px no-repeat;
+}
+
+/* line 40, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-kaixin001 {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px -32px no-repeat;
+}
+
+/* line 41, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-pinterest {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px 0px no-repeat;
+}
+
+/* line 42, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-plurk {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px -16px no-repeat;
+}
+
+/* line 43, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-qq {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px -32px no-repeat;
+}
+
+/* line 44, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-renren {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") 0px -48px no-repeat;
+}
+
+/* line 45, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-tqq {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -16px -48px no-repeat;
+}
+
+/* line 46, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-tumblr {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -32px -48px no-repeat;
+}
+
+/* line 47, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-twitter {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -48px -48px no-repeat;
+}
+
+/* line 48, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+.social-share-button-weibo {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/sprites/social-share-button-01bd4e9a7782620aab986c55abc6ecb9ee88d50bb51f28c2f00fe36d87a0944c.png") -64px 0px no-repeat;
+}
+
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+  /* line 51, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-baidu {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 52, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-delicious {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 53, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-douban {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 54, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-email {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 55, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-facebook {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 56, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-flickr {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 57, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-google_bookmark {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 58, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-google_plus {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 59, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-kaixin001 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 60, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-pinterest {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 61, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-plurk {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px -16px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 62, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-qq {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px -32px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 63, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-renren {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") 0px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 64, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-tqq {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -16px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 65, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-tumblr {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -32px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 66, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-twitter {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -48px -48px no-repeat;
+    background-size: 80px 64px;
+  }
+
+  /* line 67, /home/inayath/.rvm/gems/ruby-2.2.1/gems/social-share-button-0.1.10/app/assets/stylesheets/social-share-button.scss */
+  .social-share-button-weibo {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/sprites/social-share-button@2x-a597120b30fe6ae4ac5b4f0f45f307c0f5519851529b3010a7c584eb3ed186be.png") -64px 0px no-repeat;
+    background-size: 80px 64px;
+  }
+}
 @charset "UTF-8";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -230,6 +550,7 @@ div.field, div.actions {
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+
 
 
  */
@@ -9013,100 +9334,107 @@ button.close {
     display: none !important;
   }
 }
-/* line 20, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 21, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .blue {
   color: #0782C1;
 }
 
+/* line 25, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+.social-share-button-facebook {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
 @media (max-width: 1470px) {
-  /* line 26, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 33, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .collapse_early .navbar-header {
     float: none;
   }
-  /* line 29, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 36, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .collapse_early .navbar-left, .collapse_early .navbar-right {
     float: none !important;
   }
-  /* line 32, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 39, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .collapse_early .navbar-toggle {
     display: block;
   }
-  /* line 35, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 42, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .collapse_early .navbar-collapse {
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
-  /* line 39, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 46, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .collapse_early .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
   }
-  /* line 43, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 50, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .collapse_early .navbar-collapse.collapse {
     display: none !important;
   }
-  /* line 46, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 53, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .collapse_early .navbar-nav {
     float: none !important;
     margin-top: 7.5px;
   }
-  /* line 50, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 57, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .collapse_early .navbar-nav > li {
     float: none;
   }
-  /* line 53, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 60, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .collapse_early .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  /* line 57, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 64, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .collapse_early .collapse.in {
     display: block !important;
   }
 }
 
-/* line 63, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 70, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .no_padding {
   padding: 0 !important;
 }
 
 @media screen and (min-device-width: 350px) and (max-device-width: 1200px) {
-  /* line 68, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 75, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   a.boq {
     font-size: 5em !important;
   }
 }
 @media screen and (max-device-width: 350px) {
-  /* line 73, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 80, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   a.boq {
     font-size: 4em !important;
   }
 }
-/* line 78, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 85, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 a.boq {
   color: #008ca7;
 }
 
-/* line 81, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 88, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 a.boq:hover {
   color: #000 !important;
   border: 2px solid #fcfafc;
 }
 
-/* line 85, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 92, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 a.boq:visited {
   color: #008ca7;
 }
 
-/* line 93, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 100, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .blockquote-reverse footer:after {
   content: '' !important;
 }
-/* line 98, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 105, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .morecontent a, .testimonial_div .morecontent a:visited {
   color: #646464 !important;
 }
-/* line 103, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 110, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .sss {
   color: #fff;
   font-size: 1.15em;
@@ -9116,69 +9444,69 @@ a.boq:visited {
   font-style: italic;
 }
 @media (max-width: 470px) {
-  /* line 113, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 120, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .testimonial_div .sss {
     padding: 0 2% !important;
   }
 }
-/* line 118, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 125, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .row {
   display: table;
 }
-/* line 122, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 129, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div [class*="col-sm-"] {
   float: none;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 128, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 135, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .testimonial {
   color: #ffffff;
   font-size: 1.2em;
   text-align: justify;
   font-style: italic;
 }
-/* line 134, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 141, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .reviewer {
   color: #646464;
   font-size: 1.2em;
 }
-/* line 138, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 145, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .qua {
   margin-top: -1%;
   text-align: center;
 }
-/* line 142, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 149, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div blockquote {
   text-align: justify;
   border: none;
 }
-/* line 146, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 153, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .white {
   color: #ffffff;
 }
-/* line 149, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 156, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .carousel-control:hover {
   opacity: 1;
 }
-/* line 152, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 159, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .carousel-control {
   opacity: 0.3;
 }
-/* line 155, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 162, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div a:hover {
   background-color: transparent;
 }
-/* line 158, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 165, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .container {
   padding: 0%;
 }
-/* line 161, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 168, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .testimonial_div .item {
   padding: 1.8% 0 0 0;
 }
 
-/* line 169, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 176, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content .title {
   font-weight: 500;
   text-decoration: none;
@@ -9186,73 +9514,73 @@ a.boq:visited {
   font-size: 2.5em;
   margin-bottom: 0;
 }
-/* line 176, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 183, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content p {
   text-align: justify;
 }
-/* line 179, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 186, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content .body {
   font-size: 1.1em;
   line-height: 1.75;
 }
-/* line 183, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 190, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content .date_and_author {
   color: #9eafba;
   margin: .5em 0 2em 0;
 }
-/* line 188, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 195, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments h2 {
   margin: 3em 0 1em 0;
   border-bottom: 1px solid #d6dce0;
   padding-bottom: 0.5em;
 }
-/* line 193, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 200, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments h3 {
   margin-top: 2em;
 }
-/* line 196, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 203, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment {
   border-bottom: 1px solid #d6dce0;
   padding: 1.5em 2em;
 }
-/* line 199, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 206, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .clear_both {
   clear: both;
 }
-/* line 202, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 209, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment:after {
   clear: both;
 }
-/* line 205, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 212, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .comment_content {
   float: left;
 }
-/* line 207, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 214, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .comment_content .comment_name {
   margin: 1em 0 0 0;
   font-size: 0.7em;
   text-transform: uppercase;
 }
-/* line 212, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 219, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .comment_content .comment_body {
   font-size: 1.2em;
   margin: 0.2em 0 0 0;
 }
-/* line 216, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 223, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .comment_content .comment_time {
   margin-top: 1.2em;
   font-size: .8em;
 }
-/* line 221, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 228, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments .comment .button {
   float: right;
 }
-/* line 225, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 232, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 #post_content #comments input[type="text"], #post_content #comments textarea {
   width: 100%;
 }
 
-/* line 232, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 239, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .who_we_are p {
   font-size: 1.3em;
   text-align: justify;
@@ -9260,7 +9588,7 @@ a.boq:visited {
   padding-bottom: 2%;
   border-radius: 1%;
 }
-/* line 240, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 247, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .who_we_are .box_wwr {
   background-color: #fcfdfd;
   padding: 3%;
@@ -9268,26 +9596,26 @@ a.boq:visited {
   margin-bottom: 1%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 248, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 255, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .who_we_are h2 {
   color: #0782C1;
   padding-bottom: 1.5%;
   font-family: cursive;
 }
 
-/* line 257, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 264, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .panel-body.video_text_spacing {
   padding: 0 2% !important;
 }
-/* line 261, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 268, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .col-sm-5.image_center {
   padding: 0% !important;
 }
-/* line 265, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 272, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .container {
   padding: 0%;
 }
-/* line 269, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 276, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .sidenav {
   width: 0;
   position: fixed;
@@ -9300,7 +9628,7 @@ a.boq:visited {
   margin-top: 90px;
   margin-left: 3%;
 }
-/* line 282, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 289, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -9309,11 +9637,11 @@ a.boq:visited {
   display: block;
   transition: 0.3s;
 }
-/* line 291, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 298, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .sidenav a:hover, .articles_class_css .offcanvas a:focus {
   color: #f1f1f1;
 }
-/* line 295, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 302, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -9321,17 +9649,17 @@ a.boq:visited {
   font-size: 36px;
   margin-left: 50px;
 }
-/* line 303, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 310, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css #main {
   transition: margin-left .5s;
   padding: 16px;
 }
-/* line 310, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 317, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css a:hover {
   text-decoration: none;
   background-color: rgba(245, 238, 238, 0.58);
 }
-/* line 314, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 321, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .single_line {
   text-overflow: ellipsis;
   max-height: 26px;
@@ -9340,33 +9668,33 @@ a.boq:visited {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 322, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 329, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .panel-body {
   padding: 0px !important;
 }
-/* line 325, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 332, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css p.justify {
   padding-top: 2%;
 }
-/* line 328, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 335, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .mobile_view_w_100 {
   padding: 0% !important;
 }
 @media (max-width: 768px) {
-  /* line 332, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+  /* line 339, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
   .articles_class_css .mobile_view_w_100_r {
     padding: 0% !important;
   }
 }
-/* line 336, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 343, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .img-responsive.thumbnail.no_bottom {
   margin-bottom: 0% !important;
 }
-/* line 339, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 346, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css hr {
   margin: 0px;
 }
-/* line 342, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 349, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .nav_btn {
   display: block;
   padding: 4%;
@@ -9375,31 +9703,31 @@ a.boq:visited {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #949f9f;
 }
-/* line 351, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 358, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .nav-pills > li > a {
   border-radius: 0px;
   font-size: 1.7em;
 }
-/* line 356, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 363, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css .nav-pills > li > a:hover {
   background-color: #fff;
   color: #1f508a;
 }
-/* line 361, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 368, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css a.btn.btn-primary:visited {
   color: white;
 }
-/* line 365, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 372, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css a.btn.btn-primary:hover {
   background-color: #286090 !important;
 }
-/* line 369, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 376, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .articles_class_css p.body {
   padding-top: 2%;
   text-align: justify;
 }
 
-/* line 376, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
+/* line 383, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss */
 .justify {
   text-align: justify;
 }

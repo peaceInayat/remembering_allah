@@ -7,6 +7,15 @@ class ApplicationController < ActionController::Base
     redirect_to root_url, :alert => exception.message
   end
 
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_in)        << :name
+    devise_parameter_sanitizer.for(:sign_up)        << :name
+    devise_parameter_sanitizer.for(:account_update) << :name
+  end
+
   before_filter do
     resource = controller_name.singularize.to_sym
     method = "#{resource}_params"

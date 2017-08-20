@@ -33,6 +33,7 @@
               %hr
               %p= @content.body
           .btn-group.pull-right
+            = social_share_button_tag("Good Article")
             = link_to like_video_path(@content), method: :put, class: "btn btn-default" do
               %span.glyphicon.glyphicon-heart
               = @content.get_upvotes.size

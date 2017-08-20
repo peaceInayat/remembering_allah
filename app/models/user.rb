@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
     where(provider: auth.provider, uid: auth.uid).first_or_initialize do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
-      user.username = auth.info.name
+      user.name = auth.info.name
       user.provider = auth.provider
       user.uid = auth.uid
 
@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
       if registered_user
         return registered_user
       else
-        User.create(username: data["name"],
+        User.create(name: data["name"],
                            provider:access_token.provider,
                            email: data["email"],
                            uid: access_token.uid ,

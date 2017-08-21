@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :comments
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable,
          :omniauthable, :omniauth_providers => [:facebook, :google_oauth2]
 
   def self.from_omniauth(auth)

@@ -1,19 +1,29 @@
-<h2>Change your password</h2>
+<div class="container shadow" style="margin-top:8%; padding-bottom: 3%; background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+  <h2>Change your password</h2>
 
-  <%= f.input :reset_password_token, as: :hidden %>
-  <%= f.full_error :reset_password_token %>
+  <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :password, label: "New password", required: true, autofocus: true %>
-    <%= f.input :password_confirmation, label: "Confirm your new password", required: true %>
-  </div>
+      <%= f.input :reset_password_token, as: :hidden %>
+      <%= f.full_error :reset_password_token %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Change my password" %>
-  </div>
-<% end %>
+      <div class="form-inputs">
+        <%= f.input :password, label: "New password", required: true, autofocus: true %>
+        <%= f.input :password_confirmation, label: "Confirm your new password", required: true %>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="form-actions">
+        <%= f.button :submit, "Change my password" %>
+      </div>
+  <% end %>
+
+</div>
+
+<style>
+    @media (max-width: 768px) {
+        .shadow{
+            margin: 2%;
+        }
+    }
+</style>

@@ -1,0 +1,25 @@
+.container
+  .row
+    .col-md-6.col-md-offset-3{:style => "margin-top:6%; padding: 10px 20px 30px 20px; background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"}
+      %h2.center_l SIGN UP
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = f.error_notification
+        .form-inputs
+          = f.input :name, required: true, autofocus: true
+          = f.input :email, required: true
+          = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable)
+          = f.input :password_confirmation, required: true
+        .form-actions
+          = f.button :submit, "Sign up"
+      %br
+      - resource_class.omniauth_providers.each do |provider|
+        - if provider.to_s.titleize == 'Facebook'
+          = link_to "Sign Up with Facebook", omniauth_authorize_path(resource_name, provider), class:'btn btn-default facebook social', style:'background-color:#3b5998; color:white; width:49.5%;'
+        - if provider.to_s.titleize == 'Google Oauth2'
+          = link_to "Sign Up with Google", omniauth_authorize_path(resource_name, provider), class:'btn btn-default google social', style:'background-color:#f54337; color:white;width:49.5%;'
+
+:css
+  .center_l{
+    text-align: center;
+    text-decoration: underline;
+  }

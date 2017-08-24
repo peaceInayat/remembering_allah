@@ -121,3 +121,9 @@ footer.navbar-fixed-bottom {
 .twitter:hover{
   background-color: #47b2f4 !important;
 }
+
+.lis{
+  .nav > li {
+    display: inline-block !important;
+  }
+}

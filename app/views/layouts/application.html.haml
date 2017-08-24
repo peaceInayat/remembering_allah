@@ -1,7 +1,8 @@
 !!! 5
 %html
 %head
-  %title Ra
+  %title Remembering Allah
+  = favicon_link_tag 'favicon.ico'
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
@@ -21,34 +22,33 @@
           = link_to image_tag('logo_big.png'), root_path
         .hidden-lg
           = link_to image_tag('logo_small.png'), root_path
-      #myNavbar.collapse.navbar-collapse{style:'padding-top:0.9%'}
-        %div
-          %ul.nav.navbar-nav.navbar-right
-            %li
-              %a{:href => root_path}Home
-            %li.dropdown
-              %a.dropbtn{style:'background-color:#000;'}
-                About Us
-                %span.caret
-              .dropdown-content
-                %a{:href => who_we_are_path} Who we Are
-                %a{:href => galleries_path} Gallery
-                %a{:href => publications_path} Publications
-            %li
-              %a{:href => core_articles_path}Breath of Quran
-            %li
-              %a{:href => posts_path}Blog
-            %li
-              %a{:href => videos_path}Videos
-            %li
-              %a{:href => wisdoms_path}Wisdom Corner
-            - if user_signed_in?
-              %li= link_to "My Account", edit_user_registration_path
-              %li= link_to "Log Out", destroy_user_session_path, method: :delete
-            - else
-              %li= link_to "Sign In", new_user_session_path
-            %li
-              %a{:href => contact_us_path}Contact Us
+      #myNavbar.collapse.navbar-collapse.lis{style:'padding-top:0.9%'}
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a{:href => root_path}Home
+          %li.dropdown
+            %a.dropbtn{style:'background-color:#000;'}
+              About Us
+              %span.caret
+            .dropdown-content
+              %a{:href => who_we_are_path} Who we Are
+              %a{:href => galleries_path} Gallery
+              %a{:href => publications_path} Publications
+          %li
+            %a{:href => core_articles_path}Breath of Quran
+          %li
+            %a{:href => posts_path}Blog
+          %li
+            %a{:href => videos_path}Videos
+          %li
+            %a{:href => wisdoms_path}Wisdom Corner
+          - if user_signed_in?
+            %li= link_to "My Account", edit_user_registration_path
+            %li= link_to "Log Out", destroy_user_session_path, method: :delete
+          - else
+            %li= link_to "Sign In", new_user_session_path
+          %li
+            %a{:href => contact_us_path}Contact Us
 
   -#.container
   -#  - flash.each do |name, msg|
@@ -62,6 +62,7 @@
   .navbar-nav > li > a {
     font-size: 1.5em;
   }
+
   .navbar {
     border-radius: 0px !important;
     margin-bottom: 0px;

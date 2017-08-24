@@ -134,6 +134,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     pg (0.21.0)
+    puma (3.8.1)
     rack (1.6.8)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -242,6 +243,7 @@ DEPENDENCIES
   omniauth-google-oauth2 (~> 0.4.1)
   paperclip (~> 5.1)
   pg
+  puma
   rails (= 4.2.2)
   rails_12factor
   sass-rails (~> 5.0)

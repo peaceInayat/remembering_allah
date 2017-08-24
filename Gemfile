@@ -24,6 +24,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'puma'
 end
 
 gem 'devise', '~> 3.4.1'

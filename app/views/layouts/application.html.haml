@@ -50,9 +50,9 @@
           %li
             %a{:href => contact_us_path}Contact Us
 
-  -#.container
-  -#  - flash.each do |name, msg|
-  -#    = content_tag :div, msg, class: "alert alert-info"
+  .container
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: "alert alert-info"
   = yield
 
   %footer{style:'background: #000;padding: 2rem 0; color: white;text-align: center;clear: both;left:0;bottom:0;position:absolute;width:100%;z-index: 10; height: 60px;'}
@@ -70,6 +70,10 @@
   html {
     position:relative;
     min-height: 100%;
+  }
+
+  .alert{
+    margin-bottom: 0% !important;
   }
 
 :javascript

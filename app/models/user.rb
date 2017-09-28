@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
       user.name = auth.info.name
       user.provider = auth.provider
       user.uid = auth.uid
-
+      user.skip_confirmation!
       user.save
     end
   end
@@ -32,16 +32,12 @@ class User < ActiveRecord::Base
       if registered_user
         return registered_user
       else
-        User.create(name: data["name"],
-                           provider:access_token.provider,
-                           email: data["email"],
-                           uid: access_token.uid ,
-                           password: Devise.friendly_token[0,20],
-        )
+        user = User.new(name: data["name"],provider:access_token.provider, email: data["email"], uid: access_token.uid, password: Devise.friendly_token[0,20])
+        user.skip_confirmation!
+        user.save
       end
     end
   end
-
 
 end
 

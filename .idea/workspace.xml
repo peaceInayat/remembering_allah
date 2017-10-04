@@ -58,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_users.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manage_users.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/manage_users.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="840">
               <caret line="0" column="50" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
               <folding />
             </state>
@@ -83,6 +83,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="new.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="750">
+              <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+              <folding>
+                <marker date="1506581437629" expanded="true" signature="2395:2456" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="devise.en.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/locales/devise.en.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20547946" vertical-offset="0" max-vertical-offset="1050">
+              <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/publications/new.html.erb" />
         <option value="$PROJECT_DIR$/app/models/publication.rb" />
         <option value="$PROJECT_DIR$/app/views/publications/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/publications_controller.rb" />
@@ -149,6 +170,7 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/manage_users.html.haml" />
+        <option value="$PROJECT_DIR$/config/locales/devise.en.yml" />
       </list>
     </option>
   </component>
@@ -157,9 +179,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -620,7 +642,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SocialButtonExample-master" />
     <property name="recentsLimit" value="5" />
-    <property name="SearchEverywhereHistoryKey" value="rout&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;app&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/layouts/application.html.haml&#10;ab&#9;null&#9;null&#10;new&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/devise/sessions/new.html.haml&#10;gem&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;appl&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/application_controller.rb&#10;USe&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;ge&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;rou&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;user&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;us&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;_in&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/testimonials/_index.html.haml&#10;co&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/core_articles_controller.rb&#10;wi&#9;null&#9;null&#10;core&#9;null&#9;null&#10;ga&#9;null&#9;null&#10;post&#9;null&#9;null&#10;wel&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/welcome.html.haml&#10;comm&#9;null&#9;null&#10;abili&#9;null&#9;null&#10;mis&#9;null&#9;null&#10;in&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/posts/index.html.haml&#10;misc&#9;null&#9;null&#10;fo&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/posts/_form.html.erb&#10;_ind&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/testimonials/_index.html.haml&#10;ap&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss&#10;tes&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/testimonials_controller.rb&#10;pub&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/publications_controller.rb&#10;gitig&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/.gitignore&#10;wisd&#9;null&#9;null&#10;abil&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/ability.rb&#10;route&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;we&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/welcome.html.haml&#10;else&#9;null&#9;null&#10;use&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;de&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/initializers/devise.rb&#10;add_p&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/db/migrate/20170724065730_add_provider_to_users.rb&#10;gemf&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;routes&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;gemfi&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;_to_comm&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/db/migrate/20170628090517_add_columns_to_comments.rb&#10;_to_po&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/db/migrate/20170628043717_add_column_to_posts.rb&#10;_to_post&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/db/migrate/20170628043717_add_column_to_posts.rb&#10;ro&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb" />
+    <property name="SearchEverywhereHistoryKey" value="devise.&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/locales/devise.en.yml&#10;rout&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;app&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/layouts/application.html.haml&#10;ab&#9;null&#9;null&#10;new&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/devise/sessions/new.html.haml&#10;gem&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;appl&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/application_controller.rb&#10;USe&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;ge&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;rou&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;user&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;us&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;_in&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/testimonials/_index.html.haml&#10;co&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/core_articles_controller.rb&#10;wi&#9;null&#9;null&#10;core&#9;null&#9;null&#10;ga&#9;null&#9;null&#10;post&#9;null&#9;null&#10;wel&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/welcome.html.haml&#10;comm&#9;null&#9;null&#10;abili&#9;null&#9;null&#10;mis&#9;null&#9;null&#10;in&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/posts/index.html.haml&#10;misc&#9;null&#9;null&#10;fo&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/posts/_form.html.erb&#10;_ind&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/testimonials/_index.html.haml&#10;ap&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss&#10;tes&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/testimonials_controller.rb&#10;pub&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/publications_controller.rb&#10;gitig&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/.gitignore&#10;wisd&#9;null&#9;null&#10;abil&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/ability.rb&#10;route&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;we&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/welcome.html.haml&#10;else&#9;null&#9;null&#10;use&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;de&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/initializers/devise.rb&#10;add_p&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/db/migrate/20170724065730_add_provider_to_users.rb&#10;gemf&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;routes&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;gemfi&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;_to_comm&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/db/migrate/20170628090517_add_columns_to_comments.rb&#10;_to_po&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/db/migrate/20170628043717_add_column_to_posts.rb&#10;_to_post&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/db/migrate/20170628043717_add_column_to_posts.rb&#10;ro&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -820,7 +842,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -829,10 +851,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3768997" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38686132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2299613" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45187438" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16892597" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -868,13 +890,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/wisdoms/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.041666" vertical-offset="11" max-vertical-offset="945">
-          <caret line="36" column="8" selection-start-line="14" selection-start-column="4" selection-end-line="36" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/post.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45652175" vertical-offset="0" max-vertical-offset="690">
@@ -1051,13 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="660">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3558394" vertical-offset="405" max-vertical-offset="960">
@@ -1226,16 +1234,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="750">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
-          <folding>
-            <marker date="1506581437629" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
@@ -1277,6 +1275,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
           <caret line="0" column="50" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="750">
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+          <folding>
+            <marker date="1506581437629" expanded="true" signature="2395:2456" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33203125" vertical-offset="100" max-vertical-offset="660">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/devise.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20547946" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
           <folding />
         </state>
       </provider>

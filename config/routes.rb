@@ -34,7 +34,9 @@ Rails.application.routes.draw do
   root 'home#welcome'
   get '/who_we_are', to: 'home#who_we_are'
   get '/contact_us', to: 'home#contact_us'
-  get '/core_articles', to: 'home#core_articles'
+  get '/manage_users', to: 'home#manage_users'
+  get '/update_users', to: 'home#update_users'
+
   resources :pics
 
 end

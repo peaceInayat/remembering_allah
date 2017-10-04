@@ -43,7 +43,21 @@
           %li
             %a{:href => wisdoms_path}Wisdom Corner
           - if user_signed_in?
-            %li= link_to "My Account", edit_user_registration_path
+            - if current_user.admin?
+              %li.dropdown
+                %a.dropbtn{style:'background-color:#000;'}
+                  Admin Zone
+                  %span.caret
+                .dropdown-content
+                  %a{:href => manage_users_path} Manage Users
+                  %a{:href => categories_path} Create New Category
+                  %a{:href => new_core_article_path} Add Breath of Quran
+                  %a{:href => new_post_path} Add Blog
+                  %a{:href => new_video_path} Add Video
+                  %a{:href => new_wisdom_path} Add Wisdom Corner
+                  %a{:href => edit_user_registration_path} My Account
+            - else
+              %li= link_to "My Account", edit_user_registration_path
             %li= link_to "Log Out", destroy_user_session_path, method: :delete
           - else
             %li= link_to "Sign In", new_user_session_path

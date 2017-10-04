@@ -1,0 +1,51 @@
+.container.shadow{style:'margin-top:3%;padding-top:1%;'}
+  %button.btn.btn-success.pull-right#submit Update
+  %br
+  %table.table.table-striped.table-responsive
+    %thead
+      %tr
+        %th S.no
+        %th Name
+        %th Email ID
+        %th Admin
+    %tbody
+      - @users.each_with_index do |user, i|
+        %tr
+          %td= i+1
+          %td= user.name
+          %td= user.email
+          %td
+            - if user.admin?
+              %input{:name => "myCheckBox", :type => "checkbox", :value => "#{user.id}", checked: 'checked'}
+            -else
+              %input{:name => "myCheckBox", :type => "checkbox", :value => "#{user.id}"}
+
+:javascript
+
+  $(document).ready(function(){
+
+    $('#submit').click(function(){
+       var checkedIds = $('input[name="myCheckBox"]:checked').map(function() {
+            return this.value;
+        }).get();
+
+       var allIds = $('input[name="myCheckBox"]').map(function() {
+            return this.value;
+        }).get();
+
+      $.ajax({
+              type: "GET",
+              url: "/update_users",
+              data: {admin_ids:checkedIds, all_ids:allIds},
+              success: function(data){
+                alert("Successfully Updated");
+              },
+              statusCode: {
+                  404: function() {
+                      alert("request failed");
+                  }
+              }
+          });
+    });
+
+  });

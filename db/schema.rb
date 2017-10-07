@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170821112716) do
+ActiveRecord::Schema.define(version: 20171007055236) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20170821112716) do
     t.datetime "image_updated_at"
     t.text     "short_description",  limit: 65535
     t.string   "title_keyword",      limit: 255
+    t.boolean  "highlight",          limit: 1
   end
 
   create_table "galleries", force: :cascade do |t|
@@ -109,6 +110,7 @@ ActiveRecord::Schema.define(version: 20170821112716) do
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
     t.text     "short_description",  limit: 65535
+    t.boolean  "highlight",          limit: 1
   end
 
   create_table "publications", force: :cascade do |t|
@@ -177,6 +179,7 @@ ActiveRecord::Schema.define(version: 20170821112716) do
     t.integer  "category_id", limit: 4
     t.integer  "user_id",     limit: 4
     t.integer  "rank",        limit: 4
+    t.boolean  "highlight",   limit: 1
   end
 
   create_table "votes", force: :cascade do |t|
@@ -207,6 +210,7 @@ ActiveRecord::Schema.define(version: 20170821112716) do
     t.string   "image_content_type", limit: 255
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
+    t.boolean  "highlight",          limit: 1
   end
 
 end

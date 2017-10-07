@@ -1,0 +1,49 @@
+.container.shadow{style:'margin-top:3%;padding-top:1%;'}
+  %button.btn.btn-success.pull-right#submit Update
+  %h3 Video Highlights
+  %table.table.table-striped.table-responsive
+    %thead
+      %tr
+        %th S.no
+        %th Title
+        %th Highlight
+    %tbody
+      - @videos.each_with_index do |article, i|
+        %tr
+          %td= i+1
+          %td= article.title
+          %td
+            - if article.highlight?
+              %input{:name => "myCheckBox", :type => "checkbox", :value => "#{article.id}", checked: 'checked'}
+            -else
+              %input{:name => "myCheckBox", :type => "checkbox", :value => "#{article.id}"}
+
+:javascript
+
+  $(document).ready(function(){
+
+    $('#submit').click(function(){
+       var checkedIds = $('input[name="myCheckBox"]:checked').map(function() {
+            return this.value;
+        }).get();
+
+       var allIds = $('input[name="myCheckBox"]').map(function() {
+            return this.value;
+        }).get();
+
+      $.ajax({
+              type: "GET",
+              url: "/update_highlights",
+              data: {checked_ids:checkedIds, all_ids:allIds, highlight_id:3},
+              success: function(data){
+                alert("Successfully Updated");
+              },
+              statusCode: {
+                  404: function() {
+                      alert("request failed");
+                  }
+              }
+          });
+    });
+
+  });

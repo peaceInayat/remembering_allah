@@ -95,7 +95,33 @@
       %div.col-md-4.col-xs-12
         %div.border
           %div.popping{"data-content" => "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look eveThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look eveThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look eve", "data-placement" => "bottom", "data-toggle" => "popover", :title => "Pondering over the verses of the Qur’an"} Tafakkur
+
+
 %div.container-fuild{style:'background-color: #fafafa;padding-bottom: 20px;'}
+  %div{align:'center'}
+    %h2.blue{style:'padding:25px 0 20px 0; font-family:cursive;'} Breath of Quran Highlights
+  %div.container-fluid.articles_class_css.mobile_view_w_100
+    %div.row
+      - @recent_boq.reverse.each do |article|
+        %div.col-md-4.col-xs-12
+          .panel.panel-default
+            .panel-heading
+              %h4.single_line
+                =link_to truncate(article.title, :length => 100), article
+              %hr
+              %p.date= article.created_at.strftime("%B %d, %Y")
+            .panel-body
+              .row
+                .col-sm-5.image_center
+                  = image_tag article.image.url(:thumb), class:'img-responsive thumbnail no_bottom'
+                .col-sm-7
+                  %p.justify= truncate(article.short_description, :length => 250)
+  %div{align:'right'}
+    - if can? :edit, CoreArticle
+      = link_to 'Edit Highlights,', manage_boq_highlights_path, style:'margin-right: 22px; font-size: 1.65em;'
+    = link_to '... see more->', core_articles_path, style:'margin-right: 22px; font-size: 1.65em;'
+
+%div.container-fuild{style:'background-color: #fff;margin-top: -20px;padding-bottom:20px;'}
   %div{align:'center'}
     %h2.blue{style:'padding:25px 0 20px 0; font-family:cursive;'} Blog Highlights
   %div.container-fluid.articles_class_css.mobile_view_w_100
@@ -115,9 +141,11 @@
                 .col-sm-7
                   %p.justify= truncate(article.short_description, :length => 250)
   %div{align:'right'}
+    - if can? :edit, Post
+      = link_to 'Edit Highlights,', manage_post_highlights_path, style:'margin-right: 22px; font-size: 1.65em;'
     = link_to '... see more->', posts_path, style:'margin-right: 22px; font-size: 1.65em;'
 
-%div.container-fuild{style:'background-color: #fff;'}
+%div.container-fuild{style:'background-color: #fafafa;padding-bottom:20px;padding-top:1px;'}
   %div{align:'center'}
     %h2.blue{style:'padding:9px 0 20px 0; font-family:cursive;'} Video Highlights
   %div.container-fluid.articles_class_css.mobile_view_w_100
@@ -134,7 +162,33 @@
               %hr
               %p.date= video.created_at.strftime("%B %d, %Y")
   %div{align:'right'}
+    - if can? :edit, Video
+      = link_to 'Edit Highlights,', manage_video_highlights_path, style:'margin-right: 22px; font-size: 1.65em;'
     = link_to '... see more->', videos_path, style:'margin-right: 22px; font-size: 1.65em;'
+
+%div.container-fuild{style:'background-color: #fff;margin-top: -20px;'}
+  %div{align:'center'}
+    %h2.blue{style:'padding:25px 0 20px 0; font-family:cursive;'} Wisdom Corner Highlights
+  %div.container-fluid.articles_class_css.mobile_view_w_100
+    %div.row
+      - @recent_wisdoms.reverse.each do |article|
+        %div.col-md-4.col-xs-12
+          .panel.panel-default
+            .panel-heading
+              %h4.single_line
+                =link_to truncate(article.title, :length => 100), article
+              %hr
+              %p.date= article.created_at.strftime("%B %d, %Y")
+            .panel-body
+              .row
+                .col-sm-5.image_center
+                  = image_tag article.image.url(:thumb), class:'img-responsive thumbnail no_bottom'
+                .col-sm-7
+                  %p.justify= truncate(article.short_description, :length => 250)
+  %div{align:'right'}
+    - if can? :edit, Wisdom
+      = link_to 'Edit Highlights,', manage_wisdom_highlights_path, style:'margin-right: 22px; font-size: 1.65em;'
+    = link_to '... see more->', wisdoms_path, style:'margin-right: 22px; font-size: 1.65em;'
 
 = render 'testimonials/index.html.haml'
 
@@ -223,6 +277,14 @@
 :javascript
   $(document).ready(function(){
       $('[data-toggle="popover"]').popover();
+      $('body').on('click', function (e) {
+        $('[data-toggle=popover]').each(function () {
+            // hide any open popovers when the anywhere else in the body is clicked
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+      });
   });
 
 
@@ -248,6 +310,7 @@
 
   .popover{
     color: #333;
+    max-width: 400px;
   }
   h2{
     color: #fff;

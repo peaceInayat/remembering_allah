@@ -45,4 +45,4 @@
               - if can? :edit, article
                 .btn-group.btn-group-justified
                   %a.btn.btn-primary{:href => edit_core_article_path(article)} Edit
-                  %a.btn.btn-primary{:href => article, method: :delete, data: { confirm: 'Are you sure?' }} Destroy
+                  = link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-primary'

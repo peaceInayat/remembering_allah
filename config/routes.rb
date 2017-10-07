@@ -37,6 +37,13 @@ Rails.application.routes.draw do
   get '/manage_users', to: 'home#manage_users'
   get '/update_users', to: 'home#update_users'
 
+  get '/manage_boq_highlights', to: 'home#manage_boq_highlights'
+  get '/manage_post_highlights', to: 'home#manage_post_highlights'
+  get '/manage_video_highlights', to: 'home#manage_video_highlights'
+  get '/manage_wisdom_highlights', to: 'home#manage_wisdom_highlights'
+
+  get '/update_highlights', to: 'home#update_highlights'
+
   resources :pics
 
 end

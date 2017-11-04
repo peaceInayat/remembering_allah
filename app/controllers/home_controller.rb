@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     @recent_posts = Post.where(highlight:true).last(3)
     @recent_videos = Video.where(highlight:true).last(3)
     @recent_wisdoms = Wisdom.where(highlight:true).last(3)
+    @q_links = Misc.where(code:'quick_link')
   end
 
   def manage_users
@@ -33,6 +34,20 @@ class HomeController < ApplicationController
 
     respond_to do |format|
       format.json{render json: admin_ids}
+    end
+  end
+
+  def quick_links
+    @q_links = Misc.where(code:'quick_link')
+  end
+
+  def update_quick_links
+    qls_data = params[:qls_data].values
+    qls_data.each do |data|
+      Misc.find_by_id(data[0]).update(name:data[1], body:data[2])
+    end
+    respond_to do |format|
+      format.json{render json: qls_data}
     end
   end
 

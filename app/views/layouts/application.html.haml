@@ -39,8 +39,13 @@
             %a{:href => core_articles_path}Breath of Quran
           %li
             %a{:href => posts_path}Blog
-          %li
-            %a{:href => videos_path}Videos
+          %li.dropdown#open3
+            %a.dropbtn{style:'background-color:#000;'}
+              Media
+              %span.caret
+            .dropdown-content#close3
+              %a{:href => videos_path}Videos
+              %a{:href => who_we_are_path} Audio
           %li
             %a{:href => wisdoms_path}Wisdom Corner
           - if user_signed_in?

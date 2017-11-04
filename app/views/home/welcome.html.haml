@@ -226,30 +226,14 @@
       %div.col-md-3.col-xs-12{align:'left'}
         %h3.blue Quick Links
         %ul.quick_links#quick_l{style:'margin-left:-10%;'}
-          %li
-            %a{:href => "#"}
-              %span.fa.fa-arrow-right
-              Marriage and Islam
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-arrow-right
-              Importance of Prayer
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-arrow-right
-              Quran Recitation
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-arrow-right
-              Children Rights In Islam
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-arrow-right
-              Pray! Before It Is Late
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-arrow-right
-              Mosque, Center For Peace
+
+          -@q_links.each do |q_link|
+            %li
+              %a{:href => q_link.body}
+                %span.fa.fa-arrow-right
+                = q_link.name
+          %br
+          = link_to 'Edit', quick_links_path, class:'btn btn-default'
       %div.col-md-3.col-xs-12{align:'left'}
         %h3.blue Contact Us
         %ul.quick_links#address{style:'margin-left:-10%;'}
@@ -383,3 +367,4 @@
   .carousel-control:hover{
     opacity: 0.1;
   }
+

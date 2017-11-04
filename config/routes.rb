@@ -36,6 +36,8 @@ Rails.application.routes.draw do
   get '/contact_us', to: 'home#contact_us'
   get '/manage_users', to: 'home#manage_users'
   get '/update_users', to: 'home#update_users'
+  get '/quick_links', to: 'home#quick_links'
+  get '/update_quick_links', to: 'home#update_quick_links'
 
   get '/manage_boq_highlights', to: 'home#manage_boq_highlights'
   get '/manage_post_highlights', to: 'home#manage_post_highlights'

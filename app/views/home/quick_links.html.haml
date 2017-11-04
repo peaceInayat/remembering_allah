@@ -1,0 +1,47 @@
+.container.shadow{style:'margin-top:3%;padding-top:1%;'}
+  %button.btn.btn-success.pull-right#submit Update
+  %br
+  %table.table.table-striped.table-responsive
+    %thead
+      %tr
+        %th Quick Link Id
+        %th Quick Link Name
+        %th Url
+    %tbody
+      - @q_links.each do |q_link|
+        %tr
+          %td= q_link.id
+          %td{:contenteditable => "true"}= q_link.name
+          %td{:contenteditable => "true", style:'background-color:#f4f5f5;'}= q_link.body
+
+:javascript
+
+  $(document).ready(function(){
+
+    $('#submit').click(function(){
+
+      var data = [];
+
+      $("table tr:has(td)").each(function(i, v){
+        data[i] = [];
+        $(this).children('td').each(function(ii, vv){
+          data[i][ii] = $(this).text();
+        });
+      })
+
+      $.ajax({
+              type: "GET",
+              url: "/update_quick_links",
+              data: {qls_data:data},
+              success: function(data){
+                alert("Successfully Updated");
+              },
+              statusCode: {
+                  404: function() {
+                      alert("request failed");
+                  }
+              }
+          });
+    });
+
+  });

@@ -1,0 +1,61 @@
+%div.articles_class_css
+  %div.sidenav#mysidenav{style:'background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+    %ul.nav.nav-pills.nav-stacked
+      %li= link_to 'All Audios', audios_path, class:'nav_btn'
+      - Category.where(section:'Audio').order('rank').each do |cat|
+        %li= link_to cat.name, audios_path(category_id: cat.id), class:'nav_btn'
+      - if can? :create, Category
+        %br
+        = link_to 'Add Category', categories_path, class:'nav_btn'
+
+  %div#main
+    %div.row
+      %div.col-md-2.col-sm-4.hidden-xs{style:'margin-top:0.8%;background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
+        %ul.nav.nav-pills.nav-stacked{style:'padding-top:5%;'}
+          %li= link_to 'All Audios', audios_path, class:'nav_btn'
+          - Category.where(section:'Audio').order('rank').each do |cat|
+            %li= link_to cat.name, audios_path(category_id: cat.id), class:'nav_btn'
+          %br
+          - if can? :create, Category
+            = link_to 'Add Category', categories_path, class:'nav_btn', style:'margin-bottom:8%;'
+
+      %div.col-md-10.col-sm-8.col-xs-12.mobile_view_w_100
+        %div
+        - if can? :create, Audio
+          = link_to 'New Audio', new_audio_path, class:'btn btn-default pull-right'
+          %br
+          %br
+        %div.visible-xs
+          %span{:style => "font-size:30px;cursor:pointer", id:'ooo'} ☰
+          %span{:style => "font-size:40px;cursor:pointer;display:none;", id:'ccc'} &times;
+        %table.table.table-striped.table-responsive{style:'box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-left:9px;border-radius:5px;'}
+          %thead
+            %tr
+              %th S.No
+              %th Title
+              %th Play
+              %th Download
+              - if can? :edit, Audio
+                %th
+                %th
+          %tbody
+            - @audios.each_with_index do |a, i|
+              %tr
+                %td=i+1
+                %td=a.title
+                %td
+                  %a{:href => "https://drive.google.com/file/d/#{a.url}", target:'_blank'}
+                    %i.fa.fa-play-circle-o{style:'font-size:1.7em;'}
+                %td
+                  %a{:href => "https://drive.google.com/uc?export=download&id=#{a.url}"}
+                    %i.fa.fa-arrow-circle-o-down{style:'font-size:1.7em;'}
+                - if can? :edit, a
+                  %td=link_to 'Edit', edit_audio_path(a)
+                  %td=link_to 'Delete', audio_path(a), method: :delete, data: { confirm: 'Are you sure?' }
+
+:css
+  @media (max-width: 767px) {
+    .table.table-striped {
+      margin-left: 0 !important;
+    }
+  }

@@ -1,3 +1,6 @@
+%link{:href => "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css", :rel => "stylesheet"}/
+%script{:src => "https://code.jquery.com/ui/1.12.1/jquery-ui.js"}
+
 %div{style:'background-color:#fafafa; padding: 1% 0 .2% 0;'}
   - if can? :edit, Misc
     %marquee{style:'font-size: 1.2em;color:#000;width:90%;'}= Misc.find_by_code('marquee').body
@@ -88,14 +91,76 @@
     %div.row{style: 'text-align:center'}
       %div.col-md-4.col-xs-12
         %div.border
-          %div.popping{"data-content" => "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look eveThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look eve", "data-placement" => "bottom", "data-toggle" => "popover", :title => "Pondering over the verses of the Qur’an"} Tawassum
+          %div.popping#opener1 Tawassum
       %div.col-md-4.col-xs-12
         %div.border
-          %div.popping{"data-content" => "Duis consequat eros nec tortor mollis luctus. Proin imperdiet nibh vitae lacus dignissim dictum. Etiam suscipit, sem et aliquam faucibus, justo risus aliquet ante, vitae ullamcorper sapien mauris a justo. Cras ac scelerisque lorem. AlDuis consequat eros nec tortor mollis luctus. Proin imperdiet nibh vitae lacus dignissim dictum. Etiam suscipit, sem et aliquam faucibus, justo risus aliquet ante, vitae ullamcorper sapien mauris a justo. Cras ac scelerisque lorem. AlDuis consequat eros nec tortor mollis luctus. Proin imperdiet nibh vitae lacus dignissim dictum. Etiam suscipit, sem et aliquam faucibus, justo risus aliquet ante, vitae ullamcorper sapien mauris a justo. Cras ac scelerisque lorem. Al", "data-placement" => "bottom", "data-toggle" => "popover", :title => "Pondering over the verses of the Qur’an"} Tadabbur
+          %div.popping#opener2 Tadabbur
       %div.col-md-4.col-xs-12
         %div.border
-          %div.popping{"data-content" => "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look eveThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look eveThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look eve", "data-placement" => "bottom", "data-toggle" => "popover", :title => "Pondering over the verses of the Qur’an"} Tafakkur
+          %div.popping#opener3 Tafakkur
 
+%div
+  #dialog1{:title => "TAWASSUM"}
+    %p
+      The word “Tawassum” means to ‘Mentally Reflect’ i.e. to think deeply or carefully about. It has been used in the Quran in
+      %b (15:75) -
+      “Surely in this are signs for those who reflect”. This verse has been used in context of reflecting on stories of the Prophets and drawing out lessons to be implemented in life. So “Tawassum” is the quality of a believer to learn lessons from history and past events.
+    %p
+      Allah says in
+      %b (12:111) –
+      “There is, in their stories, instruction for men endued with understanding. It is not a tale invented, but a confirmation of what went before it - a detailed exposition of all things, and a guide and a mercy to any such as believe”. So “Tawassum” is an essential requirement for becoming “Men of Understanding”.
+    %p
+      Allah says in
+      %b (24:34) –
+      “We have already sent down to you verses making things clear, an illustration from (the story of) people who passed away before you, and an admonition for those who fear (Allah i.e. are Muttaqeen)”. So “Tawassum” is the quality which the “Muttaqee” uses to draw lessons from the stories Allah has narrated to humanity.
+    %p
+      A believer must think deeply about history but how will he if he doesn’t read/study history? Therefore, studying history is a sign of being a good Muslim. A good Muslim studies not just the history mentioned in Quran but general history as well, in fact some of the best historians in the world made it their religious duty to travel, research and write books on history hearing verses like
+      %b (40:82) –
+      “Do they not travel through the earth and see what was the End of those before them?”. Ibn Khaldun a devout Muslim, who memorised the whole Quran to become “Haafiz-e-Quran”, devoted his life to the study of history to understand the human society and wrote books not just on history but philosophy of history. 20th-century English historian Arnold Toynbee has described Ibn Khaldun’s work as “a philosophy of history which is undoubtedly the greatest work of its kind that has ever yet been created by any mind in any time or place”. Robert Flint said about him “As a theorist on history he had no equal in any age or country until Vico appeared, more than three hundred years later. Plato, Aristotle and Augustine were not his peers . . . .”
+    %p One who follows this path and nurtures “Tawassum” might even give birth to new body of knowledge, as research in one subject leads to new undiscovered subjects, Eg. Ibn Khaldūn’s examination of history and learning lessons from it led him to discover the nature of society and social change. It clearly was a new science, which he called ʿilm al-ʿumrān (“the science of culture” or sociology). Honing the skill of “Tawassum” is a religious duty for every true believer who is sincere to his faith and it is a quality that results in deep understanding of human nature and behavior, this understanding of human nature and behavior leads to true understanding and realisation of Allah.
+    %p So, O Muslims Reflect! O Muslims Tawassum!
+
+%div
+  #dialog2{:title => "TADABBUR"}
+    %p
+      “Then do they not ponder (do tadabbur) upon the Qur'an, or are there locks upon [their] hearts?”
+      %b .[Qur’an 47:24]
+    %p “Tadabbur” is an Arabic word which means -To Ponder i.e. to think about (something) carefully, especially before making a decision or reaching a conclusion.
+    %p
+      This is an utmost important characteristic that every Muslim should have and if they don’t have then learn and nurture it, nurture it till their small seed of “Tadabbur” grows becoming a well grounded and wide spreading tree, giving shade and fruit to all who come to him/her. A believer needs to have his/her quality of “Tadabbur” to be very strong if he is sincere to Islam because Allah says that His intention behind revealing the Quran is that mankind may do “Tadabbur” i.e. pondering on Quran. “(This is) a Book (the Quran) which We have sent down to you, full of blessings that they may ponder over its Verses, and that men of understanding may remember”
+      %b .[Qur’an 38:29].
+    %p
+      Tadabbur is comprehensive and deep thinking with the aim to reach to guidance hidden in a statement or event. It is not enough to learn the Qur’an and recite it profusely. What is required from us is to ponder on what Allah is communicating through it, what He is teaching us through it, for this one needs to look into the meaning of the words/ayats and meditate on it. Quranic meditation is not about killing your thoughts but clarifying your thoughts by focussing on your thought and analysing it from every possible angle within dimensions of reality and come to the best conclusion. Allah is actually promoting  exactly this in “Will they not, then, try to Ponder on this Qur’an? Had it issued from any but God, they would surely have found in it many an inner contradiction!” –
+      %b (4:82).
+      “Do they not ponder over the Word (of Allah, or has anything (new) come to them that did not come to their fathers of old?” –
+      %b (23:68).
+    %p “Tadabbur” is the quality to understand what is really being said or taught. One who has this quality strong in him is not only able to understand instantly what others are communicating but also is able to himself communicate effectively. If the quality of one’s “Tadabbur” is still  stronger, then one may even understand things which someone is about to say but has not “yet” said. It is this very ability that enables one to see the “Zaahir” (manifest) as well as “Baatin” (Hidden) of Quran because Allah stops but the reader’s heart keeps hearing what is “yet” to be said.
+    %p We have seen that Tawassum is the quality related to understanding of human behavior and “Tafakkur” is a quality related to understanding Science. “Tadabbur” is the quality related to understanding communication. On these different kinds of understanding we build true understanding and realisation of Allah our Creator. For how can The Creator be understood if not through creation?
+    %p So O Muslims Ponder! O Muslims Tadabbur!
+
+%div
+  #dialog3{:title => "TAFAKKUR"}
+    %p “Tafakkur” is an arabic word which means to contemplate i.e. to think deeply and at length.
+    %p
+      Allah tells one of the qualities of a sincere and true believer is to do “Tafakkur” about the creation of everything around him/her.  “In the creation of the heavens and the earth, and in the succession of night and day, there are indeed signs for men of understanding; those that remember God when standing, sitting, and lying down, and contemplate on the creation of the heavens and the earth (saying): ‘Lord, You have not created these in vain. Glory be to You! Save us from the torment of the fire, Lord.”
+      %b (3:190-191).
+      Allah tells that a sign of being a believer is not just to pray to be protected from hell but rather to gain knowledge of the creation of heavens and earth (i.e. universe) and contemplate on that knowledge. It is this knowledge which will lead a believer to be sure in faith and seek forgiveness from Allah. You cannot think about the universe standing, sitting and lying down if you have no knowledge of the universe and if you are not devoted to science. Can you? No.
+    %p So true teachers like Imam Jafar-as-Sadiq (on whom every muslim sends durood as he is from the children of Prophet pbuh) taught his students that the study of science is a way to perfection of faith. Thus, one of his students “Geber” i.e. Jabir Ibn Hayyan after this teaching is known to the world as “Father of chemistry” (*along with late 18th century chemist Antoine Lavoisier). ‘Geber’ or Jabir  established chemistry as an independent branch of science in 8th century by being one of the first to engage in experiments and discovering distillation, filtration, crystallisation, sublimation, reaction and fixation which all students of chemistry take for granted as standard procedures today. This father of chemistry loved maths, astronomy, engineering, geography, physics, pharmacy etc. and considered all of them spiritual sciences i.e. sciences which increases spirituality.
+    %p
+      Believers like Jabir are true witnesses to the verse of Quran “And He has made subservient to you, [as a gift] from Himself, all that is in the heavens and on earth: in this, behold, there are messages indeed for people who contemplate!” –
+      %b (45:13).
+    %p
+      Quran is full of verses which call its readers to do “Tafakkur” “And it is He who has spread the earth wide and placed on it firm mountains and running waters, and created thereon two sexes of every [kind of] plant; [and it is He who] causes the night to cover the day. Verily, in all this there are messages indeed for people who contemplate! –
+      %b (13:3).
+      Allah says “[and] by virtue thereof He causes crops to grow for you, and olive trees, and date palms, and grapes, and all [other] kinds of fruit: in this, behold, there is a message indeed for people who contemplate!
+      %b (16:11).
+    %p Scientist discovers the “How”? And only after that “How?” one comes to “Why?” i.e. the message behind it. Though tafakkur is related to science but its purpose is not to stop at science but to reach to Allah through science i.e. it covers both the “How?” and the “Why?”
+    %p
+      Just as astronomy aims to discover relationships between stars and planets there is another science, the science which helps to discover the connections within the Quran. On this Allah says “Had We bestowed this Qur’an from on high upon a mountain, thou wouldst indeed see it humbling itself, breaking asunder for awe of God. And [all] such parables We propound unto men, so that they might [learn to] contemplate”
+      %b (59:21).
+      Only a scientific mind can contemplate that Haabil was a mountain and not Qaabil, that Prophet (pbuh) was stronger and not the people of Taif, that truly whenever the mission of Allah has been put on a mountain it crumbles in the remembrance of Allah.
+    %p "No act of worship is as meritorious as contemplation. So reflect on the God's bounties and the works of His Power" - (al-Mu’jam al-Awsaṭ 6489. Grade Hasan according to Al-Tabarani and Al-Albani)
+    %p So, O Muslims Contemplate! O Muslims Tafakkur!
 
 %div.container-fuild{style:'background-color: #fafafa;padding-bottom: 20px;'}
   %div{align:'center'}
@@ -257,22 +322,52 @@
               %i.fa.fa-globe
               www.churchmosque.com
 
-
 :javascript
-  $(document).ready(function(){
-      $('[data-toggle="popover"]').popover();
-      $('body').on('click', function (e) {
-        $('[data-toggle=popover]').each(function () {
-            // hide any open popovers when the anywhere else in the body is clicked
-            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-                $(this).popover('hide');
-            }
-        });
-      });
+  $( "#dialog1, #dialog2, #dialog3" ).dialog({
+    autoOpen: false,
+    modal:true,
+    show: {
+      effect: "blind",
+      duration: 1000
+    },
+    hide: {
+      effect: "explode",
+      duration: 1000
+    },
+    maxWidth:800,
+    width: $(window).width() > 600 ? 700 : 320,
+    fluid:true
   });
 
+  function set_css(){
+    $('.ui-widget-overlay').css('background', '#000');
+    $('.ui-widget-overlay').css('opacity', '.8');
+  }
+
+  $( "#opener1" ).on( "click", function() {
+    $("#dialog1").dialog();
+    $( "#dialog1" ).dialog( "open" );
+    set_css();
+  });
+  $( "#opener2" ).on( "click", function() {
+    $("#dialog2").dialog();
+    $( "#dialog2" ).dialog( "open" );
+    set_css();
+  });
+  $( "#opener3" ).on( "click", function() {
+    $("#dialog3").dialog();
+    $( "#dialog3" ).dialog( "open" );
+    set_css();
+  });
 
 :css
+  #dialog { /* set all these in set_css function if required */
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   padding: 10px;
+   overflow: auto;
+   max-height: 300px !important;
+  }​
 
   @media (max-width: 991px) {
     .video{

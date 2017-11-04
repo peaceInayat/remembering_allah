@@ -80,6 +80,6 @@ class WisdomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wisdom_params
-      params.require(:wisdom).permit(:title, :body, :category_id, :short_description, :image)
+      params.require(:wisdom).permit(:title, :body, :category_id, :short_description, :image, :rank)
     end
 end

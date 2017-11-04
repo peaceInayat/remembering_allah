@@ -4,7 +4,7 @@
   %title Remembering Allah
   = favicon_link_tag 'favicon.ico'
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => false
   = csrf_meta_tags
   %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
   %link{:href => "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet", :type => "text/css"}
@@ -45,7 +45,7 @@
               %span.caret
             .dropdown-content#close3
               %a{:href => videos_path}Videos
-              %a{:href => who_we_are_path} Audio
+              %a{:href => audios_path} Audio
           %li
             %a{:href => wisdoms_path}Wisdom Corner
           - if user_signed_in?
@@ -60,6 +60,7 @@
                   %a{:href => new_core_article_path} Add Breath of Quran
                   %a{:href => new_post_path} Add Blog
                   %a{:href => new_video_path} Add Video
+                  %a{:href => new_audio_path} Add Audio
                   %a{:href => new_wisdom_path} Add Wisdom Corner
                   %a{:href => edit_user_registration_path} My Account
                   %a{:href => destroy_user_session_path, method: :delete} Log Out

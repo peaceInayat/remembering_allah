@@ -32,6 +32,9 @@
 
     <%= f.cktext_area :body, :class => "form-control" %>
     <br>
+    <%= f.text_field :rank, placeholder:'Rank (Any Integer)', class:'url' %>
+    <br>
+    <br>
     <p><b>Choose Category</b></p>
     <%= f.collection_select :category_id, Category.where(section:'Article'), :id, :name %>
     <br>

@@ -2,6 +2,7 @@
   %div.sidenav#mysidenav{style:'background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
     %ul.nav.nav-pills.nav-stacked
       %li= link_to 'All Articles', core_articles_path, class:'nav_btn'
+      %li= link_to 'Breath Of Quran', core_article_path(:id=> CoreArticle.first, name:'breath_of_quran'), class:'nav_btn'
       - @core_articles.each do |article|
         %li= link_to article.title_keyword, article, class:'nav_btn'
       - if can? :create, Post
@@ -14,6 +15,7 @@
       %div.col-md-2.col-sm-4.hidden-xs{style:'margin-top:0.8%;background-color: #f4f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'}
         %ul.nav.nav-pills.nav-stacked{style:'padding-top:5%;'}
           %li= link_to 'All Articles', core_articles_path, class:'nav_btn'
+          %li= link_to 'Breath Of Quran', core_article_path(:id=> CoreArticle.first, name:'breath_of_quran'), class:'nav_btn'
           - @core_articles.each do |article|
             %li= link_to article.title_keyword, article, class:'nav_btn'
           %br
@@ -25,24 +27,7 @@
           %span{:style => "font-size:30px;cursor:pointer", id:'ooo'} ☰
           %span{:style => "font-size:40px;cursor:pointer;display:none;", id:'ccc'} &times;
         #post_content.container
-          %h1.title.justify= @content.title
-          %p.date
-            Submitted #{time_ago_in_words(@content.created_at)} Ago By
-            %strong= @content.user.name rescue ''
-          %hr
-          %p.body= @content.body.to_s.html_safe
-          .btn-group.pull-right
-            = social_share_button_tag("Good Article")
-            = link_to like_core_article_path(@content), method: :put, class: "btn btn-default" do
-              %span.glyphicon.glyphicon-heart
-              = @content.get_upvotes.size
-            - if can? :edit, @content
-              =link_to 'Edit', edit_core_article_path(@content),class:'btn btn-default'
-              =link_to 'Delete', core_article_path(@content), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default'
-          -##comments
-          -#  %h2
-          -#    = @content.comments.count
-          -#    Comments
-          -#  = render @content.comments
-          -#  %h3 Add a comment:
-          -#  = render "comments/form"
+          - if @name == 'breath_of_quran'
+            = render 'breath_of_quran'
+          - else
+            = render 'core_article'

@@ -13,6 +13,11 @@ class CoreArticlesController < ApplicationController
   def show
     @core_articles = CoreArticle.all
     @content = @core_article
+    if params[:name] == 'breath_of_quran'
+      @name = 'breath_of_quran'
+    else
+      @name = params[:id]
+    end
   end
 
   # GET /core_articles/new

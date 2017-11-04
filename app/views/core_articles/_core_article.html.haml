@@ -1,0 +1,21 @@
+%h1.title.justify= @content.title
+%p.date
+  Submitted #{time_ago_in_words(@content.created_at)} Ago By
+  %strong= @content.user.name rescue ''
+%hr
+%p.body= @content.body.to_s.html_safe
+.btn-group.pull-right
+  = social_share_button_tag("Good Article")
+  = link_to like_core_article_path(@content), method: :put, class: "btn btn-default" do
+    %span.glyphicon.glyphicon-heart
+    = @content.get_upvotes.size
+  - if can? :edit, @content
+    =link_to 'Edit', edit_core_article_path(@content),class:'btn btn-default'
+    =link_to 'Delete', core_article_path(@content), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default'
+-##comments
+-#  %h2
+-#    = @content.comments.count
+-#    Comments
+-#  = render @content.comments
+-#  %h3 Add a comment:
+-#  = render "comments/form"

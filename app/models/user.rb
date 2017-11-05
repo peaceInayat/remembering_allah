@@ -35,6 +35,7 @@ class User < ActiveRecord::Base
         user = User.new(name: data["name"],provider:access_token.provider, email: data["email"], uid: access_token.uid, password: Devise.friendly_token[0,20])
         user.skip_confirmation!
         user.save
+        user
       end
     end
   end

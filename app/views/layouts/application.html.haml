@@ -63,7 +63,7 @@
                   %a{:href => new_audio_path} Add Audio
                   %a{:href => new_wisdom_path} Add Wisdom Corner
                   %a{:href => edit_user_registration_path} My Account
-                  %a{:href => destroy_user_session_path, method: :delete} Log Out
+                  %a{:href => destroy_user_session_path, method: :get} Log Out
             - else
               %li.dropdown#open3
                 %a.dropbtn{style:'background-color:#000;'}

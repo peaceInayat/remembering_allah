@@ -71,7 +71,7 @@
                   %span.caret
                 .dropdown-content#close3
                   %a{:href => edit_user_registration_path} My Account
-                  %a{:href => destroy_user_session_path, "data-method"=> :delete} Log Out
+                  %a{:href => destroy_user_session_path, "data-method"=> :get} Log Out
           - else
             %li= link_to "Sign In", new_user_session_path
 

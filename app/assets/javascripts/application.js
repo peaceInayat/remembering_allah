@@ -8,12 +8,12 @@
 // compiled file.
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
+// about supported directives., REMOVED ---- require turbolinks
 //
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
+
 //= require social-share-button
 //= require ckeditor/init
 //= require_tree .

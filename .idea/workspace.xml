@@ -26,11 +26,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_breath_of_quran.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="welcome.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/welcome.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-226.875" vertical-offset="0" max-vertical-offset="7095">
+              <caret line="363" column="0" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
+              <folding>
+                <marker date="1509840160032" expanded="true" signature="24508:24685" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="24716:24740" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="24728:24736" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="24751:24826" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="24837:24932" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="24944:24988" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="24993:25015" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="25032:25082" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="25113:25202" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="25128:25197" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="25213:25339" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="25350:25430" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="25435:25462" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="25481:25547" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="25577:25893" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="25929:25979" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="25996:26029" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="26048:26076" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="26095:26121" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="26131:26198" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="26219:26242" placeholder="{...}" />
+                <marker date="1509840160032" expanded="true" signature="26268:26291" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_breath_of_quran.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/core_articles/_breath_of_quran.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13111888" vertical-offset="0" max-vertical-offset="572">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
+              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -46,12 +79,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33880904" vertical-offset="0" max-vertical-offset="795">
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/testimonials/_index.html.haml" />
         <option value="$PROJECT_DIR$/db/migrate/20170821111531_add_cc_to_users.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20170821112716_add_index_to_users.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" />
@@ -100,8 +142,9 @@
         <option value="$PROJECT_DIR$/app/views/core_articles/index.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/core_articles_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/core_articles/show.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/home/welcome.html.haml" />
         <option value="$PROJECT_DIR$/app/views/core_articles/_breath_of_quran.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/home/welcome.html.haml" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       </list>
     </option>
   </component>
@@ -453,6 +496,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -461,7 +544,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SocialButtonExample-master" />
     <property name="recentsLimit" value="5" />
-    <property name="SearchEverywhereHistoryKey" value="wel&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/welcome.html.haml&#10;corea&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/core_articles_controller.rb&#10;rou&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;hom&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/home_controller.rb&#10;qui&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/quick_links.html.haml&#10;ho&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/home_controller.rb&#10;rout&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;core&#9;null&#9;null&#10;wisdo&#9;null&#9;null&#10;vide&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/videos_controller.rb&#10;Post&#9;null&#9;null&#10;add_ra&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/db/migrate/20171104215101_add_rank_to_core_articles.rb&#10;audio&#9;null&#9;null&#10;welco&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/welcome.html.haml&#10;video&#9;null&#9;null&#10;ROU&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;route&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;we&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/welcome.html.haml&#10;home&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/home_controller.rb&#10;abil&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/ability.rb&#10;devise.&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/locales/devise.en.yml&#10;app&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/layouts/application.html.haml&#10;ab&#9;null&#9;null&#10;new&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/devise/sessions/new.html.haml&#10;gem&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;appl&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/application_controller.rb&#10;USe&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;ge&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;user&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;us&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;_in&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/testimonials/_index.html.haml&#10;co&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/core_articles_controller.rb&#10;wi&#9;null&#9;null&#10;ga&#9;null&#9;null&#10;post&#9;null&#9;null&#10;comm&#9;null&#9;null&#10;abili&#9;null&#9;null&#10;mis&#9;null&#9;null&#10;in&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/posts/index.html.haml&#10;misc&#9;null&#9;null&#10;fo&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/posts/_form.html.erb&#10;_ind&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/testimonials/_index.html.haml&#10;ap&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss&#10;tes&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/testimonials_controller.rb&#10;pub&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/publications_controller.rb&#10;gitig&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/.gitignore&#10;wisd&#9;null&#9;null&#10;else&#9;null&#9;null&#10;use&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;de&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/initializers/devise.rb" />
+    <property name="SearchEverywhereHistoryKey" value="welco&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/welcome.html.haml&#10;wel&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/welcome.html.haml&#10;corea&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/core_articles_controller.rb&#10;rou&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;hom&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/home_controller.rb&#10;qui&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/quick_links.html.haml&#10;ho&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/home_controller.rb&#10;rout&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;core&#9;null&#9;null&#10;wisdo&#9;null&#9;null&#10;vide&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/videos_controller.rb&#10;Post&#9;null&#9;null&#10;add_ra&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/db/migrate/20171104215101_add_rank_to_core_articles.rb&#10;audio&#9;null&#9;null&#10;video&#9;null&#9;null&#10;ROU&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;route&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/routes.rb&#10;we&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/home/welcome.html.haml&#10;home&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/home_controller.rb&#10;abil&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/ability.rb&#10;devise.&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/locales/devise.en.yml&#10;app&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/layouts/application.html.haml&#10;ab&#9;null&#9;null&#10;new&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/devise/sessions/new.html.haml&#10;gem&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;appl&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/application_controller.rb&#10;USe&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;ge&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/Gemfile&#10;user&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;us&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;_in&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/testimonials/_index.html.haml&#10;co&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/core_articles_controller.rb&#10;wi&#9;null&#9;null&#10;ga&#9;null&#9;null&#10;post&#9;null&#9;null&#10;comm&#9;null&#9;null&#10;abili&#9;null&#9;null&#10;mis&#9;null&#9;null&#10;in&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/posts/index.html.haml&#10;misc&#9;null&#9;null&#10;fo&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/posts/_form.html.erb&#10;_ind&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/views/testimonials/_index.html.haml&#10;ap&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/assets/stylesheets/application.scss&#10;tes&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/testimonials_controller.rb&#10;pub&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/controllers/publications_controller.rb&#10;gitig&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/.gitignore&#10;wisd&#9;null&#9;null&#10;else&#9;null&#9;null&#10;use&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/app/models/user.rb&#10;de&#9;FILE&#9;file:///home/inayath/edutor/my_space/ra/config/initializers/devise.rb" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -663,7 +746,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -671,7 +754,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35359675" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47720364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22885571" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32624114" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -923,14 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3773585" vertical-offset="0" max-vertical-offset="795">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/audios/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.75" vertical-offset="216" max-vertical-offset="1005">
@@ -1094,37 +1169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/welcome.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9199255" vertical-offset="796" max-vertical-offset="7065">
-          <caret line="86" column="46" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
-          <folding>
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1509838809068" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/who_we_are.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="675">
@@ -1135,8 +1179,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/core_articles/_breath_of_quran.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13111888" vertical-offset="0" max-vertical-offset="572">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/welcome.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-226.875" vertical-offset="0" max-vertical-offset="7095">
+          <caret line="363" column="0" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
+          <folding>
+            <marker date="1509840160032" expanded="true" signature="24508:24685" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="24716:24740" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="24728:24736" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="24751:24826" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="24837:24932" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="24944:24988" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="24993:25015" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="25032:25082" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="25113:25202" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="25128:25197" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="25213:25339" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="25350:25430" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="25435:25462" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="25481:25547" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="25577:25893" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="25929:25979" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="25996:26029" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="26048:26076" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="26095:26121" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="26131:26198" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="26219:26242" placeholder="{...}" />
+            <marker date="1509840160032" expanded="true" signature="26268:26291" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33880904" vertical-offset="0" max-vertical-offset="795">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
           <folding />
         </state>
       </provider>

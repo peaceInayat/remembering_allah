@@ -1,4 +1,4 @@
-%link{:href => "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css", :rel => "stylesheet"}/
+%link{:href => "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css", :rel => "stylesheet"}
 %script{:src => "https://code.jquery.com/ui/1.12.1/jquery-ui.js"}
 
 %div{style:'background-color:#fafafa; padding: 1% 0 .2% 0;'}
@@ -323,41 +323,43 @@
               www.churchmosque.com
 
 :javascript
-  $( "#dialog1, #dialog2, #dialog3" ).dialog({
-    autoOpen: false,
-    modal:true,
-    show: {
-      effect: "blind",
-      duration: 1000
-    },
-    hide: {
-      effect: "explode",
-      duration: 1000
-    },
-    maxWidth:800,
-    width: $(window).width() > 600 ? 700 : 320,
-    fluid:true
-  });
+  $(document).ready(function(){
+    $( "#dialog1, #dialog2, #dialog3" ).dialog({
+      autoOpen: false,
+      modal:true,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      },
+      maxWidth:800,
+      width: $(window).width() > 600 ? 700 : 320,
+      fluid:true
+    });
 
-  function set_css(){
-    $('.ui-widget-overlay').css('background', '#000');
-    $('.ui-widget-overlay').css('opacity', '.8');
-  }
+    function set_css(){
+      $('.ui-widget-overlay').css('background', '#000');
+      $('.ui-widget-overlay').css('opacity', '.8');
+    };
 
-  $( "#opener1" ).on( "click", function() {
-    $("#dialog1").dialog();
-    $( "#dialog1" ).dialog( "open" );
-    set_css();
-  });
-  $( "#opener2" ).on( "click", function() {
-    $("#dialog2").dialog();
-    $( "#dialog2" ).dialog( "open" );
-    set_css();
-  });
-  $( "#opener3" ).on( "click", function() {
-    $("#dialog3").dialog();
-    $( "#dialog3" ).dialog( "open" );
-    set_css();
+    $( "#opener1" ).on( "click", function() {
+      $("#dialog1").dialog();
+      $( "#dialog1" ).dialog( "open" );
+      set_css();
+    });
+    $( "#opener2" ).on( "click", function() {
+      $("#dialog2").dialog();
+      $( "#dialog2" ).dialog( "open" );
+      set_css();
+    });
+    $( "#opener3" ).on( "click", function() {
+      $("#dialog3").dialog();
+      $( "#dialog3" ).dialog( "open" );
+      set_css();
+    });
   });
 
 :css

@@ -298,29 +298,26 @@
                 %span.fa.fa-arrow-right
                 = q_link.name
           %br
-          = link_to 'Edit', quick_links_path, class:'btn btn-default'
+          - if can? :edit, Wisdom
+            = link_to 'Edit', quick_links_path, class:'btn btn-default'
       %div.col-md-3.col-xs-12{align:'left'}
         %h3.blue Contact Us
         %ul.quick_links#address{style:'margin-left:-10%;'}
           %li
-            %a{:href => "#"}
-              The Church Branch, 123 Lorem Ipsum Avenue, New York United States, 012345
+            %a{:href => "javascript:void(0);"}
+              B-28 A, Ground floor, Okhla Enclave, Near Okhla vihar metro station, Jamia Nagar, Okhla, New Delhi
           %li
-            %a{:href => "#"}
-              %i.fa.fa-phone
-              0123 456 7890
+            %a{:href => "javascript:void(0);"}
+              %i.fa.fa-map-pin
+              Pin: 110025
           %li
-            %a{:href => "#"}
-              %i.fa.fa-fax
-              0123 456 7890
-          %li
-            %a{:href => "#"}
+            %a{:href => "javascript:void(0);"}
               %i.fa.fa-envelope-o
-              info@churchmosque.com
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-globe
-              www.churchmosque.com
+              rememberingallah@gmail.com
+          %li{style:'cursor:pointer;'}
+            %a{style:'cursor:pointer;', :href => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d438.0386646857175!2d77.29244204832673!3d28.560472982360178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMzJzM3LjciTiA3N8KwMTcnMzMuOCJF!5e0!3m2!1sen!2sin!4v1512897806725", target: '_blank'}
+              %i.fa.fa-map-marker
+              Locate Us
 
 :javascript
   $(document).ready(function(){

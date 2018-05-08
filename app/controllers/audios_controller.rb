@@ -4,7 +4,11 @@ class AudiosController < ApplicationController
   # GET /audios
   # GET /audios.json
   def index
-    @audios = Audio.all
+    if params[:category_id].blank?
+      @audios = Audio.all.order("rank")
+    else
+      @audios = Audio.where(category_id: params[:category_id]).order("rank")
+    end
   end
 
   # GET /audios/1

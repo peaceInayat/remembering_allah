@@ -17,7 +17,7 @@
           %p.justify.body= publication.body
 
       .btn-group.pull-right
-        = link_to 'Download', publication, class:'btn btn-default'
+        = link_to 'Download', publication.document.url(:original, false), class:'btn btn-default'
         - if can? :edit, publication
           = link_to 'Show', publication, class:'btn btn-default'
           =link_to 'Edit', edit_publication_path(publication),class:'btn btn-default'

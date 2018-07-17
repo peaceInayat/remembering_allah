@@ -4,7 +4,7 @@ class Publication < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   validates_attachment_size :image, :less_than => 0.5.megabytes, :unless => Proc.new {|m| m[:image].nil?}
 
-  has_attached_file :document
+  has_attached_file :document, dependent: :destroy
   validates_attachment :document, :content_type => { :content_type => %w(application/pdf) }
 
 end

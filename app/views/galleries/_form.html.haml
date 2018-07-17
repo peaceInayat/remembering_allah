@@ -27,7 +27,7 @@
   .row
     - @gallery.pics.each do |pic|
       .col-sm-3
-        = image_tag pic.image_file_name,  class:'img-responsive thumbnail', style:'margin-bottom:0%;'
+        = image_tag pic.image.url,  class:'img-responsive thumbnail', style:'margin-bottom:0%;'
         =link_to 'Delete', pic_path(pic_id:pic.id, gallery_id:@gallery.id), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default', style:'width:100%;'
 
   %br

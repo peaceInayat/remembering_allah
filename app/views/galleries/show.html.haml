@@ -7,7 +7,7 @@
   .row
     - @gallery.pics.each do |pic|
       .col-sm-3
-        = image_tag pic.image_file_name,  class:'img-responsive thumbnail'
+        = image_tag pic.image.url,  class:'img-responsive thumbnail'
 
   .btn-group.pull-right
     = link_to 'Back', galleries_path, class:'btn btn-default'

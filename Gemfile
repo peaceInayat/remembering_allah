@@ -42,3 +42,4 @@ gem 'omniauth-google-oauth2', '~> 0.4.1'
 
 gem 'social-share-button', '~> 0.1.6'
 gem 'sprockets', '~> 3.7', '>= 3.7.2'
+gem 'carrierwave', '~> 1.0'

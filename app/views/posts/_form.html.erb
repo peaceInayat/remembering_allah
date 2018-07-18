@@ -23,7 +23,7 @@
 
     <% if @post.image? %>
       <div>
-        <%= image_tag @post.image.url(:thumb),  class:'img-responsive thumbnail', style:'margin-bottom:0%;' %>
+        <%= image_tag @post.image.url,  class:'img-responsive thumbnail', style:'margin-bottom:0%;' %>
       </div>
     <% end %>
 

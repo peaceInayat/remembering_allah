@@ -18,7 +18,7 @@ end
 
 group :development do
   gem 'sqlite3'
-  gem 'mysql2','~> 0.3.20'
+
 end
 
 group :production do
@@ -26,7 +26,7 @@ group :production do
   gem 'rails_12factor'
   gem 'puma'
 end
-
+gem 'mysql2','~> 0.3.20'
 gem 'devise', '~> 3.4.1'
 gem 'cancan', '~> 1.6', '>= 1.6.10'
 gem 'simple_form', '~> 3.2'
@@ -43,3 +43,4 @@ gem 'omniauth-google-oauth2', '~> 0.4.1'
 gem 'social-share-button', '~> 0.1.6'
 gem 'sprockets', '~> 3.7', '>= 3.7.2'
 gem 'carrierwave', '~> 1.0'
+gem 'cloudinary', '~> 1.8', '>= 1.8.3'

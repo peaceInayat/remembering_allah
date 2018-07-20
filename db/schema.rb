@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180720145450) do
+ActiveRecord::Schema.define(version: 20180720163503) do
 
   create_table "audios", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20180720145450) do
     t.text     "short_description",  limit: 65535
     t.string   "title_keyword",      limit: 255
     t.boolean  "highlight",          limit: 1
+    t.string   "public_id",          limit: 255
   end
 
   create_table "galleries", force: :cascade do |t|
@@ -123,6 +124,7 @@ ActiveRecord::Schema.define(version: 20180720145450) do
     t.datetime "image_updated_at"
     t.text     "short_description",  limit: 65535
     t.boolean  "highlight",          limit: 1
+    t.string   "public_id",          limit: 255
   end
 
   create_table "publications", force: :cascade do |t|
@@ -140,6 +142,7 @@ ActiveRecord::Schema.define(version: 20180720145450) do
     t.string   "document_content_type", limit: 255
     t.integer  "document_file_size",    limit: 4
     t.datetime "document_updated_at"
+    t.string   "public_id",             limit: 255
   end
 
   create_table "testimonials", force: :cascade do |t|
@@ -153,6 +156,7 @@ ActiveRecord::Schema.define(version: 20180720145450) do
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
     t.integer  "rank",               limit: 4
+    t.string   "public_id",          limit: 255
   end
 
   create_table "users", force: :cascade do |t|

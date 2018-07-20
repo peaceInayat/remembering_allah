@@ -6,6 +6,12 @@
     = f.input :body, :input_html => {:rows => 10, maxlength: 500}, placeholder:'At max 500 Characters'
     = f.input :rank, placeholder:'Any Integer'
     = f.input :image, as: :file
+    - if @publication.image?
+      %div
+        = image_tag @publication.public_id,  class:'img-responsive thumbnail', style:'margin-bottom:0%;'
     = f.input :document, as: :file
+    - if @publication.document?
+      %div
+        %h4= @publication.document_file_name
   .form-actions
     = f.button :submit

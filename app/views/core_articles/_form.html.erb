@@ -10,15 +10,15 @@
         </div>
     <% end %>
     <%= f.label :title %><br>
-    <%= f.text_area :title, rows:'3' %>
+    <%= f.text_area :title, rows:'3', required:true %>
     <br>
     <br>
     <%= f.label :title_keyword %><br>
-    <%= f.text_area :title_keyword,rows:'1', maxlength:'25' %>
+    <%= f.text_area :title_keyword,rows:'1', maxlength:'25', required:true %>
     <br>
     <br>
     <p><b>Short Description for Index Page</b> (At max 300 Characters)</p>
-    <%= f.text_area :short_description, rows:'5', maxlength:'500' %>
+    <%= f.text_area :short_description, rows:'5', maxlength:'500', required:true %>
     <br>
     <br>
     <p><b>Picture for Index Page</b></p>
@@ -26,7 +26,7 @@
 
     <% if @core_article.image? %>
         <div>
-          <%= image_tag @core_article.image.url,  class:'img-responsive thumbnail', style:'margin-bottom:0%;' %>
+          <%= image_tag @core_article.public_id,  class:'img-responsive thumbnail', style:'margin-bottom:0%;' %>
         </div>
     <% end %>
 
@@ -35,7 +35,7 @@
 
     <%= f.cktext_area :body, :class => "form-control" %>
     <br>
-    <%= f.text_field :rank, placeholder:'Rank (Any Integer)', class:'url' %>
+    <%= f.text_field :rank, placeholder:'Rank (Any Integer)', class:'url', required:true %>
     <br>
     <br>
     <%= f.submit class:'btn btn-default' %>

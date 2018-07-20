@@ -32,9 +32,11 @@ class WisdomsController < ApplicationController
   # POST /wisdoms.json
   def create
     @wisdom = current_user.wisdoms.build(wisdom_params)
-    data = Cloudinary::Uploader.upload(wisdom_params[:image],@auth)
-    @wisdom.public_id = data['secure_url']
-    @wisdom.image_file_size = data['bytes']
+    if wisdom_params[:image].present?
+      data = Cloudinary::Uploader.upload(wisdom_params[:image],@auth)
+      @wisdom.public_id = data['secure_url']
+      @wisdom.image_file_size = data['bytes']
+    end
 
     respond_to do |format|
       if @wisdom.save
@@ -51,11 +53,7 @@ class WisdomsController < ApplicationController
   # PATCH/PUT /wisdoms/1.json
   def update
     new_params = wisdom_params
-    logger.info "---------------------------"
-    logger.info wisdom_params[:image].size
-    logger.info @wisdom.image_file_size
-    if @wisdom.image_file_size != wisdom_params[:image].size
-      logger.info 'true'
+    if wisdom_params[:image].present?
       Cloudinary::Uploader.destroy(@wisdom.public_id.split("/").last.split(".")[0] ,@auth) if @wisdom.public_id.present?
       data = Cloudinary::Uploader.upload(wisdom_params[:image],@auth)
       new_params['public_id'] = data['secure_url']

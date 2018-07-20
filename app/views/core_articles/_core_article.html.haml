@@ -1,7 +1,7 @@
 %h1.title.justify= @content.title
 %p.date
   Submitted #{time_ago_in_words(@content.created_at)} Ago By
-  %strong= @content.user.name rescue ''
+  %strong= @content.user.name rescue 'Slave of Allah'
 %hr
 %p.body= @content.body.to_s.html_safe
 .btn-group.pull-right

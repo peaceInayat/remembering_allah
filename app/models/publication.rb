@@ -6,6 +6,6 @@ class Publication < ActiveRecord::Base
   mount_uploader :image, ImageUploader, mount_on: :image_file_name
 
   has_attached_file :document, dependent: :destroy
-  validates_attachment :document, :content_type => { :content_type => %w(application/pdf) }
+  # validates_attachment :document, :content_type => { :content_type => %w(application/pdf) }
 
 end

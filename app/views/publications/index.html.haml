@@ -12,12 +12,12 @@
       %hr
       .row
         .col-md-5
-          = image_tag publication.image.url, class:'img-responsive thumbnail'
+          = image_tag publication.public_id, class:'img-responsive thumbnail'
         .col-md-7
           %p.justify.body= publication.body
 
       .btn-group.pull-right
-        = link_to 'Download', publication.document.url(:original, false), class:'btn btn-default'
+        = link_to 'Download', publication.document_content_type, class:'btn btn-default'
         - if can? :edit, publication
           = link_to 'Show', publication, class:'btn btn-default'
           =link_to 'Edit', edit_publication_path(publication),class:'btn btn-default'

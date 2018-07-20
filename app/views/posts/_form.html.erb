@@ -10,12 +10,12 @@
         </div>
     <% end %>
     <%= f.label :title %><br>
-    <%= f.text_area :title, rows:'3' %>
+    <%= f.text_area :title, rows:'3', required:true %>
 
     <br>
     <br>
     <p><b>Short Description for Index Page</b> (At max 300 Characters)</p>
-    <%= f.text_area :short_description, rows:'5', maxlength:'500' %>
+    <%= f.text_area :short_description, rows:'5', maxlength:'500', required:true %>
     <br>
     <br>
     <p><b>Picture for Index Page</b></p>
@@ -23,16 +23,16 @@
 
     <% if @post.image? %>
       <div>
-        <%= image_tag @post.image.url,  class:'img-responsive thumbnail', style:'margin-bottom:0%;' %>
+        <%= image_tag @post.public_id,  class:'img-responsive thumbnail', style:'margin-bottom:0%;' %>
       </div>
     <% end %>
 
     <br>
     <%= f.label :body %><br>
 
-    <%= f.cktext_area :body, :class => "form-control" %>
+    <%= f.cktext_area :body, :class => "form-control", required:true %>
     <br>
-    <%= f.text_field :rank, placeholder:'Rank (Any Integer)', class:'url' %>
+    <%= f.text_field :rank, placeholder:'Rank (Any Integer)', class:'url', required:true %>
     <br>
     <br>
     <p><b>Choose Category</b></p>

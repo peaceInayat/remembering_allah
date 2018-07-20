@@ -41,7 +41,7 @@
               .panel-body
                 .row
                   .col-sm-5.image_center
-                    = image_tag article.image.url, class:'img-responsive thumbnail no_bottom'
+                    = image_tag article.public_id, class:'img-responsive thumbnail no_bottom'
                   .col-sm-7
                     %p.justify= article.short_description
               - if can? :edit, article

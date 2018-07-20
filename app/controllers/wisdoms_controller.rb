@@ -56,7 +56,7 @@ class WisdomsController < ApplicationController
     logger.info @wisdom.image_file_size
     if @wisdom.image_file_size != wisdom_params[:image].size
       logger.info 'true'
-      Cloudinary::Uploader.destroy(@wisdom.public_id.split("/").last.split(".")[0] ,@auth)
+      Cloudinary::Uploader.destroy(@wisdom.public_id.split("/").last.split(".")[0] ,@auth) if @wisdom.public_id.present?
       data = Cloudinary::Uploader.upload(wisdom_params[:image],@auth)
       new_params['public_id'] = data['secure_url']
       new_params['image_file_size'] = data['bytes']
@@ -75,7 +75,7 @@ class WisdomsController < ApplicationController
   # DELETE /wisdoms/1
   # DELETE /wisdoms/1.json
   def destroy
-    Cloudinary::Uploader.destroy(@wisdom.public_id.split("/").last.split(".")[0] ,@auth)
+    Cloudinary::Uploader.destroy(@wisdom.public_id.split("/").last.split(".")[0] ,@auth) if @wisdom.public_id.present?
     @wisdom.destroy
     respond_to do |format|
       format.html { redirect_to wisdoms_url, notice: 'Wisdom was successfully destroyed.' }

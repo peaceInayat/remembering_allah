@@ -5,7 +5,7 @@ class PicsController < ApplicationController
     @pic.destroy
 
     @gallery = Gallery.find(params[:gallery_id])
-    redirect_to edit_gallery_path(@gallery), notice: 'Post was successfully destroyed.'
+    redirect_to edit_gallery_path(@gallery), notice: 'Pic was successfully deleted.'
 
   end
 

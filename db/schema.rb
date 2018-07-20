@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171104163552) do
+ActiveRecord::Schema.define(version: 20180720145450) do
 
   create_table "audios", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -223,6 +223,7 @@ ActiveRecord::Schema.define(version: 20171104163552) do
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
     t.boolean  "highlight",          limit: 1
+    t.string   "public_id",          limit: 255
   end
 
 end

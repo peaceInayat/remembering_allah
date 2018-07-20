@@ -1,7 +1,7 @@
 class PicsController < ApplicationController
 
   def destroy
-    @auth = {:cloud_name=>"dg51396pz", :api_key=>"177223146884353", :api_secret=>"PXSWHw8Lp-Kttp6PRKr-FPon9Ok"}
+    @auth = {:cloud_name=>"dz6tzfuuc", :api_key=>"489574853252648", :api_secret=>"AAMHKTvZsaupPGMtiKNuvJCk0Zk"}
     @pic = Pic.find(params[:pic_id])
     Cloudinary::Uploader.destroy(@pic.public_id.split("/").last.split(".")[0] ,@auth) if @pic.public_id.present?
     @pic.delete

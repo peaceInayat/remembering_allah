@@ -93,7 +93,7 @@ class WisdomsController < ApplicationController
   end
 
   def set_defaults
-    @auth = {:cloud_name=>"dg51396pz", :api_key=>"177223146884353", :api_secret=>"PXSWHw8Lp-Kttp6PRKr-FPon9Ok"}
+    @auth = {:cloud_name=>"dz6tzfuuc", :api_key=>"489574853252648", :api_secret=>"AAMHKTvZsaupPGMtiKNuvJCk0Zk"}
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

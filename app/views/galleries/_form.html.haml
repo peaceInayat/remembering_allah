@@ -20,6 +20,8 @@
     %p
       %b Pictures
       (At max 4, each size less than 500 kb and size at max 500*500)
+      %br
+      %i Let description of Photo be its name (When u click on it, file name appears as caption)
     .controls
       = file_field_tag "images[]", type: :file, multiple: true
   %br

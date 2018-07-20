@@ -15,7 +15,7 @@
       .row
         - gallery.pics.each do |pic|
           .col-sm-3
-            = image_tag pic.image.url,  class:'img-responsive thumbnail'
+            = image_tag pic.public_id,  class:'img-responsive thumbnail'
 
       .btn-group.pull-right
         - if can? :edit, gallery

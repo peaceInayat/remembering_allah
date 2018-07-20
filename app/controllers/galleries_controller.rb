@@ -1,5 +1,6 @@
 class GalleriesController < ApplicationController
   before_action :set_gallery, only: [:show, :edit, :update, :destroy]
+  before_action :set_defaults
 
   # GET /galleries
   # GET /galleries.json
@@ -28,11 +29,13 @@ class GalleriesController < ApplicationController
 
     respond_to do |format|
       if @gallery.save
-
         if params[:images]
-          #===== The magic is here ;)
           params[:images].each { |image|
-            @gallery.pics.create(image: image)
+            pic = @gallery.pics.create(image: image)
+            data = Cloudinary::Uploader.upload(image,@auth)
+            pic.public_id = data['secure_url']
+            pic.image_file_size = data['bytes']
+            pic.save
           }
         end
 
@@ -51,9 +54,12 @@ class GalleriesController < ApplicationController
     respond_to do |format|
       if @gallery.update(gallery_params)
         if params[:images]
-          #===== The magic is here ;)
           params[:images].each { |image|
-            @gallery.pics.create(image: image)
+            pic = @gallery.pics.create(image: image)
+            data = Cloudinary::Uploader.upload(image,@auth)
+            pic.public_id = data['secure_url']
+            pic.image_file_size = data['bytes']
+            pic.save
           }
         end
         format.html { redirect_to @gallery, notice: 'Gallery was successfully updated.' }
@@ -68,7 +74,11 @@ class GalleriesController < ApplicationController
   # DELETE /galleries/1
   # DELETE /galleries/1.json
   def destroy
-    @gallery.destroy
+    @gallery.pics.each do |pic|
+      Cloudinary::Uploader.destroy(pic.public_id.split("/").last.split(".")[0] ,@auth) if pic.public_id.present?
+      pic.delete
+    end
+    @gallery.delete
     respond_to do |format|
       format.html { redirect_to galleries_url, notice: 'Gallery was successfully destroyed.' }
       format.json { head :no_content }
@@ -76,13 +86,17 @@ class GalleriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_gallery
-      @gallery = Gallery.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_gallery
+    @gallery = Gallery.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def gallery_params
-      params.require(:gallery).permit(:title, :body, :rank, :event_date)
-    end
+  def set_defaults
+    @auth = {:cloud_name=>"dg51396pz", :api_key=>"177223146884353", :api_secret=>"PXSWHw8Lp-Kttp6PRKr-FPon9Ok"}
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def gallery_params
+    params.require(:gallery).permit(:title, :body, :rank, :event_date)
+  end
 end

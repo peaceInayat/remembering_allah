@@ -138,6 +138,11 @@ footer.navbar-fixed-bottom p {
 .twitter:hover {
   background-color: #47b2f4 !important;
 }
+
+/* line 126, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/home.scss */
+.instagram:hover {
+  background-color: #a9e34b !important;
+}
 /* line 1, /home/inayath/edutor/my_space/ra/app/assets/stylesheets/scaffolds.scss */
 body {
   background-color: #fff;

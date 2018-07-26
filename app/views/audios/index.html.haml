@@ -28,34 +28,102 @@
         %div.visible-xs
           %span{:style => "font-size:30px;cursor:pointer", id:'ooo'} ☰
           %span{:style => "font-size:40px;cursor:pointer;display:none;", id:'ccc'} &times;
-        %table.table.table-striped.table-responsive{style:'box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-left:9px;border-radius:5px;'}
-          %thead
-            %tr
-              %th S.No
-              %th Title
-              %th Play
-              %th Download
-              - if can? :edit, Audio
-                %th
-                %th
-          %tbody
-            - @audios.each_with_index do |a, i|
-              %tr
-                %td=i+1
-                %td=a.title
-                %td
-                  %a{:href => "https://drive.google.com/file/d/#{a.url}", target:'_blank'}
-                    %i.fa.fa-play-circle-o{style:'font-size:1.7em;'}
-                %td
-                  %a{:href => "https://drive.google.com/uc?export=download&id=#{a.url}"}
-                    %i.fa.fa-arrow-circle-o-down{style:'font-size:1.7em;'}
-                - if can? :edit, a
-                  %td=link_to 'Edit', edit_audio_path(a)
-                  %td=link_to 'Delete', audio_path(a), method: :delete, data: { confirm: 'Are you sure?' }
+
+
+        %div.articles_class_css.visible-xs
+          .row{style:'margin: 0 0% 2% 0% !important;'}
+            .col-sm-12
+              = @category_description.to_s.html_safe
+          #accordion.panel-group{style:'margin-top:5%;'}
+            - @audios.each_with_index do |audio,index|
+              .panel.panel-default
+                .panel-heading
+                  %h4.panel-title
+                    %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse#{index+1}"}= truncate(audio.title, :length => 60)
+                .panel-collapse.collapse{:id => "collapse#{index+1}"}
+                  .panel-body
+                    %p.body_style= truncate(audio.body, :length => 300)
+                    .row
+                      .col-md-6.col-sm-12.no_padding
+                        %a{:href => "https://drive.google.com/file/d/#{audio.url}", target:'_blank', class:'btn btn-default custom_btn'}
+                          %i.fa.fa-play-circle-o{"aria-hidden" => "true"} &nbsp;Play
+                      .col-md-6.col-sm-12.no_padding
+                        %a{:href => "https://drive.google.com/file/d/#{audio.url}", target:'_blank', class:'btn btn-default custom_btn'}
+                          %i.fa.fa-download{"aria-hidden" => "true"} &nbsp;Download
+                    - if can? :edit, audio
+                      .row
+                        .col-md-6.col-sm-12.no_padding
+                          %a{:href => edit_audio_path(audio), class:'btn btn-default custom_btn'}
+                            %i.fa.fa-edit{"aria-hidden" => "true"} &nbsp;Edit
+                        .col-md-6.col-sm-12.no_padding
+                          %a{:href => audio_path(audio), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default custom_btn'}
+                            %i.fa.fa-trash-o{"aria-hidden" => "true"} &nbsp; Delete
+
+        %div.articles_class_css.hidden-xs
+          .row{style:'margin: 0 0% 2% 0% !important;'}
+            .col-md-8.col-md-offset-2.col-sm-12
+              = @category_description.to_s.html_safe
+          .row
+            - @audios.each do |audio|
+              .col-md-3.col-xs-12
+                .panel.panel-default
+                  .panel-heading{style:'background-color:#cfcfcf;'}
+                    %p.title_style.bold= truncate(audio.title, :length => 60)
+                  %p.body_style= truncate(audio.body, :length => 300)
+                  .row
+                    .col-md-6.col-sm-12.no_padding
+                      %a{:href => "https://drive.google.com/file/d/#{audio.url}", target:'_blank', class:'btn btn-default custom_btn'}
+                        %i.fa.fa-play-circle-o{"aria-hidden" => "true"} &nbsp;Play
+                    .col-md-6.col-sm-12.no_padding
+                      %a{:href => "https://drive.google.com/file/d/#{audio.url}", target:'_blank', class:'btn btn-default custom_btn'}
+                        %i.fa.fa-download{"aria-hidden" => "true"} &nbsp;Download
+                  - if can? :edit, audio
+                    .row
+                      .col-md-6.col-sm-12.no_padding
+                        %a{:href => edit_audio_path(audio), class:'btn btn-default custom_btn'}
+                          %i.fa.fa-edit{"aria-hidden" => "true"} &nbsp;Edit
+                      .col-md-6.col-sm-12.no_padding
+                        %a{:href => audio_path(audio), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default custom_btn'}
+                          %i.fa.fa-trash-o{"aria-hidden" => "true"} &nbsp; Delete
 
 :css
   @media (max-width: 767px) {
     .table.table-striped {
       margin-left: 0 !important;
     }
+
+  }
+
+  .panel-title a {
+    display: block;
+    padding: 10px 15px;
+    margin: -10px -15px;
+  }
+
+  .bold{
+    font-weight: bold;
+  }
+
+  .custom_btn{
+    width:100%;
+    font-size:1.4em;
+    background-color:#f5f5f5;
+
+  }
+
+  .title_style{
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.1em;
+    padding: 2% 0 0 0%;
+  }
+
+  .body_style{
+    text-align:justify;
+    padding: 2% 2% 0 2%;
+  }
+  .no_padding{
+    padding:0px !important;
   }

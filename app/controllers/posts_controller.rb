@@ -9,9 +9,12 @@ class PostsController < ApplicationController
   def index
     if params[:category_id].blank?
       @posts = Post.all.order('rank')
+      @category_description = Category.first.description
     else
       @posts = Post.where(category_id: params[:category_id]).order("rank")
+      @category_description = Category.find(params[:category_id]).description
     end
+
   end
 
   # GET /posts/1

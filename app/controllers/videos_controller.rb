@@ -7,8 +7,10 @@ class VideosController < ApplicationController
   def index
     if params[:category_id].blank?
       @videos = Video.all.order("rank")
+      @category_description = Category.first.description
     else
       @videos = Video.where(category_id: params[:category_id]).order("rank")
+      @category_description = Category.find(params[:category_id]).description
     end
   end
 

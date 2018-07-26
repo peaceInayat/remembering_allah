@@ -29,6 +29,9 @@
           %span{:style => "font-size:30px;cursor:pointer", id:'ooo'} ☰
           %span{:style => "font-size:40px;cursor:pointer;display:none;", id:'ccc'} &times;
         .row{style:'padding:1%;'}
+          .row{style:'margin: 0 0% 2% 0% !important;'}
+            .col-md-8.col-md-offset-2.col-sm-12
+              = @category_description.to_s.html_safe
           - @videos.each do |video|
             .col-sm-3.col-xs-12.mobile_view_w_100_r
               .panel.panel-default

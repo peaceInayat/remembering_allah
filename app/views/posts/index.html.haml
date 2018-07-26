@@ -29,6 +29,9 @@
           %span{:style => "font-size:30px;cursor:pointer", id:'ooo'} ☰
           %span{:style => "font-size:40px;cursor:pointer;display:none;", id:'ccc'} &times;
         .container{style:'margin-top:2%;'}
+          .row{style:'margin: 0 0% 2% 0% !important;'}
+            .col-md-8.col-md-offset-2.col-sm-12
+              = @category_description.to_s.html_safe
           - @posts.each do |article|
             .panel.panel-default
               .panel-heading

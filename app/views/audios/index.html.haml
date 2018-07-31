@@ -63,30 +63,85 @@
           .row{style:'margin: 0 0% 2% 0% !important;'}
             .col-md-8.col-md-offset-2.col-sm-12
               = @category_description.to_s.html_safe
-          .row
-            - @audios.each do |audio|
-              .col-md-3.col-xs-12
-                .panel.panel-default
-                  .panel-heading{style:'background-color:#cfcfcf;'}
-                    %p.title_style.bold= truncate(audio.title, :length => 60)
-                  %p.body_style= truncate(audio.body, :length => 300)
-                  .row
-                    .col-md-6.col-sm-12.no_padding
-                      %a{:href => "https://drive.google.com/file/d/#{audio.url}", target:'_blank', class:'btn btn-default custom_btn'}
-                        %i.fa.fa-play-circle-o{"aria-hidden" => "true"} &nbsp;Play
-                    .col-md-6.col-sm-12.no_padding
-                      %a{:href => "https://drive.google.com/file/d/#{audio.url}", target:'_blank', class:'btn btn-default custom_btn'}
-                        %i.fa.fa-download{"aria-hidden" => "true"} &nbsp;Download
-                  - if can? :edit, audio
-                    .row
-                      .col-md-6.col-sm-12.no_padding
-                        %a{:href => edit_audio_path(audio), class:'btn btn-default custom_btn'}
-                          %i.fa.fa-edit{"aria-hidden" => "true"} &nbsp;Edit
-                      .col-md-6.col-sm-12.no_padding
-                        %a{:href => audio_path(audio), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default custom_btn'}
-                          %i.fa.fa-trash-o{"aria-hidden" => "true"} &nbsp; Delete
+          %table.table.table-striped.table-responsive{style:'box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-left:9px;border-radius:5px;'}
+            %thead
+              %tr
+                %th S.No
+                %th Title
+                %th Play
+                %th Download
+                - if can? :edit, Audio
+                  %th
+                  %th
+            %tbody
+              - @audios.each_with_index do |a, i|
+                %tr
+                  %td=i+1
+                  %td{"data-container" => "body", "data-original-title" => "Alhamdulillah", "data-toggle" => "tooltip",:title => "#{a.body}", "data-placement" => "bottom"}=a.title
+                  %td
+                    %a{:href => "https://drive.google.com/file/d/#{a.url}", target:'_blank'}
+                      %i.fa.fa-play-circle-o{style:'font-size:1.7em;'}
+                  %td
+                    %a{:href => "https://drive.google.com/uc?export=download&id=#{a.url}"}
+                      %i.fa.fa-arrow-circle-o-down{style:'font-size:1.7em;'}
+                  - if can? :edit, a
+                    %td=link_to 'Edit', edit_audio_path(a)
+                    %td=link_to 'Delete', audio_path(a), method: :delete, data: { confirm: 'Are you sure?' }
+
+
+          -#.row
+          -#  - @audios.each do |audio|
+          -#    .col-md-3.col-xs-12
+          -#      .panel.panel-default
+          -#        .panel-heading{style:'background-color:#cfcfcf;'}
+          -#          %p.title_style.bold= truncate(audio.title, :length => 60)
+          -#        %p.body_style= truncate(audio.body, :length => 300)
+          -#        .row
+          -#          .col-md-6.col-sm-12.no_padding
+          -#            %a{:href => "https://drive.google.com/file/d/#{audio.url}", target:'_blank', class:'btn btn-default custom_btn'}
+          -#              %i.fa.fa-play-circle-o{"aria-hidden" => "true"} &nbsp;Play
+          -#          .col-md-6.col-sm-12.no_padding
+          -#            %a{:href => "https://drive.google.com/file/d/#{audio.url}", target:'_blank', class:'btn btn-default custom_btn'}
+          -#              %i.fa.fa-download{"aria-hidden" => "true"} &nbsp;Download
+          -#        - if can? :edit, audio
+          -#          .row
+          -#            .col-md-6.col-sm-12.no_padding
+          -#              %a{:href => edit_audio_path(audio), class:'btn btn-default custom_btn'}
+          -#                %i.fa.fa-edit{"aria-hidden" => "true"} &nbsp;Edit
+          -#            .col-md-6.col-sm-12.no_padding
+          -#              %a{:href => audio_path(audio), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default custom_btn'}
+          -#                %i.fa.fa-trash-o{"aria-hidden" => "true"} &nbsp; Delete
+
+:javascript
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
 
 :css
+  .tooltip-inner {
+    background-color:#ababab;
+    font-size: 1.4em;
+    max-width: 350px;
+    width: 350px;
+  }
+  .tooltip.top .tooltip-arrow {
+    border-top-color: #00acd6;
+  }
+
+  .tooltip.right .tooltip-arrow {
+    border-right-color: #00acd6;
+  }
+
+  .tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #00acd6;
+  }
+
+  .tooltip.left .tooltip-arrow {
+    border-left-color: #00acd6;
+  }
+
+
+
   @media (max-width: 767px) {
     .table.table-striped {
       margin-left: 0 !important;

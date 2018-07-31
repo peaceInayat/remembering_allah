@@ -30,7 +30,7 @@
     <br>
     <%= f.label :body %><br>
 
-    <%= f.cktext_area :body, :class => "form-control", required:true %>
+    <%= f.cktext_area :body, :class => "form-control", required:true, :ckeditor => {:toolbar => 'Full'} %>
     <br>
     <%= f.text_field :rank, placeholder:'Rank (Any Integer)', class:'url', required:true %>
     <br>
